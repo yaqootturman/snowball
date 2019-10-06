@@ -1,0 +1,31 @@
+{
+  "name": "the-crowd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/server.js",
+    "client-install": "cd client && npm install",
+    "client": "cd client && npm run start",
+    "server": "nodemon ./server/server.js",
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/the-crowd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/the-crowd/issues"
+  },
+  "homepage": "https://github.com/fack2/the-crowd#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "env2": "^2.2.2",
+    "express": "^4.17.1",
+    "pg": "^7.12.1"
+  }
+}
