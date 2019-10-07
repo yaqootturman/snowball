@@ -1,6 +1,6 @@
 BEGIN;
 
-  DROP TABLE IF EXISTS user, pledge, pledge_to_user, category
+  DROP TABLE IF EXISTS user, pledge, pledge_to_user, category, pledge_pros_cons, pledge_instructions, pledge_resources, pledge_references
     CASCADE;
 
 CREATE TABLE user
@@ -19,7 +19,9 @@ CREATE TABLE pledge
     title VARCHAR(200) ,
     description TEXT NOT NULL,
     number_of_enrollement  INTEGER ,
-    img TEXT
+    img TEXT ,
+    importance TEXT ,
+    further_info TEXT
 );
 
 CREATE TABLE pledge_to_user
@@ -35,7 +37,33 @@ CREATE TABLE category
     name VARCHAR(100) ,
     img TEXT ,
     description TEXT NOT NULL,
-    number_of_pledges  INTEGER ,
+    number_of_pledges  INTEGER 
 );
 
+CREATE TABLE pledge_pros_cons
+(
+    id serial primary key ,
+    FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
+    statement TEXT ,
+    color TEXT 
+);
+CREATE TABLE pledge_instructions(
+    instructions_id serial primary key ,
+    FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
+    description TEXT
+);
+
+CREATE TABLE pledge_resources
+(
+    resources_id serial primary key ,
+    FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
+    description TEXT
+);
+
+CREATE TABLE pledge_references
+(
+    references_id serial primary key ,
+    FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
+    description TEXT
+);
 COMMIT;

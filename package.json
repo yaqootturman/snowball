@@ -9,7 +9,8 @@
     "client": "cd client && npm run start",
     "server": "nodemon ./server/server.js",
     "build": "cd client && npm run build",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
     "env2": "^2.2.2",
     "express": "^4.17.1",
     "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1"
   }
 }
