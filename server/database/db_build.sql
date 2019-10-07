@@ -42,10 +42,10 @@ CREATE TABLE category
 
 CREATE TABLE pledge_pros_cons
 (
+    id serial primary key ,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
-    pros TEXT ,
-    cons TEXT ,
-    med TEXT 
+    statement TEXT ,
+    color TEXT 
 );
 CREATE TABLE pledge_instructions(
     instructions_id serial primary key ,
