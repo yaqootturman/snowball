@@ -31,7 +31,7 @@
 
 ## DB Schema :
 
-![image](https://user-images.githubusercontent.com/27896127/66298329-24e58380-e8fa-11e9-97f2-9e764526d939.png)
+![image](https://user-images.githubusercontent.com/27896127/66298739-dd132c00-e8fa-11e9-8799-636cf98ba4c4.png)
 
 ## [Figma Wireframe](https://www.figma.com/file/hFtTGaPfdTBUBr2ibqU7Pd/The-Crowd?node-id=431%3A0)
 
