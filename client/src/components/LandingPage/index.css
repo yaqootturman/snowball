@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.vertical {
+  margin-left: 15%;
+  border-left: 1px solid #3fcfad;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+.circle1 {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: #bbfbec;
+  display: inline-block;
+}
+.the-tiltle {
+  width: 100%;
+  margin: 0;
+}
