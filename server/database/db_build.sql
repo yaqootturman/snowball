@@ -21,11 +21,7 @@ CREATE TABLE pledge
     number_of_enrollement  INTEGER ,
     img TEXT ,
     importance TEXT ,
-    instructions TEXT,
-    resources TEXT,
-    further_info TEXT,
-    references TEXT
-
+    further_info TEXT
 );
 
 CREATE TABLE pledge_to_user
