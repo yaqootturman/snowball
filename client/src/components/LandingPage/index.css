@@ -82,3 +82,9 @@
 .vertical__contents__circles__span {
   margin-left: 5%;
 }
+@media (max-width: 360px) {
+  .vertical__contents__circles {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
