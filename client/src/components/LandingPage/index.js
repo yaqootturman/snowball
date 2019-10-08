@@ -65,7 +65,10 @@ const LandingPage = () => {
       </div>
       <div className='start'>
         <button
-          onClick={console.log('this should push to home page')}
+          type='submit'
+          onClick={() => {
+            alert('this should go to next page ')
+          }}
           className='start__letsgo'
         >
           Let’s go!
