@@ -1,34 +1,30 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from "react"
+import axios from "axios"
 
 class Category extends Component {
-  state={
-    details: ""
+  state = {
+    details: []
   }
   componentDidMount = () => {
-    console.log("hii");
-    
+    console.log("hii")
+
     axios.get(`/api/dashboard`).then(({ data }) => {
-      console.log("data",data);
-      
+      console.log("data", data)
+
       this.setState({
         details: data
       })
+      console.log("details", this.state.details.data[0].img)
     })
   }
 
-  
-
-
   render() {
-
     return (
       <div>
-        data
+        {/* <img src={this.state.details.data[0].img} /> */}
+        kk
       </div>
-     
-      
     )
-    }
+  }
 }
 export default Category
