@@ -1,10 +1,10 @@
-const dbConnection = require('./../db_connection')
+const dbConnection = require("./../db_connection")
 
 const getCategoryInfo = () => {
+  console.log("query")
+
   return dbConnection
-    .query(
-      'select * from category'
-    )
+    .query("select * from category")
     .then(res => res.rows)
     .catch(err => console.log(err))
 }

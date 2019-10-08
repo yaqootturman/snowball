@@ -6,7 +6,7 @@ const App = () => (
   <Router>
     <React.Fragment>
       <Switch>
-        <Route exact path="/dashboard" component={Category} />
+        <Route exact path="/category" component={Category} />
       </Switch>
     </React.Fragment>
   </Router>

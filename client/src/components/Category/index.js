@@ -19,10 +19,15 @@ class Category extends Component {
   }
 
   render() {
+    const { data } = this.state.details
+
     return (
       <div>
-        {/* <img src={this.state.details.data[0].img} /> */}
-        kk
+        {!data ? (
+          <h1>Loading</h1>
+        ) : (
+          <img src={this.state.details.data[0].img} />
+        )}
       </div>
     )
   }
