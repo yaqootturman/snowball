@@ -1,9 +1,9 @@
 BEGIN;
 
-  DROP TABLE IF EXISTS user, pledge, pledge_to_user, category, pledge_pros_cons, pledge_instructions, pledge_resources, pledge_references
+DROP TABLE IF EXISTS "user", pledge, pledge_to_user,category, pledge_pros_cons, pledge_instructions, pledge_resources, pledge_references
     CASCADE;
 
-CREATE TABLE user
+CREATE TABLE "user"
 (
     user_id serial primary key ,
     first_name VARCHAR(100) ,
@@ -13,9 +13,20 @@ CREATE TABLE user
 
 );
 
+CREATE TABLE category
+(
+    category_id serial primary key ,
+    name TEXT ,
+    img TEXT ,
+    description TEXT NOT NULL,
+    number_of_pledges  INTEGER 
+);
+
 CREATE TABLE pledge
 (
     pledge_id serial primary key ,
+    category_id INTEGER,
+    FOREIGN KEY (category_id) REFERENCES category(category_id),
     title VARCHAR(200) ,
     description TEXT NOT NULL,
     number_of_enrollement  INTEGER ,
@@ -25,30 +36,25 @@ CREATE TABLE pledge
 );
 
 CREATE TABLE pledge_to_user
-(
+( pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
-    FOREIGN KEY (user_id) REFERENCES user (user_id),    bledge_name TEXT
+     user_id INTEGER,
+    FOREIGN KEY (user_id) REFERENCES "user" (user_id),
+    pledge_name TEXT
 );
  
-
-CREATE TABLE category
-(
-    category_id serial primary key ,
-    name VARCHAR(100) ,
-    img TEXT ,
-    description TEXT NOT NULL,
-    number_of_pledges  INTEGER 
-);
 
 CREATE TABLE pledge_pros_cons
 (
     id serial primary key ,
+    pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
     statement TEXT ,
     color TEXT 
 );
 CREATE TABLE pledge_instructions(
     instructions_id serial primary key ,
+     pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
     description TEXT
 );
@@ -56,14 +62,18 @@ CREATE TABLE pledge_instructions(
 CREATE TABLE pledge_resources
 (
     resources_id serial primary key ,
+    pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
-    description TEXT
+    description TEXT,
+    link TEXT
 );
 
 CREATE TABLE pledge_references
 (
     references_id serial primary key ,
+     pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
-    description TEXT
+    description TEXT,
+    link TEXT
 );
 COMMIT;
