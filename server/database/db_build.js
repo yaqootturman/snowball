@@ -1,10 +1,10 @@
-const fs = require("fs")
-const path = require("path")
+const fs = require('fs')
+const path = require('path')
 
-const dbConnection = require("./db_connection")
+const dbConnection = require('./db_connection')
 
-const sql = fs.readFileSync(path.join(__dirname, "db_build.sql")).toString()
-const sql2 = fs.readFileSync(path.join(__dirname, "data_build.sql")).toString()
+const sql = fs.readFileSync(path.join(__dirname, 'db_build.sql')).toString()
+const sql2 = fs.readFileSync(path.join(__dirname, 'data_build.sql')).toString()
 
 const runDbBuild = (sql, sql2) => {
   return dbConnection
