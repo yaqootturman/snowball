@@ -7,7 +7,7 @@
   border-left: 3px solid #3fcfad;
   display: inline-block;
 }
-.the-tiltle {
+.vertical__tiltle {
   width: 80%;
   display: block;
   font-weight: bold;
@@ -18,12 +18,21 @@
   background: white;
   padding: 5%;
 }
-.button-div {
+.vertical__contents {
+  margin-bottom: 8%;
+  margin-left: -10%;
+  padding: 5%;
+  background-color: white;
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 28px;
+}
+.start {
   width: 100%;
   text-align: center;
   margin-top: 10%;
 }
-.lets-go {
+.start__letsgo {
   background-color: white;
   border: 3px solid #f9be02;
   border-radius: 5px;
@@ -34,7 +43,7 @@
   font-size: 20px;
 }
 
-.circles-div {
+.vertical__contents__circles {
   height: 30px;
   shape-outside: padding-box;
   font-family: Raleway;
@@ -46,16 +55,8 @@
   padding-top: 5%;
   padding-left: 0%;
 }
-.div-contents {
-  margin-bottom: 8%;
-  margin-left: -10%;
-  padding: 5%;
-  background-color: white;
-  font-family: Raleway;
-  font-size: 17px;
-  line-height: 28px;
-}
-.circle {
+
+.vertical__contents__circles__circle {
   width: 39px;
   height: 39px;
   text-align: center;
@@ -68,16 +69,16 @@
   display: inline-block;
   color: white;
 }
-.numberCircle1 {
+.vertical__contents__circles__numberCircle1 {
   background: #3fcfad;
 }
-.numberCircle2 {
+.vertical__contents__circles__numberCircle2 {
   background: #f9be02;
 }
 
-.numberCircle3 {
+.vertical__contents__circles__numberCircle3 {
   background: #e23724;
 }
-.span-style {
+.vertical__contents__circles__span {
   margin-left: 5%;
 }
