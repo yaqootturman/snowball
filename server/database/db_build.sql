@@ -1,9 +1,8 @@
 BEGIN;
 
-  DROP TABLE IF EXISTS user, pledge, pledge_to_user, category, pledge_pros_cons, pledge_instructions, pledge_resources, pledge_references
-    CASCADE;
+  DROP TABLE IF EXISTS "user", pledge, pledge_to_user, category, pledge_pros_cons, pledge_instructions, pledge_resources, pledge_references CASCADE;
 
-CREATE TABLE user
+CREATE TABLE "user"
 (
     user_id serial primary key ,
     first_name VARCHAR(100) ,
@@ -27,7 +26,8 @@ CREATE TABLE pledge
 CREATE TABLE pledge_to_user
 (
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
-    FOREIGN KEY (user_id) REFERENCES user (user_id),    bledge_name TEXT
+    FOREIGN KEY (user_id) REFERENCES "user" (user_id),  
+      pledge_name TEXT
 );
  
 
