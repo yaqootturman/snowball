@@ -4,17 +4,20 @@ import React, { Component } from 'react'
 
 class Footer extends Component {
   Home =()=>{
-  const { history } = this.props
-  history.push('/home')
+  // const { history } = this.props
+  // history.push('/home')
+  console.log("this should route to home page ")
 }
 Actions =()=>{
-  const { history } = this.props
-  history.push('/dashboard')
+  // const { history } = this.props
+  // history.push('/dashboard')
+  console.log("this should route to dashboard page ")
 }
 
 Info =()=>{
-  const { history } = this.props
-  history.push('/information')
+  // const { history } = this.props
+  // history.push('/information')
+  console.log("this should route to information page ")
 }
 
   render() {
