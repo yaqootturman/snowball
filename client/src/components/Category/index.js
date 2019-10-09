@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import './style.css'
 import axios from "axios"
 
 class Category extends Component {
@@ -26,19 +27,26 @@ class Category extends Component {
     const { data } = this.state.details
     return (
       <div>
+        <h1 className="dashboard__title">Action Dashboard</h1>
         {!data ? (
           <h1>Loading</h1>
-        ) : (
-            data.map(item => {
-              return (
-                <div onClick={this.moveToCategorActionPage}>
-                  <img src={item.img} />
-                  <p>{item.name}</p>
-                </div>
-              )
-            })
-          )}
-      </div>
+        ) :
+          (
+            <div className="category">
+              {data.map((item, i) => {
+                return (
+
+                  <div className="category__dashboardAction" onClick={this.moveToCategorActionPage} key={i}>
+                    <img className="category__dashboardAction__image" src={item.img} alt={item.name} />
+                    <p className="category__dashboardAction__title" >{item.name}</p>
+                  </div>
+
+                )
+              })}
+            </div>
+          )
+        }
+      </div >
     )
   }
 }
