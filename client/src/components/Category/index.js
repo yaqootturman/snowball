@@ -6,28 +6,38 @@ class Category extends Component {
     details: []
   }
   componentDidMount = () => {
-    console.log("hii")
-
     axios.get(`/api/dashboard`).then(({ data }) => {
-      console.log("data", data)
-
       this.setState({
         details: data
       })
-      console.log("details", this.state.details.data[0].img)
+    })
+  }
+
+  moveToCategorActionPage = () => {
+    const { history } = this.props
+
+    history.push({
+      pathname: "/dashboard/actionCategory",
+      data: this.state.details
     })
   }
 
   render() {
     const { data } = this.state.details
-
     return (
       <div>
         {!data ? (
           <h1>Loading</h1>
         ) : (
-          <img src={this.state.details.data[0].img} />
-        )}
+            data.map(item => {
+              return (
+                <div onClick={this.moveToCategorActionPage}>
+                  <img src={item.img} />
+                  <p>{item.name}</p>
+                </div>
+              )
+            })
+          )}
       </div>
     )
   }
