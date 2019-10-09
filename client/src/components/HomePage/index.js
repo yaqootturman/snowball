@@ -8,11 +8,15 @@ class HomePage extends Component {
   }
   componentDidMount() {
     const userId = 1
-    axios.get(`/api/home/${userId}`).then(result => console.log('axios result', result.data))
+    axios.get(`/api/home/${userId}`).then(({ data }) => {
+      this.setState({ pledges: data })
+      console.log(data, 'data')
+    })
       .catch(error => console.log('axios error', error))
   }
   render() {
-    const pledges = this.state
+    const { pledges } = this.state
+
     return (
       <React.Fragment>
         <h1>home</h1>
