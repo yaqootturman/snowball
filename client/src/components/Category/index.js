@@ -17,7 +17,7 @@ class Category extends Component {
     const { history } = this.props
 
     history.push({
-      pathname: "/dashboard/actionCategory",
+      pathname: "/dashboard/action-category",
       data: this.state.details
     })
   }
