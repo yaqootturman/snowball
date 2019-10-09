@@ -9,17 +9,17 @@
     background: #F7F7F7;
 }
 
-.footer-element img {
+.footer_element img {
     width: 40px;
     margin: auto;
 }
 
-.footer-element {
+.footer_element {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
 }
 
-.footer-element p {
+.footer_element p {
     margin: 5px auto 10px auto;
 }

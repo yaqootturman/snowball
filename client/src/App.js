@@ -1,25 +1,24 @@
 import './App.css';
-import Footer from './components/Footer';
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 
 
 const App = () => {
- 
-return (
+
+  return (
 
 
-  <div className="App">
+    <div className="App">
+
       <Router>
-  <React.Fragment>
-    <Route exact path='/' component={LandingPage} />
-  </React.Fragment>
-</Router>
+        <React.Fragment>
+          <Route exact path='/' component={ LandingPage } />
+        </React.Fragment>
+      </Router>
 
-  <Footer  />
-  </div>
-);
+    </div>
+  );
 }
 
 export default App
