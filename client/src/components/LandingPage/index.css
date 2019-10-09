@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.vertical {
+  margin: 8%;
+  border-left: 3px solid #3fcfad;
+  display: inline-block;
+}
+.vertical__tiltle {
+  width: 80%;
+  display: block;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 39px;
+  margin-top: 30%;
+  margin-left: -10%;
+  background: white;
+  padding: 5%;
+}
+.vertical__contents {
+  margin-bottom: 8%;
+  margin-left: -10%;
+  padding: 5%;
+  background-color: white;
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 28px;
+}
+.start {
+  width: 100%;
+  text-align: center;
+  margin-top: 10%;
+}
+.start__letsgo {
+  background-color: white;
+  border: 3px solid #f9be02;
+  border-radius: 5px;
+  width: 134px;
+  height: 43px;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.vertical__contents__circles {
+  height: 30px;
+  shape-outside: padding-box;
+  font-family: Raleway;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 2%;
+  width: 100%;
+  padding-top: 5%;
+  padding-left: 0%;
+}
+
+.vertical__contents__circles__circle {
+  width: 39px;
+  height: 39px;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 25px;
+  line-height: 29px;
+  font-weight: bold;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  display: inline-block;
+  color: white;
+}
+.vertical__contents__circles__numberCircle1 {
+  background: #3fcfad;
+}
+.vertical__contents__circles__numberCircle2 {
+  background: #f9be02;
+}
+
+.vertical__contents__circles__numberCircle3 {
+  background: #e23724;
+}
+.vertical__contents__circles__span {
+  margin-left: 5%;
+}
+@media (max-width: 360px) {
+  .vertical__contents__circles {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
