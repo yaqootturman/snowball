@@ -3,7 +3,7 @@ const dbConnection = require('./../db_connection')
 const getCategoryPledges = categoryID => {
   return dbConnection
     .query(
-      'select * from pledge where category_id = $1',
+      'SELECT * FROM pledge WHERE category_id = $1',
       [categoryID]
     )
 }

@@ -21,8 +21,8 @@ class CategoryPledges extends React.Component {
     return (
       <>
         {
-          !pledge_info.length ? <h1>Loading...</h1> : pledge_info.map(element => {
-            return <PledgeItem {...element} />
+          !pledge_info.length ? <h1>Loading...</h1> : pledge_info.map((element, index) => {
+            return <PledgeItem {...element} key={index} />
           })
         }
 
