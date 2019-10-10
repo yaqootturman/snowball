@@ -12,7 +12,6 @@ const App = () => {
       <Router>
         <React.Fragment>
           <Route exact path='/' component={ LandingPage } />
-          <Route exact path='/userId/pledgeId/addPledge' component={ PledgeConfirmPage } />
         </React.Fragment>
       </Router>
     </div>
