@@ -27,9 +27,9 @@ class Footer extends Component {
     return (
       <div className="footer">
 
-        <section className="footer_element" onClick={ this.Home }><img src="https://img.icons8.com/material-sharp/48/000000/home-page.png" alt="Home" /><p>Home</p></section>
-        <section className="footer_element" onClick={ this.Actions } ><img src="https://img.icons8.com/ios-glyphs/60/000000/keypad.png" alt="Actions" /><p>Actions</p></section>
-        <section className="footer_element" onClick={ this.Info } ><img src="https://img.icons8.com/android/48/000000/info.png" alt="info" /><p>Info</p></section>
+        <section className="footer_footer-element" onClick={ this.Home }><img src="https://img.icons8.com/material-sharp/48/000000/home-page.png" alt="Home" /><p>Home</p></section>
+        <section className="footer_footer-element" onClick={ this.Actions } ><img src="https://img.icons8.com/ios-glyphs/60/000000/keypad.png" alt="Actions" /><p>Actions</p></section>
+        <section className="footer_footer-element" onClick={ this.Info } ><img src="https://img.icons8.com/android/48/000000/info.png" alt="info" /><p>Info</p></section>
 
       </div>
     )
