@@ -6,8 +6,8 @@ import NumberOfPledges from '../NumberOfPledges'
 const DashboardPage = props => {
   return (
     <>
-      <Category {...props} />
       <NumberOfPledges />
+      <Category {...props} />
     </>
   )
 }

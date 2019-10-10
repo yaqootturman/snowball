@@ -20,12 +20,13 @@ class NumberOfPledges extends Component {
   render() {
     const { data } = this.state.details
     return (
-      <div>
+      <div className="container">
+        <h1 className="container__dashboard__title">Action Dashboard</h1>
         {!data ? (
           <h1>Loading</h1>
         ) :
           (
-            <div className="numberOfPledges">{data.length}</div>
+            <div className="container__numberOfPledges">{data.length}</div>
           )
         }
       </div >

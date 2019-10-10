@@ -27,7 +27,7 @@ class Category extends Component {
     const { data } = this.state.details
     return (
       <div>
-        <h1 className="dashboard__title">Action Dashboard</h1>
+        {/* <h1 className="dashboard__title">Action Dashboard</h1> */}
         {!data ? (
           <h1>Loading</h1>
         ) :
@@ -35,10 +35,12 @@ class Category extends Component {
             <div className="category">
               {data.map((item, i) => {
                 return (
+
                   <div className="category__dashboardAction" onClick={this.moveToCategorActionPage} key={i}>
                     <img className="category__dashboardAction__image" src={item.img} alt={item.name} />
                     <p className="category__dashboardAction__title" >{item.name}</p>
                   </div>
+
                 )
               })}
             </div>
