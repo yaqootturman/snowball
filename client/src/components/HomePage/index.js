@@ -16,11 +16,17 @@ class HomePage extends Component {
   }
   render() {
     const { pledges } = this.state
-
+    console.log(pledges, 'pledges list')
+    console.log(pledges[0], 'one pledge')
     return (
       <React.Fragment>
-        <h1>home</h1>
-        <UserPledges userPledge={pledges[0]} />
+        <h1>My Pledges</h1>
+        <h5>TOTAL PLEDGES{pledges.length}</h5>
+
+        {!pledges.length ? <h2>Loading...</h2> : <UserPledges userPledge={pledges[1]} />}
+
+
+
       </React.Fragment>
     )
   }
