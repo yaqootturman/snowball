@@ -1,0 +1,37 @@
+*{
+  font-family: Raleway;
+}
+.pledge--div{
+  position: relative;
+  margin:10%;
+  padding-top:6%;
+}
+.pledge--div__img{
+  position: relative;
+  width:99%;
+  height: 48%;
+  top:0;
+  left:0;
+  line-height: 39px;
+}
+.pledge--div__title{
+  position: absolute;
+  top: 65%; 
+  left: 3%;
+  font-weight: 900;
+  color:white;
+  font-size:20px;
+}
+.pledge--div__description{
+  font-size: 15px;
+  font-weight: medium;
+}
+.pledge--div__already{
+  font-weight: bold;
+
+}
+.pledge--div__number{
+  color:#0A7FA4;
+  font-weight: bold;
+
+}
