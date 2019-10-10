@@ -1,8 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import PledgeItem from './../PledgItem/PledgeItem'
-import './style.css'
-// there  is an a problem with db at pledge table
+
 class CategoryPledges extends React.Component {
   state = {
     pledge_info: [], // i used an array to store values of object cause its more difficult if i use each name or an object inside state object
