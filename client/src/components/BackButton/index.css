@@ -1,0 +1,26 @@
+.Back_button {
+  position: absolute;
+  margin: 5% auto auto 5%;
+  height: 34px;
+  width: 88px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid rgb(192, 191, 191);
+}
+
+.Back_button_inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Back_button_inner img {
+  width: 14px;
+  height: 14px;
+}
+
+.Back_button_inner p {
+  color: #67675B;
+  padding-left: 0px;
+  font-weight: 5px;
+}
