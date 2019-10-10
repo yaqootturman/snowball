@@ -9,7 +9,7 @@ const UserPledge = ({ userPledge: { title, description, number_of_enrollement, i
       <img className="user-pledge__image" alt="pledge photo" src={img} />
       <h5 className="user-pledge__title">{title}</h5>
       <p className="user-pledge__description">{description}</p>
-      <span className="user-pledge__enrollements">{number_of_enrollement}</span>
+      <div className="user-pledge__enrollements">{number_of_enrollement}</div>
 
     </div>
   )
