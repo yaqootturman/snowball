@@ -8,9 +8,9 @@ class BackButton extends Component {
   render() {
     return (
       <div>
-        <button className="Back_button" onClick={ ()=>{
+        <button className="Back__button" onClick={ ()=>{
           this.goBack();
-        } } > <div className="Back_button_inner"><img src="https://i.ibb.co/47c20FN/Polygon.png" alt="arrow-back" /><p>BACK</p></div></button>
+        } } > <div className="Back__button-inner"><img src="https://i.ibb.co/47c20FN/Polygon.png" alt="arrow-back" /><p>BACK</p></div></button>
       </div>
     )
   }

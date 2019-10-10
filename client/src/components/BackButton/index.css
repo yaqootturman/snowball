@@ -1,4 +1,4 @@
-.Back_button {
+.Back__button {
   position: absolute;
   margin: 5% auto auto 5%;
   height: 34px;
@@ -8,18 +8,18 @@
   border: 1px solid rgb(192, 191, 191);
 }
 
-.Back_button_inner {
+.Back__button-inner {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.Back_button_inner img {
+.Back__button-inner img {
   width: 14px;
   height: 14px;
 }
 
-.Back_button_inner p {
+.Back__button-inner p {
   color: #67675B;
   padding-left: 0px;
   font-weight: 5px;
