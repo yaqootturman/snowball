@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    justify-content: space-around;
+    background: #F7F7F7;
+}
+
+.footer_footer-element img {
+    width: 40px;
+    margin: auto;
+}
+
+.footer_footer-element {
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_footer-element p {
+    margin: 5px auto 10px auto;
+}
