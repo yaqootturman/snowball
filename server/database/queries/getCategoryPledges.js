@@ -6,8 +6,6 @@ const getCategoryPledges = categoryID => {
       'select * from pledge where category_id = $1',
       [categoryID]
     )
-    .then(res => res.rows)
-    .catch(err => console.log(err))
 }
 
 module.exports = getCategoryPledges

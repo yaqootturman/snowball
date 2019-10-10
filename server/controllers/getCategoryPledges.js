@@ -1,8 +1,8 @@
 const getCategoryPledges = require('./../database/queries/getCategoryPledges')
 
 exports.getCategoryPledges = (req, res) => {
-  // const { pharmacyID } = req
-  getCategoryPledges(1)
-    .then(data => res.json(data))
+  const { categoryID } = req.params
+  getCategoryPledges(categoryID)
+    .then(data => res.json(data.rows))
     .catch(() => res.status(500).json({ err: ' Error' }))
 }
