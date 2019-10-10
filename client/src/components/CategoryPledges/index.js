@@ -10,7 +10,8 @@ class CategoryPledges extends React.Component {
 
   componentDidMount() {
     const { pledge_info, loading } = this.state
-    axios.get('/api/action-category/1').then(Response => {
+    const category_id = 1; //this should change to take id from props
+    axios.get(`/api/action-category/${category_id}`).then(Response => {
       const pledge_info_obj = Response.data[0]
       const pledge_info = Object.values(pledge_info_obj)
       this.setState({ loading: false, pledge_info })
@@ -25,7 +26,7 @@ class CategoryPledges extends React.Component {
     } else {
       return (
         <>
-          <h1>title{pledge_info[2]}</h1>
+          <h1>{pledge_info[2]}</h1>
           <p>description{pledge_info[3]}</p>
           <p>number_of_enrollement{pledge_info[4]}</p>
           <img src={pledge_info[5]} />
