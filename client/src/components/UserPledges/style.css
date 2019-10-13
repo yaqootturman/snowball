@@ -15,13 +15,13 @@
 
 .user-pledge__title{
   position: absolute;
-  bottom: 20px;
+  bottom: 57px;
   left: 10px;
-  font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  line-height: 0px;
-  color: #FFFFFF;  
+  color: #FFFFFF;
+  margin-block-start: 0;
+  margin-block-end: 0; 
 }
 
 .user-pledge__description{
@@ -29,7 +29,6 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 15px;
