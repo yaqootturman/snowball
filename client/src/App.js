@@ -1,20 +1,17 @@
 import './App.css';
 import React from 'react'
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
-const App = () => {
-
-  return (
+import CategoryPledges from './components/CategoryPledges'
 
 
-    <div className="App">
-      <Router>
-        <React.Fragment>
-          <Route exact path='/' component={ LandingPage } />
-        </React.Fragment>
-      </Router>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <React.Fragment>
+      <Route exact path='/' component={LandingPage} />
+      <Route path='/dashboard/action-category/:category_id' component={CategoryPledges} />
+    </React.Fragment>
+  </Router>
+)
 
 export default App
