@@ -39,7 +39,7 @@ class NumberOfPledges extends Component {
         ) :
           (
             <div className="container__numberOfPledges">
-              {!data2 ? <h1>loading</h1> : (<div><p>{data2.length}/{data2.length}</p> <h3 className="container__pledges">PLEDGES</h3></div>)}
+              {!data2 ? <h1>loading</h1> : (<div><p>{data.length}/{data2.length}</p> <h3 className="container__pledges">PLEDGES</h3></div>)}
             </div>
           )
         }
