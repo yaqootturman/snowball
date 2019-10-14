@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css'
 
 const UserPledge = ({ userPledge: { title, description, number_of_enrollement, img } }) => {
-  console.log(img, 'title')
 
   return (
     <div className="user-pledge">
@@ -11,9 +10,6 @@ const UserPledge = ({ userPledge: { title, description, number_of_enrollement, i
       <span className="user-pledge__description">{description}</span>
       <div className="user-pledge__enrollements"><img className="user-pledge__enrollements__image" alt="people" src="https://imgur.com/qw15p7I.png" />
         <p className="user-pledge__enrollements__text">{number_of_enrollement}</p></div>
-
-
-
     </div>
   )
 }
