@@ -10,6 +10,6 @@ router.get('/api/dashboard', getCategoryInfo.get)
 router.get('/api/dashboard_number_of_pledges/:userId', getNumberOfUserPledges.get)
 router.get('/api/dashboard_number_of_all_pledges', getAllPledges.get)
 router.get('/api/dasboard_pledges_in_category/:userId', getPledgesInCategory.get)
-router.get('/api/dashboard_pledges_category/:categoryName', getNumberPledgesCategory.get)
+router.get('/api/dashboard_pledges_category', getNumberPledgesCategory.get)
 
 module.exports = router
