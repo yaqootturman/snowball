@@ -7,38 +7,28 @@ class Category extends Component {
     details: [],
     pledgesCategory: [],
     name: "",
-    categories: []
+    categories: [],
+
   }
   componentDidMount = () => {
     const userId = 1
     axios.get(`/api/dashboard`).then(({ data }) => {
-      console.log("dash", data);
 
       this.setState({
         details: data
       })
-      // this.fetchPledge()
     })
     axios.get(`/api/dasboard_pledges_in_category/${userId}`).then(({ data }) => {
-      console.log("hi", data);
 
       this.setState(
         { pledgesCategory: data })
     })
 
-
-  }
-
-  fetchPledge = (categoryName) => {
-    var len = 0;
-    axios.get(`/api/dashboard_pledges_category/${categoryName}`)
+    axios.get(`/api/dashboard_pledges_category`)
       .then(({ data }) => {
-        console.log('dgdsg', data.data4[0]);
-        console.log('lll', data.data4.length)
-        return len = data.data4.length
 
+        this.setState({ categories: data })
       })
-      .then(len => { return len })
 
 
   }
@@ -55,10 +45,21 @@ class Category extends Component {
   }
 
   numberOfPledges = (arr1, item) => {
-
     let arr2 = arr1.filter((element) => {
       if (element.name === item) {
         return element.pledge_name
+      }
+    })
+    return arr2.length
+  }
+
+  numberOfPledges2 = (arr1, item) => {
+
+
+    let arr2 = arr1.filter((element) => {
+
+      if (element.category_id === item) {
+        return element.pledge_id
       }
     })
     return arr2.length
@@ -80,7 +81,7 @@ class Category extends Component {
                   <div className="category__dashboardAction" onClick={this.moveToCategorActionPage} key={i}>
                     <img className="category__dashboardAction__image" src={item.img} alt={item.name} />
                     <p className="category__dashboardAction__title" >{item.name} </p>
-                    <div> {!data3 ? <h3>loading</h3> : <div>{this.numberOfPledges(data3, item.name)}/{this.fetchPledge(item.name)} </div>}</div>
+                    <div> {!data3 ? <h3>loading</h3> : <div>{this.numberOfPledges(data3, item.name)}/{!data4 ? <h2>loading</h2> : <p>{this.numberOfPledges2(data4, item.category_id)}</p>} </div>}</div>
                   </div>
 
                 )
