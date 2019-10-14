@@ -30,13 +30,16 @@ class Category extends Component {
   }
 
   fetchPledge = (categoryName) => {
-    axios.get(`/api/dashboard_pledges_category/${categoryName}`).then(({ data }) => {
-      console.log("hiiiii", data);
-      this.setState(
-        { categories: data })
-    })
+    var len = 0;
+    axios.get(`/api/dashboard_pledges_category/${categoryName}`)
+      .then(({ data }) => {
+        console.log('dgdsg', data.data4[0]);
+        console.log('lll', data.data4.length)
+        return len = data.data4.length
 
-    return this.state.categories.length
+      })
+      .then(len => { return len })
+
 
   }
 
