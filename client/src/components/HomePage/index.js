@@ -21,7 +21,7 @@ class HomePage extends Component {
         <h1 className="home-title">My Pledges</h1>
         <h5 className="home-title__subtitle">TOTAL PLEDGES: {pledges.length}</h5>
 
-        {!pledges.length ? <h2>Loading...</h2> :
+        {!pledges.length ? <h2>  Loading...</h2> :
           pledges.map(onePledge => {
             return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
           })
