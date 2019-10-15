@@ -23,7 +23,7 @@ class HomePage extends Component {
 
         {!pledges.length ? <h2>Loading...</h2> :
           pledges.map(onePledge => {
-            return <UserPledges userPledge={onePledge} />
+            return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
           })
         }
       </React.Fragment>
