@@ -26,7 +26,7 @@ class NumberOfPledges extends Component {
 
   render() {
     const { data } = this.state.details
-    const { data2 } = this.state.allPledges
+    const { allPledges } = this.state.allPledges
 
 
 
@@ -39,7 +39,7 @@ class NumberOfPledges extends Component {
         ) :
           (
             <div className="container-div__numberOfPledges">
-              {!data2 ? <h1>loading</h1> : (<div ><p className="container-div__numberOfPledges__numbers">{data.length}/{data2.length}</p> <h3 className="container-div__pledges">PLEDGES</h3></div>)}
+              {!allPledges ? <h1>loading</h1> : (<div ><p className="container-div__numberOfPledges__numbers">{data.length}/{allPledges.length}</p> <h3 className="container-div__pledges">PLEDGES</h3></div>)}
             </div>
           )
         }

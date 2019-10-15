@@ -2,6 +2,6 @@ const getNumberPledgesCategory = require('./../database/queries/getNumberPledges
 
 exports.get = (req, res) => {
   getNumberPledgesCategory()
-    .then(data4 => res.json({ data4 }))
+    .then(pledgesCategory => res.json({ pledgesCategory }))
     .catch(() => res.status(500).json({ err: 'Error' }))
 }
