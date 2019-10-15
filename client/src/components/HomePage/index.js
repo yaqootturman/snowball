@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserPledges from '../UserPledges'
+import Footer from '../Footer'
 import axios from 'axios'
 import './style.css'
 
@@ -15,6 +16,7 @@ class HomePage extends Component {
       .catch(error => console.log('axios error', error))
   }
   render() {
+
     const { pledges } = this.state
     return (
       <React.Fragment>
@@ -26,6 +28,7 @@ class HomePage extends Component {
             return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
           })
         }
+        <Footer />
       </React.Fragment>
     )
   }
