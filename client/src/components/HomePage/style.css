@@ -3,7 +3,7 @@
     margin-left:18px;
 }
 
-.home-title__subtitle{
+.home-subtitle{
   box-sizing: border-box;
   margin-left:18px;
 }
@@ -14,8 +14,8 @@
     margin-left:40px;
 }
 
-.home-title__subtitle{
-  margin-left:40px;
-}
+  .home-subtitle{
+    margin-left:40px;
+  }
 
 }
