@@ -145,3 +145,25 @@
 
 
 
+@media (min-width: 768px) {
+  .user-pledge{
+  width:100%;
+  height: 45%; 
+}
+.user-pledge__enrollements{
+  top: 75%;
+  right: 3.5%;
+  width: 70px;
+  height: 70px;
+}
+.user-pledge__title{
+  bottom: 34%;
+  font-size: 26px;
+}
+.user-pledge__description{
+    width: 78%;
+    bottom: 10%;
+    font-size: 21px;
+    line-height: 25px;
+}
+}

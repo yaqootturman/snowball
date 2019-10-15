@@ -7,3 +7,15 @@
   box-sizing: border-box;
   margin-left:18px;
 }
+
+
+@media (min-width: 768px) {
+  .home-title{
+    margin-left:40px;
+}
+
+.home-title__subtitle{
+  margin-left:40px;
+}
+
+}
