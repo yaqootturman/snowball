@@ -21,7 +21,7 @@ class HomePage extends Component {
     return (
       <React.Fragment>
         <h1 className="home-title">My Pledges</h1>
-        <h5 className="home-title__subtitle">TOTAL PLEDGES: {pledges.length}</h5>
+        <h5 className="home-subtitle">TOTAL PLEDGES: {pledges.length}</h5>
 
         {!pledges.length ? <h2>  Loading...</h2> :
           pledges.map(onePledge => {
