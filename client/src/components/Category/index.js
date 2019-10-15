@@ -5,12 +5,14 @@ import axios from "axios"
 class Category extends Component {
   state = {
     details: [],
-    pledgesCategory: [],
+    userPledges: [],
     name: "",
     categories: [],
 
   }
   componentDidMount = () => {
+
+    // request to get all categories
     const userId = 1
     axios.get(`/api/dashboard`).then(({ data }) => {
 
@@ -18,18 +20,18 @@ class Category extends Component {
         details: data
       })
     })
-
+    // request to get pledges that user make it in all categories
     axios.get(`/api/dasboard_pledges_in_category/${userId}`).then(({ data }) => {
       this.setState(
-        { pledgesCategory: data })
+        { userPledges: data })
     })
-
+    // request to get all pledges in each category in general 
     axios.get(`/api/dashboard_pledges_category`)
       .then(({ data }) => {
         this.setState({ categories: data })
       })
   }
-
+  // function to push the data to category page
   moveToCategorActionPage = () => {
     const { history } = this.props
 
@@ -39,6 +41,7 @@ class Category extends Component {
     })
   }
 
+  // function to calculate all pledges that user make it in category by filter
   numberOfPledges = (arr1, item) => {
     let arr2 = arr1.filter((element) => {
       if (element.name === item) {
@@ -48,6 +51,7 @@ class Category extends Component {
     return arr2.length
   }
 
+  //function to calculate all pledges in the category by filtering the array
   numberOfPledges2 = (arr1, item) => {
     let arr2 = arr1.filter((element) => {
       if (element.category_id === item) {
@@ -59,11 +63,11 @@ class Category extends Component {
 
   render() {
     const { data } = this.state.details
-    const { data3 } = this.state.pledgesCategory
-    const { data4 } = this.state.categories
+    const { userPledges } = this.state.userPledges
+    const { pledgesCategory } = this.state.categories
     return (
       <switch>
-        {!data || !data3 ? (
+        {!data || !userPledges ? (
           <h1>Loading</h1>
         ) :
           (
@@ -73,7 +77,7 @@ class Category extends Component {
                   <div className="category-div__dashboard-action" onClick={this.moveToCategorActionPage} key={i}>
                     <img className="category-div__dashboard-action__image" src={item.img} alt={item.name} />
                     <p className="category-div__dashboard-action__title" >{item.name} </p>
-                    <div> {!data3 ? <h3>loading</h3> : <div>{this.numberOfPledges(data3, item.name)}/{!data4 ? <h2>loading</h2> : <p>{this.numberOfPledges2(data4, item.category_id)}</p>} </div>}</div>
+                    <div> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.name)}/{!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>} </div>}</div>
                   </div>
 
                 )
