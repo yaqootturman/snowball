@@ -31,15 +31,15 @@ class NumberOfPledges extends Component {
 
 
     return (
-      <div className="container">
-        <h1 className="container__dashboard__title">Action Dashboard</h1>
+      <div className="container-div">
+        <p className="container-div__dashboard__title">Action Dashboard</p>
 
         {!data ? (
           <h1>Loading</h1>
         ) :
           (
-            <div className="container__numberOfPledges">
-              {!data2 ? <h1>loading</h1> : (<div><p>{data.length}/{data2.length}</p> <h3 className="container__pledges">PLEDGES</h3></div>)}
+            <div className="container-div__numberOfPledges">
+              {!data2 ? <h1>loading</h1> : (<div ><p className="container-div__numberOfPledges__numbers">{data.length}/{data2.length}</p> <h3 className="container-div__pledges">PLEDGES</h3></div>)}
             </div>
           )
         }
