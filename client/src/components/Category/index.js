@@ -18,22 +18,17 @@ class Category extends Component {
         details: data
       })
     })
-    axios.get(`/api/dasboard_pledges_in_category/${userId}`).then(({ data }) => {
 
+    axios.get(`/api/dasboard_pledges_in_category/${userId}`).then(({ data }) => {
       this.setState(
         { pledgesCategory: data })
     })
 
     axios.get(`/api/dashboard_pledges_category`)
       .then(({ data }) => {
-
         this.setState({ categories: data })
       })
-
-
   }
-
-
 
   moveToCategorActionPage = () => {
     const { history } = this.props
@@ -54,10 +49,7 @@ class Category extends Component {
   }
 
   numberOfPledges2 = (arr1, item) => {
-
-
     let arr2 = arr1.filter((element) => {
-
       if (element.category_id === item) {
         return element.pledge_id
       }
@@ -75,12 +67,12 @@ class Category extends Component {
           <h1>Loading</h1>
         ) :
           (
-            <div className="category">
+            <div className="category-div">
               {data.map((item, i) => {
                 return (
-                  <div className="category__dashboardAction" onClick={this.moveToCategorActionPage} key={i}>
-                    <img className="category__dashboardAction__image" src={item.img} alt={item.name} />
-                    <p className="category__dashboardAction__title" >{item.name} </p>
+                  <div className="category-div__dashboard-action" onClick={this.moveToCategorActionPage} key={i}>
+                    <img className="category-div__dashboard-action__image" src={item.img} alt={item.name} />
+                    <p className="category-div__dashboard-action__title" >{item.name} </p>
                     <div> {!data3 ? <h3>loading</h3> : <div>{this.numberOfPledges(data3, item.name)}/{!data4 ? <h2>loading</h2> : <p>{this.numberOfPledges2(data4, item.category_id)}</p>} </div>}</div>
                   </div>
 
