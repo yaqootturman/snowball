@@ -16,3 +16,7 @@ const UserPledge = ({ userPledge: { title, description, number_of_enrollement, i
 
 export default UserPledge
 
+
+
+
+
