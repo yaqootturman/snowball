@@ -17,7 +17,7 @@ class CategoryPledges extends React.Component {
   }
 
   render() {
-    const { pledge_info, loading } = this.state
+    const { pledge_info } = this.state
     return (
       <>
         {

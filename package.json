@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fack2/the-crowd.git"
+    "url": "https://github.com/fack2/the-crowd.git"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/fack2/the-crowd#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "concurrently": "^4.1.2",
     "env2": "^2.2.2",
     "express": "^4.17.1",
