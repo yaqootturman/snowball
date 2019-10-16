@@ -8,7 +8,7 @@ export class Congratulations extends Component {
   };
   redirectDashboard = () => {
     const { history } = this.props;
-    history.push("/dashboard/actionCategory");
+    history.push("/dashboard");
   };
   render() {
     return (
