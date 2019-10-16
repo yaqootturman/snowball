@@ -1,0 +1,21 @@
+.home-title{
+  box-sizing: border-box;
+    margin-left:18px;
+}
+
+.home-subtitle{
+  box-sizing: border-box;
+  margin-left:18px;
+}
+
+
+@media (min-width: 768px) {
+  .home-title{
+    margin-left:40px;
+}
+
+  .home-subtitle{
+    margin-left:40px;
+  }
+
+}

@@ -36,9 +36,9 @@ CREATE TABLE pledge
 );
 
 CREATE TABLE pledge_to_user
-( pledge_id INTEGER,
+(   pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
-     user_id INTEGER,
+    user_id INTEGER,
     FOREIGN KEY (user_id) REFERENCES "user" (user_id),
     pledge_name TEXT
 );
