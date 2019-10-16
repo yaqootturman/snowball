@@ -77,9 +77,12 @@ class Category extends Component {
                   <div className="category-div__dashboard-action" onClick={this.moveToCategorActionPage} key={i}>
                     <img className="category-div__dashboard-action__image" src={item.img} alt={item.name} />
                     <p className="category-div__dashboard-action__title" >{item.name} </p>
-                    <div> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.name)}/{!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>} </div>}</div>
+                    <span className="category-div__dashboard-action__numbers">
+                      <div className="category-div__dashboard-action__first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.name)}/ </div>}</div>
+                      <div>
+                        {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
+                      </div></span>
                   </div>
-
                 )
               })}
             </div>

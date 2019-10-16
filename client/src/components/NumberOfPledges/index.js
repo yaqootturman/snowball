@@ -32,14 +32,14 @@ class NumberOfPledges extends Component {
 
     return (
       <div className="container-div">
-        <p className="container-div__dashboard__title">Action Dashboard</p>
+        <div className="container-div__dashboard" ><h1 className="container-div__dashboard__title">Action Dashboard</h1></div>
 
         {!data ? (
-          <h1>Loading</h1>
+          <h2>Loading</h2>
         ) :
           (
             <div className="container-div__numberOfPledges">
-              {!allPledges ? <h1>loading</h1> : (<div ><p className="container-div__numberOfPledges__numbers">{data.length}/{allPledges.length}</p> <h3 className="container-div__pledges">PLEDGES</h3></div>)}
+              {!allPledges ? <h1>loading</h1> : (<div >{data.length}/{allPledges.length}<p className="container-div__numberOfPledges__pledges">PLEDGES</p></div>)}
             </div>
           )
         }
