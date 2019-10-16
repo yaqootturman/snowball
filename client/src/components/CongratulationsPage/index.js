@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import "./index.css";
 import Footer from "../Footer";
 export class Congratulations extends Component {
+
+    componentDidMount(){
+
+      console.log(this.props)
+    }
+
+
   redirectInformation = () => {
     const { history } = this.props;
     history.push("/information");

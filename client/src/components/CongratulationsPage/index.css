@@ -1,27 +1,25 @@
 .congratulations__page {
-  display: flex;
-  background: #f9be02;
-  flex-direction: column;
-  height: 100vh;
-  margin-bottom: 10%;
+  display: grid;
+  background: #f9be02 ;
+  height: -webkit-fill-available;
 }
 
 .congratulations__page-congratulations {
-  margin: 8% auto 0% 10%;
+  margin: 3% auto 0% 10%;
   font-size: 25px;
   font-family: Raleway;
   font-weight: 600;
 }
 
 .congratulations__page-doingAmazing {
-  margin: 2% auto 2% 10%;
+  margin: 3% auto 2% 10%;
   font-size: 35px;
   font-family: Raleway;
   font-weight: bold;
 }
 
 .congratulations__page-motivation {
-  margin: 0% auto 2% 10%;
+  margin: 1% auto 2% 10%;
   width: 80vw;
   font-family: Raleway;
   font-weight: bold;
@@ -29,14 +27,14 @@
 }
 
 .congratulations__page-tips {
-  margin: 0% auto 2% 10%;
+  margin: 1% auto 1% 10%;
   font-family: Raleway;
   font-weight: bold;
   font-size: 14px;
 }
 
 .congratulations__page li {
-  margin: 0% auto 2% 10%;
+  margin: 1% auto 1% 10%;
   font-family: Raleway;
   font-weight: bold;
   font-size: 16px;
@@ -45,7 +43,7 @@
 .congratulations__page-buttons {
   display: flex;
   flex-direction: column;
-  margin: 3% auto auto auto;
+  margin: 1% auto auto auto;
 }
 
 .congratulations__page-buttons-choices {
@@ -75,13 +73,11 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 1366px), screen and (max-height: 568px) {
+@media screen and (max-width:1330px){
     .congratulations__page {
-      display: flex;
-      background: #f9be02;
-      flex-direction: column;
-      height: 100vh;
-      margin-bottom: 30%;
+      display: grid;
+      background: #f9be02 ;
+      height: -webkit-fill-available;
       
     }
     .congratulations__page-congratulations {
@@ -97,20 +93,20 @@
       font-weight: bold;
     }
     .congratulations__page-motivation {
-      margin: 3% auto 2% 10%;
+      margin: 1% auto 2% 10%;
       width: 80vw;
       font-family: Raleway;
       font-weight: bold;
       font-size: 19px;
     }
     .congratulations__page-tips {
-      margin: 3% auto 2% 10%;
+      margin: 1% auto 1% 10%;
       font-family: Raleway;
       font-weight: bold;
       font-size: 14px;
     }
     .congratulations__page li {
-      margin: 2% auto 2% 10%;
+      margin: 1% auto 0% 10%;
       font-family: Raleway;
       font-weight: bold;
       font-size: 14px;
@@ -118,13 +114,13 @@
     .congratulations__page-buttons {
       display: flex;
       flex-direction: column;
-      margin: 3% auto auto auto;
+      margin: 2% auto auto auto;
     }
     .congratulations__page-buttons-choices {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 5%;
+      margin-bottom: 1%;
     }
     .congratulations__page-buttons-choices button {
         width: 220px;
@@ -147,13 +143,13 @@
       }
   }
 
-@media screen and (max-width: 992px), screen and (max-height: 568px) {
+
+
+@media screen and (max-width: 720px) {
   .congratulations__page {
-    display: flex;
-    background: #f9be02;
-    flex-direction: column;
-    height: 95vh;
-    margin-bottom: 10%;
+    display: grid;
+    background: #f9be02 ;
+    height: -webkit-fill-available;
   }
   .congratulations__page-congratulations {
     margin: 10% auto 0% 10%;
@@ -175,83 +171,13 @@
     font-size: 16px;
   }
   .congratulations__page-tips {
-    margin: 3% auto 2% 10%;
+    margin: 1% auto 1% 10%;
     font-family: Raleway;
     font-weight: bold;
     font-size: 12px;
   }
   .congratulations__page li {
-    margin: 2% auto 2% 10%;
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 12px;
-  }
-  .congratulations__page-buttons {
-    display: flex;
-    flex-direction: column;
-    margin: 3% auto auto auto;
-  }
-  .congratulations__page-buttons-choices {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5%;
-  }
-  .congratulations__page-buttons-choices button {
-    width: 151px;
-    height: 43px;
-    background: white;
-    border-radius: 10px;
-    border: white;
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .congratulations__page-buttons-share button {
-    width: 314px;
-    height: 37px;
-    background: #f9be02;
-    border: white 3px solid;
-    border-radius: 10px;
-    font-size: 12px;
-    font-weight: 600;
-  }
-}
-
-@media screen and (max-width: 644px), screen and (max-height: 568px) {
-  .congratulations__page {
-    display: flex;
-    background: #f9be02;
-    flex-direction: column;
-    height: 95vh;
-    margin-bottom: 20%;
-  }
-  .congratulations__page-congratulations {
-    margin: 20% auto 0% 10%;
-    font-size: 20px;
-    font-family: Raleway;
-    font-weight: 600;
-  }
-  .congratulations__page-doingAmazing {
-    margin: 20% auto 2% 10%;
-    font-size: 30px;
-    font-family: Raleway;
-    font-weight: bold;
-  }
-  .congratulations__page-motivation {
-    margin: 3% auto 2% 10%;
-    width: 80vw;
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .congratulations__page-tips {
-    margin: 15% auto 2% 10%;
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 12px;
-  }
-  .congratulations__page li {
-    margin: 2% auto 2% 10%;
+    margin: 1% auto 0% 10%;
     font-family: Raleway;
     font-weight: bold;
     font-size: 12px;
