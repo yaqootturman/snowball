@@ -1,7 +1,10 @@
 import React from 'react'
 import './style.css'
 const PledgeItem = props => {
-  const { element, history } = props
+  const { element } = props
+  //should git history to be 
+  // const { element, history } = props
+
   return (
     <div className="pledge-div">
       <img onClick={() => { console.log("history.push('')") }} alt={element.title} className="pledge-div__img" src={element.img} />
