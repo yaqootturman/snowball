@@ -1,15 +1,25 @@
 import React from "react"
+import AppContext from '../../UserContext';
+
 import axios from 'axios'
 class PledgePage extends React.Component {
+  static contextType = AppContext
+
   state = {
+    userPledges: [],
+    userPledges: [],
     pledgeInfo: [],
     pledgeInstructions: [],
     pledgeProsCons: [],
     pledgeResources: [],
-    pledgeReferences: []
+    pledgeReferences: [],
+    userExist: false
   }
 
   componentDidMount() {
+    const userPledges = this.context
+    this.setState({ userPledges })
+
     const { pledge_id } = this.props.location.state
 
     axios.get(`/api/action-category/pledge/${pledge_id}`).then(Response => {
@@ -27,11 +37,13 @@ class PledgePage extends React.Component {
   }
 
   render() {
-    const { data } = this.props.location.state
-    const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences } = this.state
+    const { pledge_id } = this.props.location.state
+
+    const { userPledges, pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, userExist } = this.state
 
     return (
       <>
+
         {
           !pledgeInfo.length ? <p>Loading...</p> :
             <>
