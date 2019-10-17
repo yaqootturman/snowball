@@ -27,7 +27,7 @@ class PledgePage extends React.Component {
   }
 
   render() {
-    const { data } = this.props.location.state
+    const { pledge_id } = this.props.location.state
     const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences } = this.state
 
     return (
