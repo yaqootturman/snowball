@@ -1,0 +1,117 @@
+.confirm__Page {
+  display: grid;
+  background: #3fcfad;
+  height: -webkit-fill-available;
+}
+
+.confirm__Page-letsConfirm {
+  margin: 10% auto 2% 10%;
+  font-weight: 600;
+  font-family: Raleway;
+  font-size: 15px;
+}
+
+.confirm__Page-confirmPledge {
+  margin: 1% auto 2% 10%;
+  font-weight: 500;
+  font-family: Raleway;
+  font-size: 30px;
+  width: 70%;
+}
+
+.confirm__Page-confirmButton {
+  margin: 0% auto 0% 10%;
+  width: 173px;
+  height: 44px;
+  border: #f9be02 3px solid;
+  border-radius: 10px;
+  font-family: Raleway;
+  font-weight: 550;
+  font-size: 15px;
+}
+
+.confirm__Page-unConfirm {
+  margin: 5% auto 5% 10%;
+  font-size: 14px;
+  width: 75%;
+}
+
+@media only screen and (max-width: 1330px) {
+  .confirm__Page {
+    display: grid;
+    background: #3fcfad;
+    height: -webkit-fill-available;
+  }
+
+  .confirm__Page-letsConfirm {
+    margin: 13% auto 2% 10%;
+    font-weight: 600;
+    font-family: Raleway;
+    font-size: 15px;
+  }
+
+  .confirm__Page-confirmPledge {
+    margin: 2.5% auto 2% 10%;
+    font-weight: 500;
+    font-family: Raleway;
+    font-size: 30px;
+    width: 70%;
+  }
+
+  .confirm__Page-confirmButton {
+    margin: 5% auto 5% 10%;
+    width: 173px;
+    height: 44px;
+    border: #f9be02 3px solid;
+    border-radius: 10px;
+    font-family: Raleway;
+    font-weight: 550;
+    font-size: 15px;
+  }
+
+  .confirm__Page-unConfirm {
+    margin: 5% auto 5% 10%;
+    font-size: 12px;
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .confirm__Page {
+    display: grid;
+    background: #3fcfad;
+    height: -webkit-fill-available;
+  }
+
+  .confirm__Page-letsConfirm {
+    margin: 30% auto 5% 10%;
+    font-weight: 600;
+    font-family: Raleway;
+    font-size: 15px;
+  }
+
+  .confirm__Page-confirmPledge {
+    margin: 5% auto 5% 10%;
+    font-weight: 500;
+    font-family: Raleway;
+    font-size: 30px;
+    width: 70%;
+  }
+
+  .confirm__Page-confirmButton {
+    margin: 10% auto 5% 10%;
+    width: 173px;
+    height: 44px;
+    border: #f9be02 3px solid;
+    border-radius: 10px;
+    font-family: Raleway;
+    font-weight: 550;
+    font-size: 15px;
+  }
+
+  .confirm__Page-unConfirm {
+    margin: 5% auto 5% 10%;
+    font-size: 12px;
+    width: 75%;
+  }
+}

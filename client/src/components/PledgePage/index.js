@@ -37,8 +37,6 @@ class PledgePage extends React.Component {
   }
 
   render() {
-    const { pledge_id } = this.props.location.state
-
     const { userPledges, pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, userExist } = this.state
 
     return (
@@ -48,7 +46,7 @@ class PledgePage extends React.Component {
           !pledgeInfo.length ? <p>Loading...</p> :
             <>
               <div className="top-info">
-                <img className="top-info__img" src={pledgeInfo[0].img} />
+                <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
                 <p className="top-info__title">{pledgeInfo[0].title}</p>
                 <p className="top-info__description">{pledgeInfo[0].description}</p>
                 <p className="top-info__number">{pledgeInfo[0].number_of_enrollement}</p>
