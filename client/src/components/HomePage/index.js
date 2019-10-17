@@ -2,35 +2,38 @@ import React, { Component } from 'react'
 import UserPledges from '../UserPledges'
 import Footer from '../Footer'
 import axios from 'axios'
+import AppContext from '../../UserContext';
 import './style.css'
 
 class HomePage extends Component {
+  static contextType = AppContext
+
   state = {
-    pledges: []
+    userPledges: []
   }
+
   componentDidMount() {
-    const userId = 1
-    axios.get(`/api/home/${userId}`).then(({ data }) => {
-      this.setState({ pledges: data })
-    })
-      .catch(error => console.log('axios error', error))
+    const userPledges = this.context
+    this.setState({ userPledges })
   }
+
   render() {
 
-    const { pledges } = this.state
+    const { userPledges } = this.state
     return (
       <React.Fragment>
         <h1 className="home-title">My Pledges</h1>
-        <h5 className="home-subtitle">TOTAL PLEDGES: {pledges.length}</h5>
+        <h5 className="home-subtitle">TOTAL PLEDGES: {userPledges.length}</h5>
 
-        {!pledges.length ? <h2>  Loading...</h2> :
-          pledges.map(onePledge => {
+        {!userPledges.length ? <h2>  Loading...</h2> :
+          userPledges.map(onePledge => {
             return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
           })
         }
         <Footer />
-      </React.Fragment>
+      </React.Fragment >
     )
+
   }
 }
 export default HomePage
