@@ -1,36 +1,38 @@
-
-import React, { Component, useContext } from 'react'
-// import UserPledges from '../UserPledges'
-// import Footer from '../Footer'
-// import axios from 'axios'
+import React, { Component } from 'react'
+import UserPledges from '../UserPledges'
+import Footer from '../Footer'
+import AppContext from '../../UserContext';
 import './style.css'
-// import { UserConsumer } from '../../UserContext'
-import UserContext from '../../UserContext'
 
 class HomePage extends Component {
-  static contextType = UserContext
+  static contextType = AppContext
 
   state = {
-    pledges: []
+    userPledges: []
   }
+
   componentDidMount() {
-    const user = this.context
-    console.log(user, 'user')
-    this.setState({ pledges: user })
+    const userPledges = this.context
+    this.setState({ userPledges })
   }
+
   render() {
-    const { pledges } = this.state
-    { console.log(pledges, 'pledges') }
+
+    const { userPledges } = this.state
     return (
-      <>
-        {!pledges.length ? <h1>loading</h1> : (pledges.map(element => {
-          return <div>
-            <h1>{element.title}</h1>
-          </div>
-        }))
+      <React.Fragment>
+        <h1 className="home-title">My Pledges</h1>
+        <h5 className="home-subtitle">TOTAL PLEDGES: {userPledges.length}</h5>
+
+        {!userPledges.length ? <h2>  Loading...</h2> :
+          userPledges.map(onePledge => {
+            return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
+          })
         }
-      </>
+        <Footer />
+      </React.Fragment >
     )
+
   }
 }
 export default HomePage
