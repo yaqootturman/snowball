@@ -4,7 +4,7 @@ const dbConnection = require('../db_connection')
 const UpdateUserPledgeEnroll = (pledgeId) => {
   return dbConnection
     .query(
-      'UPDATE pledge SET number_of_enrollement = number_of_enrollement + 1 where pledge_id =$1',
+      'UPDATE pledge SET number_of_enrollement = number_of_enrollement + 1 WHERE pledge_id =$1',
       [pledgeId]
     )
 }

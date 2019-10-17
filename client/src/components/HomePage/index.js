@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import UserPledges from '../UserPledges'
 import Footer from '../Footer'
-import axios from 'axios'
 import AppContext from '../../UserContext';
 import './style.css'
 
