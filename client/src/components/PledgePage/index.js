@@ -20,8 +20,12 @@ class PledgePage extends React.Component {
     const userPledges = this.context
     this.setState({ userPledges })
 
+    // compare between id which recieve from userPledges which recieve by context api and id from category to decide if user already mark the pledge or not
     const { pledge_id } = this.props.location.state
-
+    userPledges.map((element) => {
+      if (element.pledge_id === pledge_id)
+        this.setState({ userExist: true })
+    })
     axios.get(`/api/action-category/pledge/${pledge_id}`).then(Response => {
       const pledgeInfoPage = Response.data
       this.setState({
@@ -41,8 +45,7 @@ class PledgePage extends React.Component {
 
     return (
       <>
-
-        {
+        {userExist ? <button>Cancel the pledge</button> : <buttton>Make the pledge</buttton>}        {
           !pledgeInfo.length ? <p>Loading...</p> :
             <>
               <div className="top-info">
