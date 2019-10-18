@@ -44,7 +44,7 @@ export class ConfirmPage extends Component {
           feel able to carry it out.
         </p>
 
-        <Footer />
+        <Footer {...this.props} />
       </div>
     );
   }
