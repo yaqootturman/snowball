@@ -1,0 +1,168 @@
+#root{
+  height:100vh;
+}
+.user-pledge{
+  width:100%;
+  height: 145px;
+  font-style: Raleway;
+  position: relative;
+  margin-top:18px;  
+}
+
+.user-pledge__pledge-image{
+  margin: auto;
+  width: 90%;
+  display: block;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.user-pledge__pledge-title{
+  position: absolute;
+  bottom: 40%;
+  left: 7%;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-block-start: 0;
+  margin-block-end: 0; 
+}
+
+.user-pledge__pledge-description{
+  width: 72%;
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 15px;
+  color: white;
+  word-wrap: break-word;
+}
+
+.user-pledge__pledge-enrollements-badge{
+  position: absolute;
+  right: 3%;
+  top: 63%;
+  background: #F9BE02;
+  width:60px;
+  height: 41.38%;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-pledge__pledge-enrollements-icon{
+  width: 20px;
+  display: block;
+  margin: 10% auto 3px auto;
+  }
+
+.user-pledge__pledge-enrollements-number{
+  font-family: Raleway;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 320px) {
+ .user-pledge{
+  width:100%;
+  height: 100px;
+  font-style: Raleway;
+  position: relative;
+  margin-top:18px;  
+}
+
+.user-pledge__pledge-image{
+  margin: auto;
+  width: 90%;
+  display: block;
+  height: 100%;
+  border-radius: 15px;
+}
+.user-pledge__pledge-title{
+  position: absolute;
+  bottom: 42%;
+  left: 7%;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  margin-block-start: 0;
+  margin-block-end: 0; 
+}
+
+.user-pledge__pledge-description{
+  width: 72%;
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 10px;
+  color: white;
+  word-wrap: break-word;
+}
+
+.user-pledge__pledge-enrollements-badge{
+  position: absolute;
+  right: 3%;
+  top: 66%;
+  background: #F9BE02;
+  /* width: 16%; */
+  width:40px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.user-pledge__pledge-enrollements-icon{
+  width: 15px;
+  display: block;
+  margin: 10% auto 1px auto;
+
+  }
+
+.user-pledge__pledge-enrollements-number{
+  font-family: Raleway;
+  color: black;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 10px;
+  display: block;
+  margin: auto;
+
+}
+
+}
+
+@media (min-width: 768px) {
+  .user-pledge{
+  width:100%;
+  height: 45%; 
+}
+.user-pledge__pledge-enrollements-badge{
+  top: 75%;
+  right: 3.5%;
+  width: 70px;
+  height: 70px;
+}
+.user-pledge__pledge-title{
+  bottom: 34%;
+  font-size: 26px;
+}
+.user-pledge__pledge-description{
+    width: 78%;
+    bottom: 10%;
+    font-size: 21px;
+    line-height: 25px;
+}
+}
