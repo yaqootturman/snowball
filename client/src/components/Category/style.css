@@ -7,10 +7,13 @@
   .category-div{
     display:flex;
   justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
 
 }
 .category-div__dashboard-action{ 
-    width:100%;
+    width:40%;
     height: 145px;
     font-style: Raleway;
     position: relative;
