@@ -24,14 +24,14 @@ class NumberOfPledges extends Component {
     const { allPledges } = this.state.allPledges
     return (
       <div className="container-div">
-        <div className="container-div__dashboard" ><h1 className="container-div__dashboard__title">Action Dashboard</h1></div>
+        <div className="container-div__dashboard" ><h1 className="container-div__dashboard-title">Action Dashboard</h1></div>
 
         {!data ? (
           <h2>Loading</h2>
         ) :
           (
-            <div className="container-div__numberOfPledges">
-              {!allPledges ? <h1>loading</h1> : (<div >{data.length}/{allPledges.length}<p className="container-div__numberOfPledges__pledges">PLEDGES</p></div>)}
+            <div className="container-div__number-of-Pledges">
+              {!allPledges ? <h1>loading</h1> : (<div >{data.length}/{allPledges.length}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
             </div>
           )
         }

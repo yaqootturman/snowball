@@ -12,11 +12,11 @@
 .container-div__dashboard{
     width:40%
 }
-.container-div__dashboard__title{
+.container-div__dashboard-title{
     width: 40%;
     box-sizing: border-box;
 }
-.container-div__numberOfPledges{
+.container-div__number-of-Pledges{
     position: absolute;
     right: 14%;
     top: 6%;
@@ -27,7 +27,7 @@
     border-radius: 50%;
     border: 2px solid #000;
 }
-.container-div__numberOfPledges__pledges{
+.container-div__number-of-Pledges-pledges{
     font-size: 52%;
 
 }
