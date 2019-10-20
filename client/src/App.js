@@ -35,8 +35,8 @@ class App extends React.Component {
           <Route exact path='/home' component={Home} />
           <Route exact path='/action-category/:category_id' component={CategoryPledges} />
           <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
-          <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
-          <Route path='/congratulations' component={Congratulations} />
+          <Route exact path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
+          <Route exact path='/congratulations' component={Congratulations} />
         </Router>
       </UserProvider>
 
