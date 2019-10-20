@@ -28,21 +28,18 @@ class App extends React.Component {
   render() {
     const { pledges } = this.state
     return (
-      <>
-        {!pledges.length ? <h1>Loading</h1> :
-          (
-            <UserProvider value={pledges}>
-              <Router>
-                <Route exact path='/' component={LandingPage} />
-                <Route exact path='/home' component={Home} />
-                <Route exact path='/action-category/:category_id' component={CategoryPledges} />
-                <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
-                <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
-                <Route path='/congratulations' component={Congratulations} />
-              </Router>
-            </UserProvider>)
-        }
-      </>
+
+      <UserProvider value={pledges}>
+        <Router>
+          <Route exact path='/' component={LandingPage} />
+          <Route exact path='/home' component={Home} />
+          <Route exact path='/action-category/:category_id' component={CategoryPledges} />
+          <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
+          <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
+          <Route path='/congratulations' component={Congratulations} />
+        </Router>
+      </UserProvider>
+
     )
   }
 }
