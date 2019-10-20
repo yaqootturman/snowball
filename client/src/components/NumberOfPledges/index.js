@@ -10,26 +10,18 @@ class NumberOfPledges extends Component {
   componentDidMount = () => {
     const userId = 1
     axios.get(`/api/dashboard_number_of_pledges/${userId}`).then(({ data }) => {
-
-
       this.setState(
         { details: data })
     })
     axios.get('/api/dashboard_number_of_all_pledges').then(({ data }) => {
-
-
       this.setState(
         { allPledges: data })
     })
-
   }
 
   render() {
     const { data } = this.state.details
     const { allPledges } = this.state.allPledges
-
-
-
     return (
       <div className="container-div">
         <div className="container-div__dashboard" ><h1 className="container-div__dashboard__title">Action Dashboard</h1></div>
@@ -47,4 +39,5 @@ class NumberOfPledges extends Component {
     )
   }
 }
+
 export default NumberOfPledges

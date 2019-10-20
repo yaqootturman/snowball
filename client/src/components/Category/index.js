@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import './style.css'
 import axios from "axios"
+import { Switch } from "react-router-dom";
+
 
 class Category extends Component {
   state = {
@@ -66,7 +68,7 @@ class Category extends Component {
     const { userPledges } = this.state.userPledges
     const { pledgesCategory } = this.state.categories
     return (
-      <switch>
+      <Switch>
         {!data || !userPledges ? (
           <h1>Loading</h1>
         ) :
@@ -88,7 +90,7 @@ class Category extends Component {
             </div>
           )
         }
-      </switch>
+      </Switch>
     )
   }
 }
