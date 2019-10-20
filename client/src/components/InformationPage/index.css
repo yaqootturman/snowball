@@ -1,0 +1,95 @@
+.information__page {
+  display: grid;
+  height: -webkit-fill-available;
+}
+.information__page-title {
+    margin: 10% auto 1% 10%;
+    font-size: 30px;
+  font-family: Raleway;
+  font-weight: 600;
+}
+.information__page-question {
+  margin: 1% auto .5% 10%;
+  font-size: 20px;
+  font-family: Raleway;
+  font-weight: 600;
+}
+.information__page-answer {
+  margin: 1% auto 0% 10%;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 16px;
+  width: 80%;
+}
+.information__page-hr1,
+.information__page-hr2,
+.information__page-hr3 {
+    width: 220px;
+  height: 10px;
+  margin: 0% auto 0% 10%;
+}
+.information__page-hr1 {
+  background: #1dbfd1;
+}
+.information__page-hr2 {
+  background: #f9be02;
+}
+.information__page-hr3 {
+  background: #e25224;
+}
+
+@media screen and (max-width:1330px){
+    .information__page-title {
+        margin: 10% auto 1% 10%;
+        font-size: 30px;
+        font-family: Raleway;
+        font-weight: 600;
+      }
+      .information__page-question {
+        margin: 1% auto 1% 10%;
+        font-size: 20px;
+        font-family: Raleway;
+        font-weight: 600;
+      }
+      .information__page-answer {
+        margin: .5% auto 0% 10%;
+        font-family: Raleway;
+        font-weight: 500;
+        font-size: 16px;
+        width: 80%;
+      }
+      .information__page-hr1,
+      .information__page-hr2,
+      .information__page-hr3 {
+        width: 210px;
+        height: 10px;
+        margin: 0% auto 0% 10%;
+      }
+}
+@media screen and (max-width: 720px) {
+  .information__page-title {
+    margin: 15% auto 1% 10%;
+    font-size: 30px;
+    font-family: Raleway;
+    font-weight: 600;
+  }
+  .information__page-question {
+    margin: 1% auto 1% 10%;
+    font-size: 20px;
+    font-family: Raleway;
+    font-weight: 600;
+  }
+  .information__page-answer {
+    margin: 1% auto 1% 10%;
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 16px;
+    width: 85%;
+  }
+  .information__page-hr1,
+  .information__page-hr2,
+  .information__page-hr3 {
+    width: 210px;
+    height: 10px;
+    margin: 0% auto 1% 10%;
+  }}
