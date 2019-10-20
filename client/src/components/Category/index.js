@@ -49,6 +49,7 @@ class Category extends Component {
       if (element.name === item) {
         return element.pledge_name
       }
+      return false
     })
     return arr2.length
   }
@@ -59,6 +60,8 @@ class Category extends Component {
       if (element.category_id === item) {
         return element.pledge_id
       }
+      return false
+
     })
     return arr2.length
   }
@@ -77,10 +80,10 @@ class Category extends Component {
               {data.map((item, i) => {
                 return (
                   <div className="category-div__dashboard-action" onClick={() => this.moveToCategorActionPage(item.category_id)} key={i}>
-                    <img className="category-div__dashboard-action__image" src={item.img} alt={item.name} />
-                    <p className="category-div__dashboard-action__title" >{item.name} </p>
-                    <span className="category-div__dashboard-action__numbers">
-                      <div className="category-div__dashboard-action__first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.name)}/ </div>}</div>
+                    <img className="category-div__dashboard-action-image" src={item.img} alt={item.name} />
+                    <p className="category-div__dashboard-action-title" >{item.name} </p>
+                    <span className="category-div__dashboard-action-numbers">
+                      <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.name)}/ </div>}</div>
                       <div>
                         {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
                       </div></span>

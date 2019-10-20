@@ -18,7 +18,7 @@
     margin-left: 5%;
     margin-right: 5%
 }
-.category-div__dashboard-action__image{ 
+.category-div__dashboard-action-image{ 
     margin: auto;
     width: 100%;
     display: block;
@@ -26,7 +26,7 @@
     border-radius: 15px;
 }
 
-.category-div__dashboard-action__title{
+.category-div__dashboard-action-title{
   position: absolute;
   bottom: 50%;
   left: 30%;
@@ -37,7 +37,7 @@
   margin-block-end: 0;
 }
     
-.category-div__dashboard-action__numbers{
+.category-div__dashboard-action-numbers{
     display: flex;
     position: absolute;
       color: #FFF;
