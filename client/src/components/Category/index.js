@@ -32,11 +32,11 @@ class Category extends Component {
       })
   }
   // function to push the data to category page
-  moveToCategorActionPage = () => {
+  moveToCategorActionPage = (id) => {
     const { history } = this.props
 
     history.push({
-      pathname: "/dashboard/action-category",
+      pathname: `action-category/${id}`,
       data: this.state.details
     })
   }
@@ -74,7 +74,7 @@ class Category extends Component {
             <div className="category-div">
               {data.map((item, i) => {
                 return (
-                  <div className="category-div__dashboard-action" onClick={this.moveToCategorActionPage} key={i}>
+                  <div className="category-div__dashboard-action" onClick={() => this.moveToCategorActionPage(item.category_id)} key={i}>
                     <img className="category-div__dashboard-action__image" src={item.img} alt={item.name} />
                     <p className="category-div__dashboard-action__title" >{item.name} </p>
                     <span className="category-div__dashboard-action__numbers">
