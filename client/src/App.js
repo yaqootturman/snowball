@@ -8,6 +8,7 @@ import CategoryPledges from './components/CategoryPledges'
 import PledgePage from './components/PledgePage'
 import ConfirmPage from './components/ConfirmPage'
 import Congratulations from './components/CongratulationsPage'
+import DeletePledgeConfirmation from './components/DeletePledgeConfirmation'
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
       <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
       <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
       <Route path='/congratulations' component={Congratulations} />
+      <Route path='/delete-pledge-confirmation' component={DeletePledgeConfirmation} />
     </Router>
   )
 }

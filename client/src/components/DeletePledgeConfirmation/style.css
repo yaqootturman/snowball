@@ -1,0 +1,64 @@
+.delete-confirmation-dialog{
+  width: 100%;
+  height: 100%;
+  border:2px solid white;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.delete-confirmation-dialog__dialog-title{
+  position: relative;
+  width:100%;
+  box-shadow: 2px solid grey;
+  text-align: center;
+  align-self: flex-start;
+  padding: 5%;
+  background: #ffbf00;
+  font-size: 3.5vw;
+}
+
+.delete-confirmation-dialog__delete-icon{
+  position: absolute;
+  top: 6px;
+  right: 8px;
+}
+
+.delete-confirmation-dialog__delete-message{
+  font-size: 5vw;
+  width:100%;
+  padding:4%;
+  color:grey;
+}
+.delete-confirmation-dialog__confirm-button{
+  color: #E23724 ;
+  background: white;
+
+}
+.delete-confirmation-dialog__cancel-button{
+  background: #ffbf00;
+  color:white;
+}
+
+
+.button-aligner{
+  width:40%;
+  height: 15%;
+  align-self:flex-end;
+  margin-bottom:4%;
+  border-radius: 10px;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .delete-confirmation-dialog{
+    height:65%;
+  }
+}
+
+
+
