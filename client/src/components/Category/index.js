@@ -39,7 +39,7 @@ class Category extends Component {
 
     history.push({
       pathname: `action-category/${id}`,
-      data: this.state.details.data[id - 1]
+      data: this.state.details.data[id - 1] // to take id from database
     })
   }
 
