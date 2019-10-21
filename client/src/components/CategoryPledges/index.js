@@ -16,10 +16,6 @@ class CategoryPledges extends React.Component {
     const { data } = this.props.history.location
     const { category_id } = this.props.history.location.data; //this should change to take id from props
     this.setState({ details: data })
-    console.log("s", this.state.details);
-
-
-
     axios.get(`/api/action-category/${category_id}`).then(Response => {
       const pledge_info = Response.data
       this.setState({ loading: false, pledge_info })

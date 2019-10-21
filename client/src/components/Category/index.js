@@ -41,8 +41,6 @@ class Category extends Component {
       pathname: `action-category/${id}`,
       data: this.state.details.data[id - 1]
     })
-    console.log("d", this.state.details.data[id - 1]);
-
   }
 
   // function to calculate all pledges that user make it in category by filter
