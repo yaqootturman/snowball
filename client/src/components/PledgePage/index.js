@@ -6,7 +6,8 @@ class PledgePage extends React.Component {
     pledgeInstructions: [],
     pledgeProsCons: [],
     pledgeResources: [],
-    pledgeReferences: []
+    pledgeReferences: [],
+    userPledges: []
   }
 
   componentDidMount() {
@@ -23,12 +24,22 @@ class PledgePage extends React.Component {
       })
 
     }).catch(err => { console.log("0000", err) });
+    this.getUserPledges()
 
+  }
+
+  getUserPledges() {
+    const userId = 1;
+    axios.get(`/api/home/${userId}`).then(({ data }) => {
+      this.setState({ userPledges: data })
+    })
+      .catch(error => {
+        console.log("error", error);
+      })
   }
 
   render() {
     const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences } = this.state
-
     return (
       <>
         {
