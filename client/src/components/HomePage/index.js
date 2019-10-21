@@ -2,19 +2,22 @@ import React, { Component } from 'react'
 import nl2br from 'react-newline-to-break';
 import UserPledges from '../UserPledges'
 import Footer from '../Footer'
-import AppContext from '../../UserContext';
+import axios from 'axios'
 import './style.css'
 
 class HomePage extends Component {
-  static contextType = AppContext
-
   state = {
     userPledges: []
   }
 
   componentDidMount() {
-    const userPledges = this.context
-    this.setState({ userPledges })
+    const userId = 1;
+    axios.get(`/api/home/${userId}`).then(({ data }) => {
+      this.setState({ userPledges: data })
+    })
+      .catch(error => {
+        console.log("error", error);
+      })
   }
 
   render() {
