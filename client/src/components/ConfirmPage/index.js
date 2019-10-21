@@ -4,19 +4,29 @@ import Footer from "../Footer";
 import axios from "axios";
 import "./style.css";
 
-
 export class ConfirmPage extends Component {
+  state={
+
+   confirmPledgeStatement:'',
+   number_enrolled_people:''
+
+  }
   confirmUserPledge = () => {
     const { pathname } = this.props.location;
-    let Ids = pathname.split('/');
-    const userId = Ids[1], pledgeId = Ids[2]
+    let Ids = pathname.split("/");
+    const userId = Ids[1],
+      pledgeId = Ids[2];
     axios
       .post(`/api/${userId}/${pledgeId}/addPledge`)
       .then(response => {
         // handle success
-        console.log(response);
+        if (response.data.message) {alert(response.data.message)};
+
+        const { history } = this.props;
+        const url = response.data.redirectUrl;
+        history.push(url);
       })
-      .catch(function (error) {
+      .catch(function(error) {
         // handle error
         console.log(error);
       });

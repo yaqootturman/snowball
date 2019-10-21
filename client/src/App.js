@@ -29,7 +29,7 @@ class App extends React.Component {
     const { pledges } = this.state
     return (
       <>
-        {!pledges.length ? <h1>Loading</h1> :
+        {
           (
             <UserProvider value={pledges}>
               <Router>
