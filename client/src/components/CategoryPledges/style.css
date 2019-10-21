@@ -1,0 +1,24 @@
+.category-container{
+ position: relative;
+  /* text-align: center; */
+}
+.category-container__category-img{
+  width: 100%;
+}
+.category-container__category-title{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+}
+.category-container__category-description{
+  position: absolute;
+  width: 90%;
+  font-size: 15px;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  direction: ltr;
+}
