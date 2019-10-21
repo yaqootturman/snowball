@@ -1,6 +1,5 @@
 .category-container{
  position: relative;
-  /* text-align: center; */
 }
 .category-container__category-img{
   width: 100%;
@@ -9,16 +8,27 @@
   position: absolute;
   top: 45%;
   left: 50%;
+  font-size: 3.1em;
   transform: translate(-50%, -50%);
   color: #FFFFFF;
 }
 .category-container__category-description{
   position: absolute;
   width: 90%;
-  font-size: 15px;
+  font-size: 16px;
+  font-family: Comfortaa;
   top: 81%;
-  left: 50%;
+  font-style: normal;
+  left: 52%;
+  line-height: 18px;
+  font-weight: bold;
   transform: translate(-50%, -50%);
   color: #FFFFFF;
   direction: ltr;
+}
+.category-container__pledges{
+   text-transform: uppercase;
+   margin-top:6%;
+   margin-left: 7%;
+   font-weight: bold;
 }

@@ -31,10 +31,10 @@ class CategoryPledges extends React.Component {
         < BackButton />
         {!details ?
           <h3>loading</h3>
-          : <div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
+          : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
             <h1 className="category-container__category-title">{details.name}</h1>
             <p className="category-container__category-description">{details.description}</p>
-          </div>}
+          </div> <p className="category-container__pledges">{details.name} PLEDGES</p></span>}
         {
           !pledge_info.length ? <h2>Loading...</h2> : pledge_info.map((element, index) => {
             return <PledgeItem {...this.props} element={element} key={index} />
