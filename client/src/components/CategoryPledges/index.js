@@ -3,6 +3,7 @@ import axios from 'axios'
 import PledgeItem from './../PledgItem/PledgeItem'
 import BackButton from '../BackButton';
 import Footer from '../Footer'
+import Backutton from '../BackButton'
 import './style.css'
 
 
@@ -29,7 +30,7 @@ class CategoryPledges extends React.Component {
 
     return (
       <>
-        < BackButton />
+        < BackButton {...this.props} />
         {!details ?
           <h3>loading</h3>
           : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
