@@ -4,16 +4,37 @@
   border-left: 3px solid #3fcfad;
   display: inline-block;
 }
-.vertical__tiltle {
-  width: 80%;
-  display: block;
+.title-div{
+  margin-top: 20vh;
+  padding: 5%;
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 28px;
+  width:90%;
+}
+
+.title-div__top-title{
+
   font-weight: bold;
   font-size: 33px;
   line-height: 39px;
-  margin-top: 30%;
-  margin-left: -10%;
-  background: white;
+  display: initial;
+  margin: 249px;
+}
+.main-description-div{
+  width:90%;
+    margin-top: 20vh;
   padding: 5%;
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 28px;
+  width:90%;
+} 
+.main-description-div__description {
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 39px;
+  display: initial;
 }
 .vertical__contents {
   margin-bottom: 8%;
