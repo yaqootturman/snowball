@@ -9,6 +9,7 @@ const { userPledges } = require('./userPledges')
 const { getCategoryPledges } = require('./getCategoryPledges')
 const { getPledgePageInfo } = require('./getPledgePageInfo')
 const { confirmPledgeToUser } = require('./confirmPledgeToUser')
+const { deletePledgeToUser } = require('./deletePledgeToUser')
 
 router.get('/api/action-category/pledge/:pledgeID', getPledgePageInfo)
 router.get('/api/action-category/:categoryID', getCategoryPledges)
@@ -19,5 +20,6 @@ router.get('/api/dashboard_number_of_all_pledges', getAllPledges.get)
 router.get('/api/dasboard_pledges_in_category/:userId', getPledgesInCategory.get)
 router.get('/api/dashboard_pledges_category', getNumberPledgesCategory.get)
 router.post('/api/:userId/:pledgeId/addPledge', confirmPledgeToUser)
+router.get('/api/:userId/:pledgeId/deletePledge', deletePledgeToUser)
 
 module.exports = router

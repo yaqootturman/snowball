@@ -6,6 +6,9 @@ import "./style.css";
 
 
 export class ConfirmPage extends Component {
+  // The data from previous page --pledge page 
+  // console.log("data", this.props.location.data)
+
   confirmUserPledge = () => {
     const { pathname } = this.props.location;
     let Ids = pathname.split('/');
@@ -23,6 +26,7 @@ export class ConfirmPage extends Component {
   };
   render() {
     return (
+
       <div className="confirm__Page">
         <BackButton {...this.props} />
 
