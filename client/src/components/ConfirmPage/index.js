@@ -34,7 +34,7 @@ export class ConfirmPage extends Component {
   render() {
     return (
       <div className="confirm__Page">
-        <BackButton />
+        <BackButton {... this.props} />
 
         <p className="confirm__Page-letsConfirm">LET' S CONFIRM YOUR PLEDGE</p>
         <p className="confirm__Page-confirmPledge">
@@ -54,7 +54,7 @@ export class ConfirmPage extends Component {
           feel able to carry it out.
         </p>
 
-        <Footer />
+        <Footer {... this.props} />
       </div>
     );
   }
