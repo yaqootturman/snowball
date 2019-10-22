@@ -1,4 +1,5 @@
 import React from "react"
+import Footer from '../Footer'
 import axios from 'axios'
 class PledgePage extends React.Component {
   state = {
@@ -93,6 +94,7 @@ class PledgePage extends React.Component {
                   </div>
                 )
               })}
+              <Footer {...this.props} />
             </>
         }
       </>
