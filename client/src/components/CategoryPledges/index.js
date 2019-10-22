@@ -13,10 +13,10 @@ class CategoryPledges extends React.Component {
   };
 
   componentDidMount() {
-    const { data } = this.props.history.location
-    const { category_id } = this.props.history.location.data;
-    this.setState({ details: data })
-    axios.get(`/api/action-category/${category_id}`).then(Response => {
+    const data = sessionStorage.getItem('results')
+    const info = JSON.parse(data)
+    this.setState({ details: info })
+    axios.get(`/api/action-category/${info.category_id}`).then(Response => {
       const pledge_info = Response.data
       this.setState({ loading: false, pledge_info })
     }).catch()
