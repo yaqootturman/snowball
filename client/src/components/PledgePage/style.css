@@ -1,16 +1,16 @@
 
 .top-info{
   position: relative;
-  display:block;
+  width:80vw;
 }
 
 .top-info__img{
-  margin:0;
+  width: 100vw;
 }
 .top-info__make-cancel{
   position: absolute;
-  bottom: 27px;
-  left: 264px;
+  bottom: 6vw;
+  left:70vw;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: 3px solid #FFEB3B;
@@ -18,23 +18,23 @@
 }
 .top-info__title{
   position: absolute;
-  bottom: 170px;
-  left: 25px;
+  bottom: 93vw;
+  left: 7vw;
   font-weight: bold;
   color:white;
-  font-size: x-large;
+  font-size: 50px;
 }
 .top-info__the-pledge-word{
   position: absolute; 
-  bottom: 144px;
-  left: 25px;
+  bottom: 79vw;
+  left: 7vw;
   color:white;
   font-weight: bold;
 }
 .top-info__description{
   position: absolute;
-  bottom: 65px;
-  left: 25px;
+  bottom: 60vw;
+  left: 7vw;
   font-weight: bold;
   color:white;
   word-wrap: break-word;
@@ -42,22 +42,24 @@
 }
 .top-info__pledgeS-already-word{
   position: absolute; 
-  bottom: 27px;
-  left: 25px;
+  bottom: 19vw;
+  left: 7vw;
   color:white;
   font-weight: bold;
 }
 .top-info__number{
   position: absolute; 
-  bottom: 6px;
-  left: 25px;
+  bottom: 9vw;
+  left: 7vw;
   color:white;
   font-weight: bold;
+  font-size:25px;
 }
 .importance-div{
   width:80%;
   padding-left: 25px;
-  padding-right:50px;  
+  padding-right:50px; 
+  margin-top: 10vw; 
 }
 .how-do-div{
   width:80%;
@@ -66,6 +68,7 @@
   padding-top:5px;
   padding-bottom:25px;
   background-color: #3FCFAD;
+  margin-top: 10vw;
 }
 .how-do-div__element{
   padding:5px;
@@ -76,6 +79,7 @@
   padding-right:17vw;
   padding-top:15px;
   padding-bottom:25px;
+  margin-top: 10vw;
 }
 .pros-cons-div__element{
   padding-top:3%;
@@ -87,7 +91,7 @@
   padding-right:17vw;
   padding-top:15px;
   padding-bottom:25px;
-
+  margin-top: 10vw; 
 }
 .resources-div__link{
   color: white;
@@ -105,7 +109,7 @@ a{
   padding-right:17vw;
   padding-top:15px;
   padding-bottom:25px;
-
+  margin-top: 10vw;
 }
 
 .references{
@@ -116,7 +120,7 @@ a{
   padding-bottom:25px;
   margin-bottom:21vw;
   font-size:10px;
-
+  margin-top: 10vw;
 }
 .references__element{
   padding-top:10px;

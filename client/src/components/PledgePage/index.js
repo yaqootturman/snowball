@@ -1,11 +1,10 @@
 import React from "react"
-import AppContext from '../../UserContext';
 import axios from 'axios'
 import Footer from '../Footer'
 import './style.css'
 
 class PledgePage extends React.Component {
-  static contextType = AppContext
+
   addUserPledge() {
     const { pledge_id } = this.props.location.state
     const { history } = this.props
@@ -37,9 +36,14 @@ class PledgePage extends React.Component {
   }
 
   componentDidMount() {
-    //to use context api in the function
-    const userPledges = this.context
-    this.setState({ userPledges })
+    const { userPledges } = this.state
+    const userId = 1;
+    axios.get(`/api/home/${userId}`).then(({ data }) => {
+      this.setState({ userPledges: data })
+    })
+      .catch(error => {
+        console.log("error", error);
+      })
 
     // compare between id which recieve from userPledges which recieve by context api and id from category to decide if user already mark the pledge or not
     const { pledge_id } = this.props.location.state
@@ -58,7 +62,18 @@ class PledgePage extends React.Component {
       })
 
     }).catch(err => { console.log("0000", err) });
+    this.getUserPledges()
 
+  }
+
+  getUserPledges() {
+    const userId = 1;
+    axios.get(`/api/home/${userId}`).then(({ data }) => {
+      this.setState({ userPledges: data })
+    })
+      .catch(error => {
+        console.log("error", error);
+      })
   }
 
   render() {
@@ -83,12 +98,10 @@ class PledgePage extends React.Component {
 
               <div className="importance-div">
                 <h3>Why it`s important?</h3>
-
-
-
                 {pledgeInfo[0].importance.split('..').map(i => {
-                  return <p>{i}</p>
-
+                  return <>
+                    <br /><p >{i}</p>
+                  </>
                 })}
               </div>
 
@@ -126,12 +139,11 @@ class PledgePage extends React.Component {
               </div>
               <div className="further-information">
                 <h3>Further information</h3>
-
                 {pledgeInfo[0].further_info.split('..').map(i => {
-                  return <p >{i}</p>
+                  return <>
+                    <br /><p >{i}</p>
+                  </>
                 })}
-
-
               </div>
 
               <hr className="hr-element"></hr>

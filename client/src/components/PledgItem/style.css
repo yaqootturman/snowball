@@ -3,8 +3,7 @@
 }
 .pledge-div{
   position: relative;
-  margin:10%;
-  padding-top:6%;
+  margin:19px;
 }
 .pledge-div__img{
   position: relative;
@@ -13,6 +12,7 @@
   top:0;
   left:0;
   line-height: 39px;
+  border-radius: 15px;
 }
 .pledge-div__title{
   position: absolute;
@@ -33,5 +33,22 @@
 .pledge-div__number{
   color:#0A7FA4;
   font-weight: bold;
-
+}
+@media (min-width: 768px) {
+  .pledge-div__img{
+  height: 380px;
+}
+.pledge-div__title{
+  font-size:63px;
+}
+.pledge-div__description{
+  font-size: 32px;
+}
+.pledge-div__already{
+  font-weight: bold;
+  font-size: 32px;
+}
+.pledge-div__number{
+  font-size:32px;
+}
 }

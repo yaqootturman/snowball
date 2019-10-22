@@ -1,13 +1,22 @@
 BEGIN;
 
-Insert into category (name,img,description ,number_of_pledges) values('Transport','https://ibb.co/QfKW9dh','Transport is responsible for around 30% of all GHG emissions in the EU, of which cars account for over 72% - and unlike many sectors, emissions from transport are getting bigger. See what you can do below.' , 1329),
-('Household','https://ibb.co/QfKW9dh','In the UK, around 30% of our personal emissions come from energy used in the home. But reducing your home energy use can be surprisingly cheap and easy.',4020);
+Insert into "user" (first_name,last_name,email,password) values ('rand','inaim','rand@gmail.com',123),
+('duaa','halayqa','duaa@gmail.com',147);
 
 
-Insert into pledge (category_id,title,description,number_of_enrollement, img ,  importance ,further_info) values(1,'Flying' ,'I will take no more than one return flight each year. When I fly, I will offset my emissions',4454,'https://ibb.co/QfKW9dh','A flight from London to New York generates 1 tn. of Co2 per passenger. The average British person takes 3.2 flights per year.Not taking these flights or buying a regulated carbon offset each time you do fly, would reduce the average persons carbon footprint by around 2.4 tns per year.','Flights produce greenhouse gases - mainly carbon dioxide (CO2) - from burning fuel. These contribute to global warming when released into the atmosphere.An economy-class return flight from London to New York emits an estimated 0.96 tonnes of CO2 per passenger.Thats equivalent to 13% of the average annual emissions for someone in the UK or about the same as those caused by someone living in Ghana over a year.Aviation contributes about 2% of the worlds global carbon emissions, according to the International Air Transport Association (IATA). It predicts passenger numbers will double to 8.2 billion in 2037.'
+
+
+Insert into category (name,img,description ,number_of_pledges) values('Transport','https://i.imgur.com/VpuEoWi.png','Transport is responsible for around 30% of all GHG emissions in the EU, of which cars account for over 72% - and unlike many sectors, emissions from transport are getting bigger. See what you can do below.' , 1329),
+('Household','https://i.imgur.com/PjXoyF2.png','In the UK, around 30% of our personal emissions come from energy used in the home. But reducing your home energy use can be surprisingly cheap and easy.',4020),
+('Shopping','https://i.imgur.com/jC8Lx9b.png.png','ShoppingShoppingShoppingShoppingShoppingShoppingShoppingShoppingShopping',1477),
+('Food','https://i.imgur.com/scVf8SP.png','FoodFoodFoodFoodFoodFoodFood',14755)
+;
+
+
+Insert into pledge (category_id,title,description,number_of_enrollement, img ,  importance ,further_info) values(1,'Flying' ,'I will take no more than one return flight each year. When I fly, I will offset my emissions',4454,'https://i.ibb.co/ZVMQdmv/Flyingcats.jpg','A flight from London to New York generates 1 tn. of Co2 per passenger. The average British person takes 3.2 flights per year.Not taking these flights or buying a regulated carbon offset each time you do fly, would reduce the average persons carbon footprint by around 2.4 tns per year.','Flights produce greenhouse gases - mainly carbon dioxide (CO2) - from burning fuel. These contribute to global warming when released into the atmosphere.An economy-class return flight from London to New York emits an estimated 0.96 tonnes of CO2 per passenger.Thats equivalent to 13% of the average annual emissions for someone in the UK or about the same as those caused by someone living in Ghana over a year.Aviation contributes about 2% of the worlds global carbon emissions, according to the International Air Transport Association (IATA). It predicts passenger numbers will double to 8.2 billion in 2037.'
 ),
 
-(2,'Green energy','I will switch my electricity and gas supply to a green energy tariff',782,'https://ibb.co/QfKW9dh','The energy used to heat our homes, cook our food and power our appliances accounts for approximately 30% of the average persons carbon footprint. A green tariff means that the electricity you buy is matched by purchases of renewable energy that your energy supplier makes on your behalf, significantly reducing the emissions you create.
+(2,'Green energy','I will switch my electricity and gas supply to a green energy tariff',782,'https://i.ibb.co/ZVMQdmv/Flyingcats.jpg','The energy used to heat our homes, cook our food and power our appliances accounts for approximately 30% of the average persons carbon footprint. A green tariff means that the electricity you buy is matched by purchases of renewable energy that your energy supplier makes on your behalf, significantly reducing the emissions you create.
 
 For households that rely on gas for heating and cooking, many clean energy providers offset the carbon emissions associated with any continued gas provision.
 ','In the UK, our electricity comes from a range of sources (see the breakdown of the last 24 hours [link: https://windeurope.org/about-wind/daily-wind/electricity-mix?utf8=%E2%9C%93&areas=GB&commit=Apply+filters]). 
@@ -52,5 +61,9 @@ Insert into pledge_instructions (pledge_id,description) values
 (1, 'Plan staycations with family and friends'),
 (1,'Use the resources below to offset when you fly'),
 (1,'Use trains to get around Europe');
+
+Insert into pledge_to_user (pledge_id,user_id,pledge_name) values
+(1,1,'Flying'),
+(2,1,'Green energy');
 
   COMMIT;
