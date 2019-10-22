@@ -2,7 +2,6 @@ import React from "react"
 import BackButton from '../BackButton'
 import Footer from '../Footer'
 import axios from 'axios'
-import Footer from '../Footer'
 import './style.css'
 
 class PledgePage extends React.Component {
