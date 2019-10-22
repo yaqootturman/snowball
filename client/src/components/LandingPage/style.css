@@ -6,15 +6,13 @@
 }
 .title-div{
   margin-top: 12vh;
-  font-family: Raleway;
-  font-size: 17px;
-  line-height: 28px;
   width: 90%;
 }
 
 .title-div__top-title{
   font-weight: bold;
   font-size: 33px;
+  font-family:Comfortaa;
   line-height: 39px;
   display: initial;
   margin: 34vw;
