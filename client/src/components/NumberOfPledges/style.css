@@ -1,0 +1,33 @@
+.container-div{
+    display: flex;
+    height: 47px;
+    justify-content: space-between;
+    align-content: center;
+    width:100%;
+    margin-right: -11%;
+    margin-left: 5%;
+    margin-top:4%; 
+    margin-bottom: 10%
+}
+.container-div__dashboard{
+    width:40%
+}
+.container-div__dashboard-title{
+    width: 40%;
+    box-sizing: border-box;
+}
+.container-div__number-of-Pledges{
+    position: absolute;
+    right: 14%;
+    top: 6%;
+    width: 40px;
+    height: 40px;
+    color: #000;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+.container-div__number-of-Pledges-pledges{
+    font-size: 52%;
+
+}
