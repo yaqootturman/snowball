@@ -83,7 +83,13 @@ class PledgePage extends React.Component {
 
               <div className="importance-div">
                 <h3>Why it`s important?</h3>
-                <p>{pledgeInfo[0].importance}</p>
+
+
+
+                {pledgeInfo[0].importance.split('..').map(i => {
+                  return <p>{i}</p>
+
+                })}
               </div>
 
               <div className="how-do-div">
@@ -121,11 +127,9 @@ class PledgePage extends React.Component {
               <div className="further-information">
                 <h3>Further information</h3>
 
-
-                {pledgeInfo[0].further_info.split('.\r\n').map(i => {
+                {pledgeInfo[0].further_info.split('..').map(i => {
                   return <p >{i}</p>
                 })}
-
 
 
               </div>
