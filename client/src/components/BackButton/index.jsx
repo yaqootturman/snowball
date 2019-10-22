@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
-import './index.css'
+import './style.css'
 class BackButton extends Component {
   goBack = () => {
-    // this.props.history.goBack();
-    console.log("this should go back")
+    this.props.history.goBack();
   }
   render() {
     return (
       <div>
-        <button className="Back__button" onClick={ ()=>{
+        <button className="Back__button" onClick={() => {
           this.goBack();
-        } } > <div className="Back__button-inner"><img src="https://i.ibb.co/47c20FN/Polygon.png" alt="arrow-back" /><p>BACK</p></div></button>
+        }} > <div className="Back__button-inner"><img src="https://i.ibb.co/47c20FN/Polygon.png" alt="arrow-back" /><p>BACK</p></div></button>
       </div>
     )
   }

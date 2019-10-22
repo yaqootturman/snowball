@@ -1,10 +1,8 @@
-import './index.css'
+import './style.css'
 
 import React, { Component } from 'react'
 
 class Footer extends Component {
-
-  // these function is used to change the end point by using this.props.history.push(the-end-point)
 
   Home = () => {
     const { history } = this.props
