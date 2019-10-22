@@ -11,7 +11,7 @@ class PledgePage extends React.Component {
     const { history } = this.props
     const userId = 1; //this should change to take id from props
 
-    history.push(`/${userId}/${pledge_id}/addPledge`)
+    history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
     this.setState(() => ({ pledgeExist: true }))
   }
 
