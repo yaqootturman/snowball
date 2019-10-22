@@ -21,7 +21,7 @@ const App = () => {
       <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
       <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
       <Route path='/congratulations' component={Congratulations} />
-      <Route path='/delete-pledge-confirmation' component={DeletePledgeConfirmation} />
+      <Route path='/delete-pledge-confirmation/:pledgeId' component={DeletePledgeConfirmation} />
     </Router>
   )
 }
