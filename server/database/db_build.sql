@@ -25,8 +25,7 @@ CREATE TABLE pledge
 (
     pledge_id serial primary key ,
     category_id INTEGER,
-    order_id INTEGER,
-    priority_id INTEGER,
+    order_id INTEGER UNIQUE,
     pledge_short_description VARCHAR(200),
     title VARCHAR(200) ,
     FOREIGN KEY (category_id) REFERENCES category(category_id),
