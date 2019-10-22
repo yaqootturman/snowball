@@ -67,6 +67,9 @@
   padding-bottom:25px;
   background-color: #3FCFAD;
 }
+.how-do-div__element{
+  padding:5px;
+}
 .pros-cons-div{
   width:80%;
   padding-left: 3vw;

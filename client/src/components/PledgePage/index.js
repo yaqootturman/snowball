@@ -90,7 +90,7 @@ class PledgePage extends React.Component {
                 <h3>How to do it</h3>
                 {pledgeInstructions.map((element, index) => {
                   return (
-                    <div>
+                    <div className="how-do-div__element">
                       <span>{index + 1}.     </span>
                       <span>{element.description}</span>
                     </div>
