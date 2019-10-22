@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import PledgeItem from './../PledgItem/PledgeItem'
+import PledgeItem from './../PledgItem'
 import BackButton from '../BackButton';
 import Footer from '../Footer'
 import './style.css'
