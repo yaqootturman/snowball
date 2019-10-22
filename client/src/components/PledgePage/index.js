@@ -85,6 +85,7 @@ class PledgePage extends React.Component {
                 <h3>Why it`s important?</h3>
                 <p>{pledgeInfo[0].importance}</p>
               </div>
+
               <div className="how-do-div">
                 <h3>How to do it</h3>
                 {pledgeInstructions.map((element, index) => {
