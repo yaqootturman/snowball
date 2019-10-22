@@ -21,20 +21,22 @@ CREATE TABLE category
     description TEXT NOT NULL,
     number_of_pledges  INTEGER 
 );
-
 CREATE TABLE pledge
 (
     pledge_id serial primary key ,
     category_id INTEGER,
-    FOREIGN KEY (category_id) REFERENCES category(category_id),
+    order_id INTEGER,
+    priority_id INTEGER,
+    pledge_short_description VARCHAR(200),
     title VARCHAR(200) ,
+    FOREIGN KEY (category_id) REFERENCES category(category_id),
     description TEXT NOT NULL,
-    number_of_enrollement  INTEGER ,
+    number_of_enrollement INTEGER ,
     img TEXT ,
+    banner_img TEXT ,
     importance TEXT ,
     further_info TEXT
 );
-
 CREATE TABLE pledge_to_user
 (   pledge_id INTEGER,
     FOREIGN KEY (pledge_id) REFERENCES pledge (pledge_id),  
