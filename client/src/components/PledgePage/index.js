@@ -53,7 +53,7 @@ class PledgePage extends React.Component {
     userPledges.map((element) => {
       if (element.pledge_id === pledge_id)
         this.setState({ pledgeExist: true, pledge_id })
-
+      return true
     })
 
     axios.get(`/api/action-category/pledge/${pledge_id}`).then(Response => {
