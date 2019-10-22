@@ -1,7 +1,8 @@
 import React from 'react'
 import './style.css'
 
-const LandingPage = () => {
+const LandingPage = props => {
+  const { history } = props
   return (
     <>
       <div className='vertical'>
@@ -67,7 +68,7 @@ const LandingPage = () => {
         <button
           type='submit'
           onClick={() => {
-            alert('this should go to next page ')
+            history.push('/home')
           }}
           className='start__letsgo'
         >

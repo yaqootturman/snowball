@@ -38,7 +38,7 @@ class HomePage extends Component {
             return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
           })
         }
-        <Footer />
+        <Footer {...this.props} />
       </React.Fragment >
     )
 

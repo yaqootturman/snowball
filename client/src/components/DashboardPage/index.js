@@ -8,7 +8,7 @@ const DashboardPage = props => {
     <div className="dashboard-page">
       <NumberOfPledges />
       <Category {...props} />
-      <Footer />
+      <Footer  {...props} />
     </div>
   )
 }

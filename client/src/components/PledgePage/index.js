@@ -1,6 +1,7 @@
 import React from "react"
-import axios from 'axios'
+import BackButton from '../BackButton'
 import Footer from '../Footer'
+import axios from 'axios'
 import './style.css'
 
 class PledgePage extends React.Component {
@@ -86,6 +87,7 @@ class PledgePage extends React.Component {
 
     return (
       <>
+        <BackButton {...this.props} />
         {
           !pledgeInfo.length ? <p>Loading...</p> :
             <>
