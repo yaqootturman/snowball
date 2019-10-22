@@ -92,7 +92,6 @@ class PledgePage extends React.Component {
               <div className="top-info">
                 <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
                 {/* condition to change make/cancel the pledge  */}
-                {console.log("pledgeExist", pledgeExist)}
                 {pledgeExist ? <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.deleteUserPledge()}>Cancel the pledge</button> : <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
 
                 <h2 className="top-info__title">{pledgeInfo[0].title}</h2>
