@@ -6,24 +6,27 @@ import './style.css'
 class PledgePage extends React.Component {
 
   addUserPledge() {
+
     const { pledge_id } = this.props.location.state
     const { history } = this.props
     const userId = 1; //this should change to take id from props
 
     history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
-    this.setState(() => ({ pledgeExist: true }))
+
+    // i should recieve confirm from confirm page to setState pledgeExist
+    // this.setState(() => ({ pledgeExist: true }))
+
   }
 
   deleteUserPledge() {
 
     const { pledge_id } = this.props.location.state
-
     const userId = 1; //this should change to take id from props
     axios.get(`/api/${userId}/${pledge_id}/deletePledge`).then(() => {
-
       this.setState(() => ({ pledgeExist: false }))
     }).catch(err => { console.log("axios err", err) })
   }
+
   state = {
     userPledges: [],
     pledgeInfo: [],
@@ -48,7 +51,9 @@ class PledgePage extends React.Component {
     // compare between id which recieve from userPledges which recieve by context api and id from category to decide if user already mark the pledge or not
     const { pledge_id } = this.props.location.state
     userPledges.map((element) => {
-      if (element.pledge_id === pledge_id) this.setState({ pledgeExist: true, pledge_id })
+      if (element.pledge_id === pledge_id)
+        this.setState({ pledgeExist: true, pledge_id })
+
     })
 
     axios.get(`/api/action-category/pledge/${pledge_id}`).then(Response => {
@@ -87,6 +92,7 @@ class PledgePage extends React.Component {
               <div className="top-info">
                 <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
                 {/* condition to change make/cancel the pledge  */}
+                {console.log("pledgeExist", pledgeExist)}
                 {pledgeExist ? <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.deleteUserPledge()}>Cancel the pledge</button> : <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
 
                 <h2 className="top-info__title">{pledgeInfo[0].title}</h2>
