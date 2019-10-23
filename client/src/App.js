@@ -19,9 +19,9 @@ const App = () => {
       <Route exact path='/home' component={Home} />
       <Route exact path='/action-category/:category_id' component={CategoryPledges} />
       <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
-      <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
-      <Route path='/congratulations' component={Congratulations} />
-      <Route path='/delete-pledge-confirmation/:pledgeId' component={DeletePledgeConfirmation} />
+      <Route exact path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
+      <Route exact path='/congratulations' component={Congratulations} />
+      <Route exact path='/delete-pledge-confirmation/:pledgeId' component={DeletePledgeConfirmation} />
     </Router>
   )
 }

@@ -4,7 +4,7 @@ exports.deletePledgeToUser = (req, res) => {
   const { userId, pledgeId } = req.params
 
   deletePledgeToUser(userId, pledgeId)
-    .then(() => res.json({ msg: 'deleted' }
-    ))
+    .then(() => res.json({ msg: 'deleted' })
+    )
     .catch(() => res.status(500).json({ err: ' Error' }))
 }

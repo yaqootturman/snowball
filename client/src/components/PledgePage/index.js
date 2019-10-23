@@ -5,28 +5,6 @@ import './style.css'
 
 class PledgePage extends React.Component {
 
-  addUserPledge() {
-
-    const { pledge_id } = this.props.location.state
-    const { history } = this.props
-    const userId = 1; //this should change to take id from props
-
-    history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
-
-    // i should recieve confirm from confirm page to setState pledgeExist
-    // this.setState(() => ({ pledgeExist: true }))
-
-  }
-
-  deleteUserPledge() {
-
-    const { pledge_id } = this.props.location.state
-    const userId = 1; //this should change to take id from props
-    axios.get(`/api/${userId}/${pledge_id}/deletePledge`).then(() => {
-      this.setState(() => ({ pledgeExist: false }))
-    }).catch(err => { console.log("axios err", err) })
-  }
-
   state = {
     userPledges: [],
     pledgeInfo: [],
@@ -34,29 +12,26 @@ class PledgePage extends React.Component {
     pledgeProsCons: [],
     pledgeResources: [],
     pledgeReferences: [],
-    pledgeExist: false,
+    // pledgeExist: '',
+    loading: true,
     pledge_id: ''
   }
 
   componentDidMount() {
-    const { userPledges } = this.state
-    const userId = 1;
-    axios.get(`/api/home/${userId}`).then(({ data }) => {
-      this.setState({ userPledges: data })
-    })
-      .catch(error => {
-        console.log("error", error);
-      })
+    //set state pledge id coming from pressed pledge
+    this.setState({ pledge_id: this.props.location.state })
 
-    // compare between id which recieve from userPledges which recieve by context api and id from category to decide if user already mark the pledge or not
+    //make sure that user pledges and pledge info are brought successfully change the loading flag to false to start rendering the page
+    const userPledges_pledgeInfo = Promise.all([this.getPledgeInfo(), this.getUserPledges()])
+    userPledges_pledgeInfo.then((res) => {
+      this.setState({ loading: false })
+    }
+    )
+  }
+
+  getPledgeInfo() {
     const { pledge_id } = this.props.location.state
-    userPledges.map((element) => {
-      if (element.pledge_id === pledge_id)
-        this.setState({ pledgeExist: true, pledge_id })
-      return true
-    })
-
-    axios.get(`/api/action-category/pledge/${pledge_id}`).then(Response => {
+    return axios.get(`/api/action-category/pledge/${pledge_id}`).then(Response => {
       const pledgeInfoPage = Response.data
       this.setState({
         pledgeInfo: pledgeInfoPage[0],
@@ -67,32 +42,58 @@ class PledgePage extends React.Component {
       })
 
     }).catch(err => { console.log("0000", err) });
-    this.getUserPledges()
-
   }
-
   getUserPledges() {
     const userId = 1;
-    axios.get(`/api/home/${userId}`).then(({ data }) => {
+    return axios.get(`/api/home/${userId}`).then(({ data }) => {
       this.setState({ userPledges: data })
     })
       .catch(error => {
         console.log("error", error);
       })
   }
+  checkPledgeButton() {
+    const { userPledges } = this.state
+    //search for the id coming from props if it exists in user pledges list to define the button whether its cancel the pledge or make the pledge
+    const buttonStatus = userPledges.filter((element) => {
+      return element.pledge_id === this.props.location.state.pledge_id
+    })
+    //if the array size != 0 it means that that the id exists whichc means the user already made the pledge then the button will be cancel the pledge
+    return buttonStatus.length !== 0;
+
+  }
+
+  handlePledgeDeletionAddition(pledgeStatus) {
+    console.log('status', pledgeStatus)
+    this.setState({ pledgeExist: pledgeStatus })
+  }
+
+  addUserPledge() {
+    const { pledge_id } = this.props.location.state
+    const { history } = this.props
+    const userId = 1; //this should change to take id from props
+    // history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
+    // i should recieve confirm from confirm page to setState pledgeExist
+    this.setState(() => ({ pledgeExist: true, pledge_id }))
+  }
 
   render() {
-    const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, pledgeExist } = this.state
+    const { userPledges, pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading } = this.state
+    const { history } = this.props
+    const { pledge_id } = this.props.location.state
 
     return (
       <>
         {
-          !pledgeInfo.length ? <p>Loading...</p> :
+          loading ? (<h2>Loading...</h2>) : (
             <>
               <div className="top-info">
                 <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
                 {/* condition to change make/cancel the pledge  */}
-                {pledgeExist ? <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.deleteUserPledge()}>Cancel the pledge</button> : <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
+                {this.checkPledgeButton() ?
+                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img, handleChange: this.handlePledgeDeletionAddition })}>Cancel the pledge</button> :
+                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
+
 
                 <h2 className="top-info__title">{pledgeInfo[0].title}</h2>
                 <p className="top-info__the-pledge-word">THE PLEDGE</p>
@@ -165,7 +166,7 @@ class PledgePage extends React.Component {
                 })}
               </div>
               <Footer {...this.props} />
-            </>
+            </>)
         }
       </>
     )
