@@ -4,7 +4,7 @@ import './style.css'
 const LandingPage = props => {
   const { history } = props
   return (
-    <>
+    <div className="container">
 
       <div className="title-div">
         <h1 className='title-div__top-title'>
@@ -84,7 +84,7 @@ const LandingPage = props => {
           Let’s go!
         </button>
       </div>
-    </>
+    </div>
   )
 }
 export default LandingPage
