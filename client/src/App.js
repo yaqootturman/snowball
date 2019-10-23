@@ -14,7 +14,6 @@ const App = () => {
   return (
     <Router>
       <Route exact path='/' component={LandingPage} />
-      <Route path='/congratulations' component={Congratulations} />
       <Route exact path="/dashboard" component={DashboardPage} />
       <Route exact path='/home' component={Home} />
       <Route exact path='/action-category/:category_id' component={CategoryPledges} />
