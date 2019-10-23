@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./index.css";
+import "./style.css";
 import Footer from "../Footer";
 export class Congratulations extends Component {
   state = {
