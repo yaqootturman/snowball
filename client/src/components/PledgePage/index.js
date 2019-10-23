@@ -87,7 +87,6 @@ class PledgePage extends React.Component {
 
     return (
       <div className="container">
-        {console.log("kk", pledgeInfo)}
         <BackButton {...this.props} />
         {
           !pledgeInfo.length ? <p>Loading...</p> :

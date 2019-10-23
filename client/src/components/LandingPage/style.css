@@ -1,22 +1,45 @@
-
+.container{
+  overflow: scroll;
+}
 .vertical {
   margin: 8%;
-  border-left: 3px solid #7cdbd5;
+  border-left: 3px solid #3fcfad;
   display: inline-block;
 }
-.vertical__tiltle {
-  width: 80%;
-  display: block;
+.title-div{
+  margin-top: 12vh;
+  width: 100%;
+  text-align: center;
+}
+
+.title-div__top-title{
   font-weight: bold;
   font-size: 33px;
+  font-family:Comfortaa;
   line-height: 39px;
-  margin-top: 30%;
-  margin-left: -10%;
-  background: white;
-  padding: 5%;
+  display: initial;
+  padding-bottom: 8px;
+}
+.title-div__horizantal-line{
+  border-top: 8px solid #FF4062;
+  margin-left: 37%;
+  width: 25%;
+}
+.main-description-div{
+  margin-top: 12vh;
+  padding:5vw;
+  width: 90%;
+  text-align: center;
+} 
+.main-description-div__description {
+  font-weight: normal;
+  font-size: 33px;
+  line-height: 39px;
+  display: initial;
+  letter-spacing: 0.1em;
 }
 .vertical__contents {
-  margin-bottom: 8%;
+  margin-bottom: 24%;
   margin-left: -10%;
   padding: 5%;
   background-color: white;
@@ -25,9 +48,10 @@
   line-height: 28px;
 }
 .start {
-  width: 100%;
+  width: 100vw;
   text-align: center;
   margin-top: 10%;
+  margin-bottom:10%;
 }
 .start__letsgo {
   background-color: white;
@@ -67,14 +91,14 @@
   color: white;
 }
 .vertical__contents__circles__numberCircle1 {
-  background: #7cdbd5;
+  background: #3fcfad;
 }
 .vertical__contents__circles__numberCircle2 {
   background: #f9be02;
 }
 
 .vertical__contents__circles__numberCircle3 {
-  background: #ff4062;
+  background: #FF4062;
 }
 .vertical__contents__circles__span {
   margin-left: 5%;
