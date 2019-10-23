@@ -21,7 +21,7 @@ const App = () => {
       <Route exact path='/action-category/:category_id' component={CategoryPledges} />
       <Route exact path='/action-category/pledge/:pledge_title' component={PledgePage} />
       <Route path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
-      <Route path='/congratulations' component={Congratulations} />
+      <Route path='/congratulations' component={Congratulations} /> 
       <Route path='/information' component={InformationPage} />
     </Router>
   )
