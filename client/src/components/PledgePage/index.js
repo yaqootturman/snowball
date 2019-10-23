@@ -63,11 +63,6 @@ class PledgePage extends React.Component {
 
   }
 
-  handlePledgeDeletionAddition(pledgeStatus) {
-    console.log('status', pledgeStatus)
-    this.setState({ pledgeExist: pledgeStatus })
-  }
-
   addUserPledge() {
     const { pledge_id } = this.props.location.state
     const { history } = this.props
@@ -77,8 +72,12 @@ class PledgePage extends React.Component {
     this.setState(() => ({ pledgeExist: true, pledge_id }))
   }
 
+  // handlePledgeDeletionAddition(pledgeStatus) {
+  //   console.log('status', pledgeStatus)
+  //   this.setState({ pledgeExist: pledgeStatus })
+  // }
   render() {
-    const { userPledges, pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading } = this.state
+    const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading } = this.state
     const { history } = this.props
     const { pledge_id } = this.props.location.state
 
@@ -89,9 +88,11 @@ class PledgePage extends React.Component {
             <>
               <div className="top-info">
                 <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
-                {/* condition to change make/cancel the pledge  */}
+
+                {/* condition to change make/cancel the pledge button */}
                 {this.checkPledgeButton() ?
-                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img, handleChange: this.handlePledgeDeletionAddition })}>Cancel the pledge</button> :
+                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img, handleChange: this.handlePledgeDeletionAddition })}>Cancel the pledge</button>
+                  :
                   <button className="top-info__make-cancel" value={pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
 
 
