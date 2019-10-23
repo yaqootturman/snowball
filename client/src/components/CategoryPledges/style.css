@@ -1,3 +1,9 @@
+.category-pledges-page{
+  overflow-y: scroll;
+  position: absolute;
+  top: 0px;
+  bottom: 87px;
+}
 .category-container{
  position: relative;
 }
