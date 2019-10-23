@@ -4,11 +4,20 @@ import './style.css'
 const LandingPage = props => {
   const { history } = props
   return (
-    <>
-      <div className='vertical'>
-        <h1 className='vertical__tiltle'>
-          Fight climate change together, every single day.
+    <div className="container">
+
+      <div className="title-div">
+        <h1 className='title-div__top-title'>
+          snowball
         </h1>
+        <hr className="title-div__horizantal-line"></hr>
+      </div>
+      <div className="main-description-div">
+        <h1 className='main-description-div__description'>
+          Together powerful in the fight against climate change
+        </h1>
+      </div>
+      <div className='vertical'>
         <div className='vertical__contents'>
           <div className='vertical__contents__circles'>
             <div className='vertical__contents__circles__circle vertical__contents__circles__numberCircle1'>
@@ -75,7 +84,7 @@ const LandingPage = props => {
           Let’s go!
         </button>
       </div>
-    </>
+    </div>
   )
 }
 export default LandingPage
