@@ -12,7 +12,6 @@ class PledgePage extends React.Component {
     pledgeProsCons: [],
     pledgeResources: [],
     pledgeReferences: [],
-    // pledgeExist: '',
     loading: true,
     pledge_id: ''
   }
@@ -72,10 +71,7 @@ class PledgePage extends React.Component {
     this.setState(() => ({ pledgeExist: true, pledge_id }))
   }
 
-  // handlePledgeDeletionAddition(pledgeStatus) {
-  //   console.log('status', pledgeStatus)
-  //   this.setState({ pledgeExist: pledgeStatus })
-  // }
+
   render() {
     const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading } = this.state
     const { history } = this.props
