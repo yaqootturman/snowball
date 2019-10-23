@@ -10,6 +10,7 @@ const LandingPage = props => {
         <h1 className='title-div__top-title'>
           snowball
         </h1>
+        <hr className="title-div__horizantal-line"></hr>
       </div>
       <div className="main-description-div">
         <h1 className='main-description-div__description'>

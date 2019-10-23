@@ -15,9 +15,13 @@
   font-family:Comfortaa;
   line-height: 39px;
   display: initial;
-  margin: 34vw;
+  margin: 36vw;
   padding-bottom: 8px;
-  border-bottom: 10px solid #FF4062;
+}
+.title-div__horizantal-line{
+  width: 117px;
+  border-top: 8px solid #FF4062;
+  margin-left: 39vw;
 }
 .main-description-div{
   margin-top: 12vh;
