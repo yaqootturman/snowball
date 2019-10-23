@@ -15,7 +15,7 @@ const InsertUserPledge = (userID, pledgeId) => {
 const CheckIfUserConfirm = (userID, pledgeId) => {
   return dbConnection
     .query(
-      'select user_id from pledge_to_user where pledge_id = $2 AND user_id = $1',
+      'SELECT user_id FROM pledge_to_user WHERE pledge_id = $2 AND user_id = $1',
       [userID, pledgeId]
     )
     .then(res => res.rows)

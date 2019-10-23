@@ -6,9 +6,8 @@ import "./style.css";
 
 export class ConfirmPage extends Component {
   state = {
-    pledgeDescription:
-      " taking no more than one return flight each year.When I do fly, I will offset my emissions.",
-    NumberOfEnrolledPeople: 3333
+    pledgeDescription:'',
+    NumberOfEnrolledPeople:''
   };
   componentDidMount() {
     if (this.props.location.data) {
@@ -18,7 +17,6 @@ export class ConfirmPage extends Component {
       } = this.props.location.data[0];
       const separator = "$";
       const confirmDescription=description.replace("I will", "");
-      console.log(number_of_enrollement)
       window.localStorage.setItem("storedData", [
         confirmDescription,
         separator,
