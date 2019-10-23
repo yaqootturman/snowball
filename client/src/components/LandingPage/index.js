@@ -77,7 +77,7 @@ const LandingPage = props => {
         <button
           type='submit'
           onClick={() => {
-            history.push('/home')
+            history.push('/home/1')
           }}
           className='start__letsgo'
         >

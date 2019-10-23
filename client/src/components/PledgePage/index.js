@@ -88,7 +88,7 @@ class PledgePage extends React.Component {
 
                 {/* condition to change make/cancel the pledge button */}
                 {this.checkPledgeButton() ?
-                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img, handleChange: this.handlePledgeDeletionAddition })}>Cancel the pledge</button>
+                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img })}>Cancel the pledge</button>
                   :
                   <button className="top-info__make-cancel" value={pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
 

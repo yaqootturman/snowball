@@ -7,7 +7,7 @@ class Footer extends Component {
   Home = () => {
     const { history } = this.props
 
-    history.push('/home')
+    history.push('/home/1')
   }
   Actions = () => {
     const { history } = this.props

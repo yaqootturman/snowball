@@ -16,10 +16,12 @@ const DeletePledgeConfirmation = (props) => {
   const deleteUserPledge = () => {
     const userId = 1;
     axios.get(`/api/${userId}/${pledgeId}/deletePledge`).then(
-      () => history.push(`/action-category/pledge/${pledge_name}`, { pledge_id: pledgeId })
+      () => {
+        history.push(`/home/${userId}`)
+      }
     ).catch(err => { console.log("axios err", err) })
   }
-
+  console.log(props.history)
   return (
 
     <>
@@ -28,8 +30,8 @@ const DeletePledgeConfirmation = (props) => {
         <h3 className="delete-confirmation-dialog__dialog-title" >Delete Confirmation!</h3>
         <p className="delete-confirmation-dialog__delete-message">Are you Sure You Want To Delete {pledge_name} Pledge ?</p>
         <img className="delete-confirmation-dialog__pledge-image" alt="pledge to delete " src={pledge_image}></img>
-        <button className="delete-confirmation-dialog__confirm-button button-aligner" onClick={deleteUserPledge}>Yes, Delete</button>
-        <button className="delete-confirmation-dialog__cancel-button button-aligner" >Cancel</button>
+        <button className="delete-confirmation-dialog__confirm-button button-aligner" onClick={() => deleteUserPledge()}>Yes, Delete</button>
+        <button className="delete-confirmation-dialog__cancel-button button-aligner" onClick={() => history.goBack()}>Cancel</button>
       </div>
       <Footer {...props} />
     </>
