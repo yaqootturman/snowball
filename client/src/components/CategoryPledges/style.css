@@ -1,8 +1,11 @@
+.category-pledges-page{
+  overflow-y: scroll;
+  position: absolute;
+  top: 0px;
+  bottom: 87px;
+}
 .category-container{
  position: relative;
-}
-.category-pledges{
-  margin-bottom: 103px;
 }
 .category-container__category-img{
   width: 100%;
