@@ -67,9 +67,8 @@ class PledgePage extends React.Component {
     const { pledge_id } = this.props.location.state
     const { history } = this.props
     const userId = 1; //this should change to take id from props
-    // history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
+    history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
     // i should recieve confirm from confirm page to setState pledgeExist
-    this.setState(() => ({ pledgeExist: true, pledge_id }))
   }
 
 
@@ -103,9 +102,9 @@ class PledgePage extends React.Component {
 
               <div className="importance-div">
                 <h3>Why it`s important?</h3>
-                {pledgeInfo[0].importance.split('..').map(i => {
+                {pledgeInfo[0].importance.split('..').map((element, index) => {
                   return <>
-                    <br /><p >{i}</p>
+                    <br /><p key={index}>{element}</p>
                   </>
                 })}
               </div>
@@ -114,7 +113,7 @@ class PledgePage extends React.Component {
                 <h3>How to do it</h3>
                 {pledgeInstructions.map((element, index) => {
                   return (
-                    <div className="how-do-div__element">
+                    <div className="how-do-div__element" key={index}>
                       <span>{index + 1}.     </span>
                       <span>{element.description}</span>
                     </div>
@@ -125,7 +124,7 @@ class PledgePage extends React.Component {
                 <h3>Pros & cons of pledge</h3>
                 {pledgeProsCons.map((element, index) => {
                   return (
-                    <div className="pros-cons-div__element">
+                    <div className="pros-cons-div__element" key={index}>
                       <div className={element.color}></div>
                       <span>{element.statement}</span>
                     </div>
@@ -136,7 +135,7 @@ class PledgePage extends React.Component {
                 <h3>Resources to help</h3>
                 {pledgeResources.map((element, index) => {
                   return (
-                    <li className="resources-div__link">
+                    <li className="resources-div__link" key={index}>
                       <a href={element.link}> {element.description}</a>
                     </li>
                   )
@@ -144,9 +143,9 @@ class PledgePage extends React.Component {
               </div>
               <div className="further-information">
                 <h3>Further information</h3>
-                {pledgeInfo[0].further_info.split('..').map(i => {
+                {pledgeInfo[0].further_info.split('..').map((element, index) => {
                   return <>
-                    <br /><p >{i}</p>
+                    <br /><p key={index}>{element}</p>
                   </>
                 })}
               </div>
@@ -157,7 +156,7 @@ class PledgePage extends React.Component {
                 <h3>References</h3>
                 {pledgeReferences.map((element, index) => {
                   return (
-                    <div className="references__element">
+                    <div className="references__element" key={index}>
                       <span>{index + 1} . </span>
                       <a href={element.description}>{element.description}</a>
                     </div>
