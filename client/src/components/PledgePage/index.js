@@ -1,6 +1,7 @@
 import React from "react"
-import axios from 'axios'
+import BackButton from '../BackButton'
 import Footer from '../Footer'
+import axios from 'axios'
 import './style.css'
 
 class PledgePage extends React.Component {
@@ -78,7 +79,8 @@ class PledgePage extends React.Component {
     const { pledge_id } = this.props.location.state
 
     return (
-      <>
+      <div className="container">
+        <BackButton {...this.props} />
         {
           loading ? (<h2>Loading...</h2>) : (
             <>
@@ -165,7 +167,7 @@ class PledgePage extends React.Component {
               <Footer {...this.props} />
             </>)
         }
-      </>
+      </div>
     )
   }
 }

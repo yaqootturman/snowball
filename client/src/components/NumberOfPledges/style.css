@@ -3,7 +3,7 @@
     height: 47px;
     justify-content: space-between;
     align-content: center;
-    width:100%;
+    width:78%;
     margin-right: -11%;
     margin-left: 5%;
     margin-top:4%; 
@@ -19,7 +19,7 @@
 .container-div__number-of-Pledges{
     position: absolute;
     right: 14%;
-    top: 6%;
+    top: 4%;
     width: 40px;
     height: 40px;
     color: #000;

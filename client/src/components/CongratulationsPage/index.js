@@ -2,19 +2,33 @@ import React, { Component } from "react";
 import "./style.css";
 import Footer from "../Footer";
 export class Congratulations extends Component {
+  state = {
+    NumberOfEnrolledPeople: ""
+  };
 
   componentDidMount() {
-
-    console.log(this.props)
+    if (window.localStorage.length > 0) {
+      this.setState({
+        NumberOfEnrolledPeople: window.localStorage.getItem("EnrolledPeople")
+      });
+    } else if (this.props.location.NumberOfEnrolledPeople) {
+      const { NumberOfEnrolledPeople } = this.props.location;
+     
+      window.localStorage.setItem("EnrolledPeople", NumberOfEnrolledPeople);
+      this.setState({
+        NumberOfEnrolledPeople: window.localStorage.getItem("EnrolledPeople")
+      });
+    }
   }
-
 
   redirectInformation = () => {
     const { history } = this.props;
+    window.localStorage.clear();
     history.push("/information");
   };
   redirectDashboard = () => {
     const { history } = this.props;
+    window.localStorage.clear();
     history.push("/dashboard");
   };
   render() {
@@ -27,8 +41,9 @@ export class Congratulations extends Component {
           You are doing something amazing!
         </p>
         <p className="congratulations__page-motivation">
-          You're now one of<span> 43,242 </span> people committed to this pledge
-          and turning the tide on climate change.
+          You're now one of<span> {this.state.NumberOfEnrolledPeople} </span>{" "}
+          people committed to this pledge and turning the tide on climate
+          change.
         </p>
         <p className="congratulations__page-tips">TOP TIPS</p>
         <li>
@@ -60,7 +75,7 @@ export class Congratulations extends Component {
             <button>Share</button>
           </div>
         </div>
-        <Footer />
+        <Footer {...this.props} />
       </div>
     );
   }

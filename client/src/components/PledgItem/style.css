@@ -8,7 +8,7 @@
 .pledge-div__img{
   position: relative;
   width:99%;
-  height: 48%;
+  height: 178px;
   top:0;
   left:0;
   line-height: 39px;
@@ -31,7 +31,7 @@
 
 }
 .pledge-div__number{
-  color:#0A7FA4;
+  color:#1dbfd1;
   font-weight: bold;
 }
 @media (min-width: 768px) {

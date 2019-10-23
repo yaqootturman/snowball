@@ -9,6 +9,8 @@ import PledgePage from './components/PledgePage'
 import ConfirmPage from './components/ConfirmPage'
 import Congratulations from './components/CongratulationsPage'
 import DeletePledgeConfirmation from './components/DeletePledgeConfirmation'
+import InformationPage from './components/InformationPage'
+
 
 const App = () => {
 
@@ -22,9 +24,9 @@ const App = () => {
       <Route exact path='/:userId/:pledgeId/addPledge' component={ConfirmPage} />
       <Route exact path='/congratulations' component={Congratulations} />
       <Route exact path='/delete-pledge-confirmation/:pledgeId' component={DeletePledgeConfirmation} />
+      <Route exact path='/information' component={InformationPage} />
     </Router>
   )
 }
-
 
 export default App

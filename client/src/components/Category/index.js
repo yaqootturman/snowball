@@ -46,8 +46,8 @@ class Category extends Component {
   // function to calculate all pledges that user make it in category by filter
   numberOfPledges = (arr1, item) => {
     let arr2 = arr1.filter((element) => {
-      if (element.name === item) {
-        return element.pledge_name
+      if (element.category_id === item) {
+        return element.pledge_id
       }
       return false
     })
@@ -83,7 +83,7 @@ class Category extends Component {
                     <img className="category-div__dashboard-action-image" src={item.img} alt={item.name} />
                     <p className="category-div__dashboard-action-title" >{item.name} </p>
                     <span className="category-div__dashboard-action-numbers">
-                      <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.name)}/ </div>}</div>
+                      <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.category_id)}/ </div>}</div>
                       <div>
                         {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
                       </div></span>

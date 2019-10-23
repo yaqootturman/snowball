@@ -1,7 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import PledgeItem from './../PledgItem/PledgeItem'
+import PledgeItem from './../PledgItem'
 import BackButton from '../BackButton';
+import Footer from '../Footer'
 import './style.css'
 
 
@@ -28,18 +29,21 @@ class CategoryPledges extends React.Component {
 
     return (
       <>
-        < BackButton />
-        {!details ?
-          <h3>loading</h3>
-          : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
-            <h1 className="category-container__category-title">{details.name}</h1>
-            <p className="category-container__category-description">{details.description}</p>
-          </div> <p className="category-container__pledges">{details.name} PLEDGES</p></span>}
-        {
-          !pledge_info.length ? <h2>Loading...</h2> : pledge_info.map((element, index) => {
-            return <PledgeItem {...this.props} element={element} key={index} />
-          })
-        }
+        <div className="category-pledges-page">
+          < BackButton {...this.props} />
+          {!details ?
+            <h3>loading</h3>
+            : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
+              <h1 className="category-container__category-title">{details.name}</h1>
+              <p className="category-container__category-description">{details.description}</p>
+            </div> <p className="category-container__pledges">{details.name} PLEDGES</p></span>}
+          {
+            !pledge_info.length ? <h2>Loading...</h2> : pledge_info.map((element, index) => {
+              return (<PledgeItem {...this.props} element={element} key={index} />)
+            })
+          }
+        </div>
+        <Footer  {...this.props} />
 
       </>)
   }
