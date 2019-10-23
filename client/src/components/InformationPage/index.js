@@ -6,7 +6,7 @@ export class InformationPage extends Component {
   render() {
     return (
       <div className="information__page">
-        <BackButton />
+        <BackButton {... this.props} />
         <p className="information__page-title">Information</p>
         <p className="information__page-question">What’s our vision?</p>
 
@@ -29,7 +29,7 @@ export class InformationPage extends Component {
           against climate change. We want to create a movement to release that
           inner power!
         </p>
-        <Footer />
+        <Footer {... this.props} />
       </div>
     );
   }
