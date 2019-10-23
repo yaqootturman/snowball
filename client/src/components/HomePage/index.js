@@ -25,7 +25,6 @@ class HomePage extends Component {
     const { userPledges, loading } = this.state
     const { history } = this.props
     const userMessage = 'You haven’t made any pledges yet!\n\n Head to your action dashboard to see how you can fight climate change today.'
-    console.log("loading", loading);
 
     return (
       <React.Fragment>
