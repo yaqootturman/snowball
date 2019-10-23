@@ -6,10 +6,13 @@ import './style.css'
 
 const DeletePledgeConfirmation = (props) => {
 
+
+
+
   const { pledgeId } = props.match.params
   //get pledge info and handleChange function of the pledge to change the pledgeExit state in the pledgePage
-  const { pledge_name, pledge_image } = props.location
-  const { history } = props
+  let { pledge_name, pledge_image } = props.location
+  let { history } = props
 
   //  user_id will be changed to be taken from authentication cookies
   //  handleChange function is called to change the state of pledge
@@ -21,7 +24,14 @@ const DeletePledgeConfirmation = (props) => {
       }
     ).catch(err => { console.log("axios err", err) })
   }
-  console.log(props.history)
+
+  {
+    if (!pledge_name) {
+      const data = sessionStorage.getItem('pledgeInfo')
+      pledge_name = JSON.parse(data).pledge_name
+      pledge_image = JSON.parse(data).pledge_image
+    }
+  }
   return (
 
     <>

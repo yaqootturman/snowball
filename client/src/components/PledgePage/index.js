@@ -70,11 +70,16 @@ class PledgePage extends React.Component {
     history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
     // i should recieve confirm from confirm page to setState pledgeExist
   }
+  cancelPledgeButton(pledge_id, pledgeInfo) {
+    //store pledge info in session
+    sessionStorage.setItem('pledgeInfo', JSON.stringify({ pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img }))
 
+    const { history } = this.props
+    history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img })
+  }
 
   render() {
     const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading } = this.state
-    const { history } = this.props
     const { pledge_id } = this.props.location.state
 
     return (
@@ -88,7 +93,7 @@ class PledgePage extends React.Component {
 
                 {/* condition to change make/cancel the pledge button */}
                 {this.checkPledgeButton() ?
-                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => history.push({ pathname: `/delete-pledge-confirmation/${pledge_id}`, pledge_name: pledgeInfo[0].title, pledge_image: pledgeInfo[0].img })}>Cancel the pledge</button>
+                  <button className="top-info__make-cancel" value={pledge_id} onClick={() => this.cancelPledgeButton(pledge_id, pledgeInfo)}>Cancel the pledge</button>
                   :
                   <button className="top-info__make-cancel" value={pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
 
