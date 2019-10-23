@@ -11,7 +11,7 @@
   align-items: baseline; 
 }
 
-.delete-page-back-button{
+.delete-confirmation-dialog__back-button{
   width:100%;
   margin-bottom:50px;
 }
