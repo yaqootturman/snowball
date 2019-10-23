@@ -31,7 +31,7 @@ const DeletePledgeConfirmation = (props) => {
         <button className="delete-confirmation-dialog__confirm-button button-aligner" onClick={deleteUserPledge}>Yes, Delete</button>
         <button className="delete-confirmation-dialog__cancel-button button-aligner" >Cancel</button>
       </div>
-      <Footer />
+      <Footer {...props} />
     </>
   )
 }
