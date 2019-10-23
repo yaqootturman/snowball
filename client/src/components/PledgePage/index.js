@@ -86,7 +86,7 @@ class PledgePage extends React.Component {
     const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, pledgeExist } = this.state
 
     return (
-      <>
+      <div className="container">
         <BackButton {...this.props} />
         {
           !pledgeInfo.length ? <p>Loading...</p> :
@@ -169,7 +169,7 @@ class PledgePage extends React.Component {
               <Footer {...this.props} />
             </>
         }
-      </>
+      </div>
     )
   }
 }
