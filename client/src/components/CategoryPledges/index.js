@@ -37,9 +37,9 @@ class CategoryPledges extends React.Component {
             <p className="category-container__category-description">{details.description}</p>
           </div> <p className="category-container__pledges">{details.name} PLEDGES</p></span>}
         {
-          !pledge_info.length ? <h2>Loading...</h2> : pledge_info.map((element, index) => {
-            return <PledgeItem {...this.props} element={element} key={index} />
-          })
+          !pledge_info.length ? <h2>Loading...</h2> : <div className="category-pledges">{pledge_info.map((element, index) => {
+            return (<PledgeItem {...this.props} element={element} key={index} />)
+          })}</div>
         }
         <Footer  {...this.props} />
 
