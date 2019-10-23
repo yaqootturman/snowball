@@ -12,6 +12,8 @@
 .Back__button-inner {
   display: flex;
   flex-direction: row;
+  padding-left: 12px;
+  padding-right: 12px;
   justify-content: space-evenly;
 }
 
@@ -22,7 +24,6 @@
 
 .Back__button-inner p {
   color: #67675B;
-  padding-left: 0px;
+  padding-left: 9px;
   font-weight: 5px;
-  margin: auto;
 }
