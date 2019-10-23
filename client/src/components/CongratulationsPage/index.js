@@ -75,7 +75,7 @@ export class Congratulations extends Component {
             <button>Share</button>
           </div>
         </div>
-        <Footer />
+        <Footer {...this.props} />
       </div>
     );
   }
