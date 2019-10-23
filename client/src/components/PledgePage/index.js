@@ -87,13 +87,13 @@ class PledgePage extends React.Component {
 
     return (
       <div className="container">
-
+        {console.log("kk", pledgeInfo)}
         <BackButton {...this.props} />
         {
           !pledgeInfo.length ? <p>Loading...</p> :
             <>
               <div className="top-info">
-                <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].banner_img} />
+                <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
                 {/* condition to change make/cancel the pledge  */}
                 {pledgeExist ? <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.deleteUserPledge()}>Cancel the pledge</button> : <button className="top-info__make-cancel" value={this.state.pledge_id} onClick={() => this.addUserPledge()}>Make the pledge</button>}
 
