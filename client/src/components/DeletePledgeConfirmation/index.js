@@ -25,13 +25,13 @@ const DeletePledgeConfirmation = (props) => {
     ).catch(err => { console.log("axios err", err) })
   }
 
-  {
-    if (!pledge_name) {
-      const data = sessionStorage.getItem('pledgeInfo')
-      pledge_name = JSON.parse(data).pledge_name
-      pledge_image = JSON.parse(data).pledge_image
-    }
+
+  if (!pledge_name) {
+    const data = sessionStorage.getItem('pledgeInfo')
+    pledge_name = JSON.parse(data).pledge_name
+    pledge_image = JSON.parse(data).pledge_image
   }
+
   return (
 
     <>
