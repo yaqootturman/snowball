@@ -24,7 +24,7 @@ const DeletePledgeConfirmation = (props) => {
 
     <>
       <div className="delete-confirmation-dialog">
-        <div className="delete-confirmation-dialog__back-button"><BackButton /></div>
+        <div className="delete-confirmation-dialog__back-button"><BackButton {...props} /></div>
         <h3 className="delete-confirmation-dialog__dialog-title" >Delete Confirmation!</h3>
         <p className="delete-confirmation-dialog__delete-message">Are you Sure You Want To Delete {pledge_name} Pledge ?</p>
         <img className="delete-confirmation-dialog__pledge-image" alt="pledge to delete " src={pledge_image}></img>
