@@ -1,6 +1,6 @@
 .confirm__Page {
   display: grid;
-  background: #3fcfad;
+  background: #7cdbd5;
   height: -webkit-fill-available;
 }
 
@@ -39,7 +39,7 @@
 @media only screen and (max-width: 1330px) {
   .confirm__Page {
     display: grid;
-    background: #3fcfad;
+    background: #7cdbd5;
     height: -webkit-fill-available;
   }
 
@@ -79,7 +79,7 @@
 @media only screen and (max-width: 720px) {
   .confirm__Page {
     display: grid;
-    background: #3fcfad;
+    background: #7cdbd5;
     height: -webkit-fill-available;
   }
 
