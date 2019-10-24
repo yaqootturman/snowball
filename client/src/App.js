@@ -5,15 +5,11 @@ import LandingPage from './components/LandingPage'
 import Home from './components/HomePage'
 import DashboardPage from './components/DashboardPage'
 import CategoryPledges from './components/CategoryPledges'
-<<<<<<< HEAD
-import InformationPage from './components/InformationPage'
-=======
 import PledgePage from './components/PledgePage'
 import ConfirmPage from './components/ConfirmPage'
 import Congratulations from './components/CongratulationsPage'
 import InformationPage from './components/InformationPage'
 import FrontEndError from './components/FrontEndError'
->>>>>>> 439d6dc6241d6a0cdc8529c716225e8c79289ea4
 
 const App = () => {
 
@@ -36,18 +32,5 @@ const App = () => {
   )
 }
 
-<<<<<<< HEAD
-const App = () => (
-  <Router>
-    <React.Fragment>
-      <Route exact path='/' component={LandingPage} />
-      <Route exact path='/home' component={Home} />
-      <Route path='/action-category/:category_id' component={CategoryPledges} />
-      <Route path='/Information' component={InformationPage} />
-    </React.Fragment>
-  </Router>
-)
-=======
->>>>>>> 439d6dc6241d6a0cdc8529c716225e8c79289ea4
 
 export default App
