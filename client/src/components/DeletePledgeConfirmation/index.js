@@ -27,7 +27,8 @@ const DeletePledgeConfirmation = (props) => {
 
   //read pledge info from session storage in case the page is refreshed and the props are lost
   if (!pledge_name) {
-    const sessionData = sessionStorage.getItem('pledgeInfo')({ pledge_name, pledge_image } = JSON.parse(sessionData));
+    const sessionData = sessionStorage.getItem('pledgeInfo');
+    ({ pledge_name, pledge_image } = JSON.parse(sessionData));
   }
 
   return (
