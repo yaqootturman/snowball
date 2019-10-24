@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import './style.css'
+
 class BackButton extends Component {
   goBack = () => {
     this.props.history.goBack();
   }
+
   render() {
     return (
       <div>

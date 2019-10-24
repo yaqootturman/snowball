@@ -57,6 +57,7 @@
   width: 20px;
   display: block;
   margin: 10% auto 3px auto;
+  filter:none;
   }
 
 .user-pledge__pledge-enrollements-number{

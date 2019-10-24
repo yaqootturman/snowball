@@ -1,6 +1,22 @@
+<<<<<<< HEAD
+.loading-spinner__details{
+	margin: 30%;
+	position: relative;
+}
+.loading-spinner{
+	margin-top: 52%;
+	color: #1dbfd1;
+	margin-left: 40%;
+	font-weight: bold;
+	font-size: 100%;
+	position: absolute;
+}
+=======
+>>>>>>> master
 .top-info{
   position: relative;
   width:80vw;
+  z-index: 1;
 }
 .top-info__img{
   width: 100vw;
