@@ -5,7 +5,7 @@ const FrontEndError = () => {
   return (
     <div className="error">
       <img className="error__img"
-        src="https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg"
+        src="https://media.istockphoto.com/vectors/error-404-vector-id538038858"
         alt="Error404 page not found"
       />
     </div>

@@ -8,33 +8,6 @@ import ClipLoader from 'react-spinners/ClipLoader'
 
 class PledgePage extends React.Component {
 
-<<<<<<< HEAD
-  addUserPledge() {
-
-    const { pledge_id } = this.props.location.state
-    const { history } = this.props
-    const userId = 1; //this should change to take id from props
-
-    history.push({ pathname: `/${userId}/${pledge_id}/addPledge`, data: this.state.pledgeInfo })
-
-    // i should recieve confirm from confirm page to setState pledgeExist
-    // this.setState(() => ({ pledgeExist: true }))
-
-  }
-
-  deleteUserPledge() {
-
-    const { pledge_id } = this.props.location.state
-    const userId = 1; //this should change to take id from props
-    axios.get(`/api/${userId}/${pledge_id}/deletePledge`).then(() => {
-      this.setState(() => ({ pledgeExist: false }))
-    }).catch(error => {
-      this.setState({ serverError: error.response.data.message })
-    })
-  }
-
-=======
->>>>>>> origin
   state = {
     userPledges: [],
     pledgeInfo: [],
@@ -42,31 +15,14 @@ class PledgePage extends React.Component {
     pledgeProsCons: [],
     pledgeResources: [],
     pledgeReferences: [],
-<<<<<<< HEAD
-    pledgeExist: false,
+    loading: true,
     pledge_id: '',
     serverError: ""
   }
 
   componentDidMount() {
-    const { userPledges } = this.state
-    const userId = 1;
-    axios.get(`/api/home/${userId}`).then(({ data }) => {
-      this.setState({ userPledges: data })
-    })
-      .catch(error => {
-        this.setState({ serverError: error.response.data.message })
-      })
-=======
-    loading: true,
-    pledge_id: ''
-  }
-
-  componentDidMount() {
     //set state pledge id coming from pressed pledge
     this.setState({ pledge_id: this.props.location.state })
->>>>>>> origin
-
     //make sure that user pledges and pledge info are brought successfully to change the loading flag to false to start rendering the page
     const pledgePageInfo = Promise.all([this.getPledgeInfo(), this.getUserPledges()])
     pledgePageInfo.then((res) => {
@@ -86,7 +42,9 @@ class PledgePage extends React.Component {
         pledgeReferences: pledgeInfoPage[4]
       })
 
-    }).catch(err => { console.log("0000", err) });
+    }).catch(error => {
+      this.setState({ serverError: error.response.data.message })
+    })
   }
   getUserPledges() {
     const userId = 1;
@@ -124,7 +82,7 @@ class PledgePage extends React.Component {
   }
 
   render() {
-    const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading } = this.state
+    const { pledgeInfo, pledgeInstructions, pledgeProsCons, pledgeResources, pledgeReferences, loading, serverError } = this.state
     const { pledge_id } = this.props.location.state
 
     return (
