@@ -10,7 +10,7 @@ class Category extends Component {
     userPledges: [],
     name: "",
     categories: [],
-
+    serverError: ""
   }
   componentDidMount = () => {
 
@@ -27,10 +27,16 @@ class Category extends Component {
       this.setState(
         { userPledges: data })
     })
+      .catch(error => {
+        this.setState({ serverError: error.response.data.message })
+      })
     // request to get all pledges in each category in general 
     axios.get(`/api/dashboard_pledges_category`)
       .then(({ data }) => {
         this.setState({ categories: data })
+      })
+      .catch(error => {
+        this.setState({ serverError: error.response.data.message })
       })
   }
   // function to push the data to category page
@@ -70,29 +76,36 @@ class Category extends Component {
     const { data } = this.state.details
     const { userPledges } = this.state.userPledges
     const { pledgesCategory } = this.state.categories
+    const { serverError } = this.state
     return (
       <Switch>
-        {!data || !userPledges ? (
-          <h1>Loading</h1>
-        ) :
-          (
-            <div className="category-div">
-              {data.map((item, i) => {
-                return (
-                  <div className="category-div__dashboard-action" onClick={() => this.moveToCategorActionPage(item.category_id)} key={i}>
-                    <img className="category-div__dashboard-action-image" src={item.img} alt={item.name} />
-                    <p className="category-div__dashboard-action-title" >{item.name} </p>
-                    <span className="category-div__dashboard-action-numbers">
-                      <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.category_id)}/ </div>}</div>
-                      <div>
-                        {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
-                      </div></span>
-                  </div>
-                )
-              })}
-            </div>
-          )
+
+        {serverError !== "" ? <h1>{serverError}</h1> :
+          (<>
+            {!data || !userPledges ? (
+              <h1>Loading</h1>
+            ) :
+              (
+                <div className="category-div">
+                  {data.map((item, i) => {
+                    return (
+                      <div className="category-div__dashboard-action" onClick={() => this.moveToCategorActionPage(item.category_id)} key={i}>
+                        <img className="category-div__dashboard-action-image" src={item.img} alt={item.name} />
+                        <p className="category-div__dashboard-action-title" >{item.name} </p>
+                        <span className="category-div__dashboard-action-numbers">
+                          <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.category_id)}/ </div>}</div>
+                          <div>
+                            {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
+                          </div></span>
+                      </div>
+                    )
+                  })}
+                </div>
+              )
+            }
+          </>)
         }
+
       </Switch>
     )
   }
