@@ -77,7 +77,7 @@ class Category extends Component {
           <div className='sweet-loading'>
             <ClipLoader className="sweet-loading-dashboard"
               sizeUnit={"px"}
-              size={150}
+              size={80}
               color={'#123abc'}
             />
           </div>
