@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import './style.css'
 import axios from "axios"
 import { Switch } from "react-router-dom";
+import ClipLoader from 'react-spinners/ClipLoader'
 
 
 class Category extends Component {
@@ -73,7 +74,13 @@ class Category extends Component {
     return (
       <Switch>
         {!data || !userPledges ? (
-          <h1>Loading</h1>
+          <div className='sweet-loading'>
+            <ClipLoader className="sweet-loading-dashboard"
+              sizeUnit={"px"}
+              size={150}
+              color={'#123abc'}
+            />
+          </div>
         ) :
           (
             <div className="category-div">
