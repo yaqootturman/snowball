@@ -38,7 +38,15 @@ class NumberOfPledges extends Component {
         ) :
           (
             <div className="container-div__number-of-Pledges">
-              {!allPledges ? <h1>loading</h1> : (<div >{data.length}/{allPledges.length}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
+              {!allPledges ?
+                <div >
+                  <ClipLoader
+                    sizeUnit={"px"}
+                    size={15}
+                    color={'#FFF'}
+                  />
+                </div>
+                : (<div >{data.length}/{allPledges.length}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
             </div>
           )
         }

@@ -74,8 +74,8 @@ class Category extends Component {
     return (
       <Switch>
         {!data || !userPledges ? (
-          <div className='sweet-loading'>
-            <ClipLoader className="sweet-loading-dashboard"
+          <div className='loading-spinner'>
+            <ClipLoader className="loading-spinner__home"
               sizeUnit={"px"}
               size={80}
               color={'#123abc'}

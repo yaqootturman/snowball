@@ -1,8 +1,8 @@
-.loading-spinner{
+.loading-spinner__home{
 	margin: 30%;
 	position: relative;
 }
-.loading-spinner__home{
+.loading-spinner{
 	margin-top: 52%;
 	color: #1dbfd1;
 	margin-left: 40%;
