@@ -1,5 +1,7 @@
 .error {
-  padding: 1.4%;
-  width: 97%;
-  margin-top: 20%;
+  width: 100%;
+  height: 100%;
+}
+.error__img{
+  margin: 23vw;
 }

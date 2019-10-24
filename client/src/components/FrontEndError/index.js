@@ -4,8 +4,10 @@ import './style.css'
 const FrontEndError = () => {
   return (
     <div className="error">
-      <h1>Not Found</h1>
-      <p>Enter correct path,Please!</p>
+      <img className="error__img"
+        src="https://www.interserver.net/tips/wp-content/uploads/2016/10/404error.jpeg"
+        alt="Error404 page not found"
+      />
     </div>
   )
 }
