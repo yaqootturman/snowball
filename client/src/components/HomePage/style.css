@@ -1,15 +1,4 @@
-.loading-spinner{
-	margin: 30%;
-	position: relative;
-}
-.loading-spinner__home{
-	margin-top: 52%;
-	color: #1dbfd1;
-	margin-left: 40%;
-	font-weight: bold;
-	font-size: 100%;
-	position: absolute;
-}
+
 .home{
   overflow-y: scroll;
   position: absolute;
