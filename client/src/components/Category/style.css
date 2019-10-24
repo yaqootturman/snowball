@@ -2,7 +2,18 @@
     padding:0;
     margin:0
 }
-  
+.sweet-loading{
+	margin: 30%;
+	position: relative;
+}
+.sweet-loading-dashboard{
+	margin-top: 52%;
+	color: #1dbfd1;
+	margin-left: 40%;
+	font-weight: bold;
+	font-size: 100%;
+	position: absolute;
+}
 .category-div{
   display:flex;
   justify-content: space-around;
