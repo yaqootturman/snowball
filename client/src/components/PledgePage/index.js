@@ -91,9 +91,9 @@ class PledgePage extends React.Component {
       <div className="container">
         <BackButton {...this.props} />
         {
-          !pledgeInfo.length ? <div className="loading">
+          !pledgeInfo.length ? <div className="loading-spinner">
             <ClipLoader
-              className="loading-details"
+              className="loading-spinner__home"
               sizeUnit={'px'}
               size={80}
               color={'#123abc'}
