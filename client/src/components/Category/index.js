@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import './style.css'
 import axios from "axios"
 import { Switch } from "react-router-dom";
+import ClipLoader from 'react-spinners/ClipLoader'
 
 
 class Category extends Component {
@@ -80,33 +81,38 @@ class Category extends Component {
     return (
       <Switch>
 
-        {serverError !== "" ? <h1>{serverError}</h1> :
-          (<>
-            {!data || !userPledges ? (
-              <h1>Loading</h1>
-            ) :
-              (
-                <div className="category-div">
-                  {data.map((item, i) => {
-                    return (
-                      <div className="category-div__dashboard-action" onClick={() => this.moveToCategorActionPage(item.category_id)} key={i}>
-                        <img className="category-div__dashboard-action-image" src={item.img} alt={item.name} />
-                        <p className="category-div__dashboard-action-title" >{item.name} </p>
-                        <span className="category-div__dashboard-action-numbers">
-                          <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.category_id)}/ </div>}</div>
-                          <div>
-                            {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
-                          </div></span>
-                      </div>
-                    )
-                  })}
-                </div>
-              )
-            }
-          </>)
+        {
+          serverError !== "" ? <h1>{serverError}</h1> :
+            (<>
+              {!data || !userPledges ? (
+                <ClipLoader className="sweet-loading-dashboard"
+                  sizeUnit={"px"}
+                  size={80}
+                  color={'#123abc'}
+                />
+              ) :
+                (
+                  <div className="category-div">
+                    {data.map((item, i) => {
+                      return (
+                        <div className="category-div__dashboard-action" onClick={() => this.moveToCategorActionPage(item.category_id)} key={i}>
+                          <img className="category-div__dashboard-action-image" src={item.img} alt={item.name} />
+                          <p className="category-div__dashboard-action-title" >{item.name} </p>
+                          <span className="category-div__dashboard-action-numbers">
+                            <div className="category-div__dashboard-action-first"> {!userPledges ? <h3>loading</h3> : <div>{this.numberOfPledges(userPledges, item.category_id)}/ </div>}</div>
+                            <div>
+                              {!pledgesCategory ? <h2>loading</h2> : <p>{this.numberOfPledges2(pledgesCategory, item.category_id)}</p>}
+                            </div></span>
+                        </div>
+                      )
+                    })}
+                  </div>
+                )
+              }
+            </>)
         }
 
-      </Switch>
+      </Switch >
     )
   }
 }

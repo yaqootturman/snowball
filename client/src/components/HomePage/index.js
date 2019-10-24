@@ -4,6 +4,7 @@ import UserPledges from '../UserPledges'
 import Footer from '../Footer'
 import axios from 'axios'
 import './style.css'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 class HomePage extends Component {
   state = {
@@ -33,23 +34,24 @@ class HomePage extends Component {
         <h5 className="home-subtitle">TOTAL PLEDGES: {userPledges.length}</h5>
         {serverError !== "" ? <h1>{serverError}</h1> : (
           <>
-            {loading ? <h1>Loading</h1> : (!userPledges.length) ?
-              (<>
-                <p className="home-user-message">{nl2br(userMessage)}</p>
-                <button className="home-redirect-to-dashboard" onClick={() => history.push('/dashboard')}><img className="home-dashboard-icon" alt="dashboard icon" src="https://imgur.com/cWgJL1U.png" /><span className="dashboard-button">Action Dashboard</span></button>
-              </>) :
-              userPledges.map(onePledge => {
-                return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
-              })
+            {loading ? <ClipLoader
+              className="loading-spinner__home"
+              sizeUnit={'px'}
+              size={80}
+              color={'#123abc'}
+            /> : (!userPledges.length) ?
+                (<>
+                  <p className="home-user-message">{nl2br(userMessage)}</p>
+                  <button className="home-redirect-to-dashboard" onClick={() => history.push('/dashboard')}><img className="home-dashboard-icon" alt="dashboard icon" src="https://imgur.com/cWgJL1U.png" /><span className="dashboard-button">Action Dashboard</span></button>
+                </>) :
+                userPledges.map(onePledge => {
+                  return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
+                })
             }
 
           </>
         )
-
-
         }
-
-
         <Footer {...this.props} />
       </React.Fragment >
     )
