@@ -98,7 +98,7 @@ class PledgePage extends React.Component {
             {
               !pledgeInfo.length ? <div className="loading">
                 <ClipLoader
-                  className="loading-details"
+                  className="loading-spinner__home"
                   sizeUnit={'px'}
                   size={80}
                   color={'#123abc'}

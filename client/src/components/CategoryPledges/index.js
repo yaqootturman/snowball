@@ -4,6 +4,7 @@ import PledgeItem from './../PledgItem'
 import BackButton from '../BackButton';
 import Footer from '../Footer'
 import './style.css'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 
 class CategoryPledges extends React.Component {
@@ -27,18 +28,25 @@ class CategoryPledges extends React.Component {
   }
 
   render() {
-    const { pledge_info } = this.state
-    const { details, serverError } = this.state
+    const { pledge_info, serverError } = this.state
+    const { details } = this.state
 
     return (
       <>
-        <div className="category-pledges-page">
-          < BackButton {...this.props} />
-          {serverError !== "" ? <h1>{serverError}</h1> :
-            (
-              <>
+        {serverError !== "" ? <h1>{serverError}</h1> :
+          (
+            <>
+              <div className="category-pledges-page">
+                < BackButton {...this.props} />
                 {!details ?
-                  <h3>loading</h3>
+                  <div className="loading-spinner">
+                    <ClipLoader
+                      className="loading-spinner__home"
+                      sizeUnit={'px'}
+                      size={80}
+                      color={'#123abc'}
+                    />
+                  </div>
                   : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
                     <h1 className="category-container__category-title">{details.name}</h1>
                     <p className="category-container__category-description">{details.description}</p>
@@ -48,11 +56,12 @@ class CategoryPledges extends React.Component {
                     return (<PledgeItem {...this.props} element={element} key={index} />)
                   })
                 }
+              </div>
 
-              </>
-            )}
+            </>
+          )
+        }
 
-        </div>
         <Footer  {...this.props} />
 
       </>)

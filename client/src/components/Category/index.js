@@ -85,7 +85,7 @@ class Category extends Component {
           serverError !== "" ? <h1>{serverError}</h1> :
             (<>
               {!data || !userPledges ? (
-                <ClipLoader className="sweet-loading-dashboard"
+                <ClipLoader className="loading-spinner__home"
                   sizeUnit={"px"}
                   size={80}
                   color={'#123abc'}
