@@ -3,6 +3,8 @@ import BackButton from '../BackButton'
 import Footer from '../Footer'
 import axios from 'axios'
 import './style.css'
+import ClipLoader from 'react-spinners/ClipLoader'
+
 
 class PledgePage extends React.Component {
 
@@ -89,7 +91,14 @@ class PledgePage extends React.Component {
       <div className="container">
         <BackButton {...this.props} />
         {
-          !pledgeInfo.length ? <p>Loading...</p> :
+          !pledgeInfo.length ? <div className="loading">
+            <ClipLoader
+              className="loading-details"
+              sizeUnit={'px'}
+              size={80}
+              color={'#123abc'}
+            />
+          </div> :
             <>
               <div className="top-info">
                 <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />

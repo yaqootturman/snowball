@@ -1,9 +1,19 @@
-
+.loading-details{
+	margin: 30%;
+	position: relative;
+}
+.loading{
+	margin-top: 52%;
+	color: #1dbfd1;
+	margin-left: 40%;
+	font-weight: bold;
+	font-size: 100%;
+	position: absolute;
+}
 .top-info{
   position: relative;
   width:80vw;
 }
-
 .top-info__img{
   width: 100vw;
 }
