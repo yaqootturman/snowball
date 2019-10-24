@@ -10,7 +10,7 @@
  font-weight: 600;
 }
 .congratulations__page-doingAmazing {
- margin: 3% auto 2% 10%;
+ margin: 3% auto 0% 10%;
  font-size: 35px;
  font-family: Raleway;
  font-weight: bold;
@@ -69,6 +69,7 @@
      display: grid;
      background: #f9be02 ;
      height: -webkit-fill-available;
+     margin-bottom: 10%;
    }
    .congratulations__page-congratulations {
      margin: 5% auto 0% 10%;
@@ -77,7 +78,7 @@
      font-weight: 600;
    }
    .congratulations__page-doingAmazing {
-     margin: 5% auto 2% 10%;
+     margin: 5% auto 0% 10%;
      font-size: 35px;
      font-family: Raleway;
      font-weight: bold;
@@ -90,7 +91,7 @@
      font-size: 19px;
    }
    .congratulations__page-tips {
-     margin: 1% auto 1% 10%;
+     margin: 2% auto 1% 10%;
      font-family: Raleway;
      font-weight: bold;
      font-size: 14px;
@@ -104,7 +105,7 @@
    .congratulations__page-buttons {
      display: flex;
      flex-direction: column;
-     margin: 2% auto auto auto;
+     margin: 5% auto auto auto;
    }
    .congratulations__page-buttons-choices {
      display: flex;
@@ -136,6 +137,7 @@
    display: grid;
    background: #f9be02 ;
    height: -webkit-fill-available;
+   margin-bottom: 15%;
  }
  .congratulations__page-congratulations {
    margin: 10% auto 0% 10%;
@@ -144,20 +146,20 @@
    font-weight: 600;
  }
  .congratulations__page-doingAmazing {
-   margin: 10% auto 2% 10%;
+   margin: 10% auto 0% 10%;
    font-size: 30px;
    font-family: Raleway;
    font-weight: bold;
  }
  .congratulations__page-motivation {
-   margin: 3% auto 2% 10%;
+   margin: 1% auto 2% 10%;
    width: 80vw;
    font-family: Raleway;
    font-weight: bold;
    font-size: 16px;
  }
  .congratulations__page-tips {
-   margin: 1% auto 1% 10%;
+   margin: 8% auto 1% 10%;
    font-family: Raleway;
    font-weight: bold;
    font-size: 12px;
@@ -172,7 +174,7 @@
  .congratulations__page-buttons {
    display: flex;
    flex-direction: column;
-   margin: 3% auto auto auto;
+   margin: 10% auto auto auto;
    font-size: 12px;
  }
  .congratulations__page-buttons-choices {
