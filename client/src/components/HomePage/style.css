@@ -10,6 +10,12 @@
 	font-size: 100%;
 	position: absolute;
 }
+.home{
+  position: absolute;
+  top: 0px;
+  bottom: 100px;
+  overflow-y: scroll;
+}
 .home__title{
   margin-left:18px;
   margin-block-start: 3rem;
