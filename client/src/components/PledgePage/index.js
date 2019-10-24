@@ -21,12 +21,11 @@ class PledgePage extends React.Component {
     //set state pledge id coming from pressed pledge
     this.setState({ pledge_id: this.props.location.state })
 
-    //make sure that user pledges and pledge info are brought successfully change the loading flag to false to start rendering the page
-    const userPledges_pledgeInfo = Promise.all([this.getPledgeInfo(), this.getUserPledges()])
-    userPledges_pledgeInfo.then((res) => {
+    //make sure that user pledges and pledge info are brought successfully to change the loading flag to false to start rendering the page
+    const pledgePageInfo = Promise.all([this.getPledgeInfo(), this.getUserPledges()])
+    pledgePageInfo.then((res) => {
       this.setState({ loading: false })
-    }
-    )
+    })
   }
 
   getPledgeInfo() {

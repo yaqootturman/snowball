@@ -25,11 +25,11 @@ const DeletePledgeConfirmation = (props) => {
     ).catch(err => { console.log("axios err", err) })
   }
 
-
+  //read pledge info from session storage in case the page is refreshed and the props are lost
   if (!pledge_name) {
-    const data = sessionStorage.getItem('pledgeInfo')
-    pledge_name = JSON.parse(data).pledge_name
-    pledge_image = JSON.parse(data).pledge_image
+    const sessionData = sessionStorage.getItem('pledgeInfo')
+      ({ pledge_name, pledge_image } = JSON.parse(sessionData));
+
   }
 
   return (
