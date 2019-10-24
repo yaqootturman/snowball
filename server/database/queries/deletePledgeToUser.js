@@ -7,5 +7,11 @@ const deletePledgeToUser = (userId, pledgeId) => {
       [userId, pledgeId]
     )
 }
+const updateUserPledgeEnroll = pledgeId => {
+  return dbConnection.query(
+    'UPDATE pledge SET number_of_enrollement = number_of_enrollement - 1 WHERE pledge_id =$1',
+    [pledgeId]
+  )
+}
 
-module.exports = deletePledgeToUser
+module.exports = { deletePledgeToUser, updateUserPledgeEnroll }
