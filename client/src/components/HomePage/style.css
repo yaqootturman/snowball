@@ -10,24 +10,24 @@
 	font-size: 100%;
 	position: absolute;
 }
-.home-title{
+.home__title{
   margin-left:18px;
   margin-block-start: 3rem;
   margin-block-end: 1rem;
 }
 
-.home-subtitle{
+.home__subtitle{
   margin-left:18px;
   margin-block-start: 0rem;
 }
 
-.home-user-message{
+.home__user-message{
   margin:60px 18px 60px 18px;
   color: grey;
   font-size: x-large;
 }
 
-.home-redirect-to-dashboard{
+.home__redirect-to-dashboard{
   position: relative;
   display:block;
   margin:auto;
@@ -38,30 +38,30 @@
   background: white;
 }
 
-.home-dashboard-icon{
+.home__dashboard-icon{
   vertical-align: middle;
   position: absolute;
   left: 5px;
   top: 3px;
 }
-.dashboard-button{
+.home__dashboard-button{
   font-weight: bold;
 }
 
 @media (min-width: 768px) {
-  .home-title{
+  .home__title{
     margin-left:40px;
 }
 
-  .home-subtitle{
+  .home__subtitle{
     margin-left:40px;
   }
-.home-user-message{
+.home__user-message{
     margin:60px 40px 80px 40px;
     font-size: x-large;
 
 }
-  .home-redirect-to-dashboard{
+  .home__redirect-to-dashboard{
     width:50%;
     font-size: large;
   }

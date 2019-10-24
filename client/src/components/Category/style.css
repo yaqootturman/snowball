@@ -1,6 +1,10 @@
 *{
-    padding:0;
-    margin:0
+  padding:0;
+  margin:0;    
+  font-family: Raleway;
+}
+img{
+  filter:brightness(0.7)
 }
 .category-div{
   display:flex;
