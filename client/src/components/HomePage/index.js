@@ -34,7 +34,7 @@ class HomePage extends Component {
 
         {loading ? <div className="loading-spinner">
           <ClipLoader
-            className="loading-spinner__details"
+            className="loading-spinner__home"
             sizeUnit={'px'}
             size={80}
             color={'#123abc'}

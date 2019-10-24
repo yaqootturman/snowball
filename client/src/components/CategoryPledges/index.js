@@ -4,6 +4,7 @@ import PledgeItem from './../PledgItem'
 import BackButton from '../BackButton';
 import Footer from '../Footer'
 import './style.css'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 
 class CategoryPledges extends React.Component {
@@ -32,7 +33,14 @@ class CategoryPledges extends React.Component {
         <div className="category-pledges-page">
           < BackButton {...this.props} />
           {!details ?
-            <h3>loading</h3>
+            <div className="loading-spinner">
+              <ClipLoader
+                className="loading-spinner__home"
+                sizeUnit={'px'}
+                size={80}
+                color={'#123abc'}
+              />
+            </div>
             : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
               <h1 className="category-container__category-title">{details.name}</h1>
               <p className="category-container__category-description">{details.description}</p>

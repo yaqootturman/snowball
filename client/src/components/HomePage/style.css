@@ -1,9 +1,23 @@
+<<<<<<< HEAD
 
 .home{
   overflow-y: scroll;
   position: absolute;
   top: 0px;
   bottom: 87px;
+=======
+.loading-spinner__home{
+	margin: 30%;
+	position: relative;
+}
+.loading-spinner{
+	margin-top: 52%;
+	color: #1dbfd1;
+	margin-left: 40%;
+	font-weight: bold;
+	font-size: 100%;
+	position: absolute;
+>>>>>>> master
 }
 .home__title{
   margin-left:18px;
