@@ -45,8 +45,9 @@ class NumberOfPledges extends Component {
                     size={15}
                     color={'#FFF'}
                   />
-                </div>)
-                : (<div >{data.length}/{allPledges.length}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
+                </div>
+              )
+                : (<div >Loading Data...please wait}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
             </>
             )
         }
