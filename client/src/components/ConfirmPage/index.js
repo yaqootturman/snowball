@@ -6,8 +6,9 @@ import "./style.css";
 
 export class ConfirmPage extends Component {
   state = {
-    pledgeDescription:'',
-    NumberOfEnrolledPeople:''
+    pledgeDescription: '',
+    NumberOfEnrolledPeople: '',
+    serverError: ""
   };
   componentDidMount() {
     if (this.props.location.data) {
@@ -16,21 +17,21 @@ export class ConfirmPage extends Component {
         number_of_enrollement
       } = this.props.location.data[0];
       const separator = "$";
-      const confirmDescription=description.replace("I will", "");
+      const confirmDescription = description.replace("I will", "");
       window.localStorage.setItem("storedData", [
         confirmDescription,
         separator,
-        number_of_enrollement+1
+        number_of_enrollement + 1
       ]);
       this.setState({
         pledgeDescription: confirmDescription,
-        NumberOfEnrolledPeople: number_of_enrollement+1
+        NumberOfEnrolledPeople: number_of_enrollement + 1
       });
     } else if (window.localStorage.length > 0) {
       const infoPledge = window.localStorage.getItem("storedData").split(",$,");
       this.setState({
         pledgeDescription: infoPledge[0],
-        NumberOfEnrolledPeople: infoPledge[1] 
+        NumberOfEnrolledPeople: infoPledge[1]
       });
     }
   }
@@ -55,36 +56,42 @@ export class ConfirmPage extends Component {
           NumberOfEnrolledPeople: this.state.NumberOfEnrolledPeople
         });
       })
-      .catch(function(error) {
-        // handle error
-        console.log(error);
-      });
+      .catch(error => {
+        this.setState({ serverError: error.response.data.message })
+      })
   };
   render() {
+    const { serverError } = this.state
     return (
       <div className="confirm__Page">
-        <BackButton {...this.props} />
+        {serverError !== "" ? <h1>{serverError}</h1> :
+          (
+            <>
+              <BackButton {...this.props} />
 
-        <p className="confirm__Page-letsConfirm">LET' S CONFIRM YOUR PLEDGE</p>
-        <p className="confirm__Page-confirmPledge">
-          {" "}
-          I commit to
+              <p className="confirm__Page-letsConfirm">LET' S CONFIRM YOUR PLEDGE</p>
+              <p className="confirm__Page-confirmPledge">
+                {" "}
+                I commit to
           {this.state.pledgeDescription}
-        </p>
-        <button
-          className="confirm__Page-confirmButton"
-          onClick={() => {
-            this.confirmUserPledge();
-          }}
-        >
-          Confirm the pledge
+              </p>
+              <button
+                className="confirm__Page-confirmButton"
+                onClick={() => {
+                  this.confirmUserPledge();
+                }}
+              >
+                Confirm the pledge
         </button>
-        <p className="confirm__Page-unConfirm">
-          * You can come back and deselect this pledge at any time if you don' t
-          feel able to carry it out.
+              <p className="confirm__Page-unConfirm">
+                * You can come back and deselect this pledge at any time if you don' t
+                feel able to carry it out.
         </p>
 
-        <Footer {...this.props} />
+              <Footer {...this.props} />
+            </>
+          )}
+
       </div>
     );
   }

@@ -1,7 +1,7 @@
 const getAllPledges = require('./../database/queries/getAllPledges')
 
-exports.get = (req, res) => {
+exports.get = (req, res, next) => {
   getAllPledges()
     .then(allPledges => res.json({ allPledges }))
-    .catch(() => res.status(500).json({ err: 'Error' }))
+    .catch(error => next(error))
 }

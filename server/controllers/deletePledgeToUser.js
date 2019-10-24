@@ -1,6 +1,6 @@
 const { deletePledgeToUser, updateUserPledgeEnroll } = require('./../database/queries/deletePledgeToUser')
 
-exports.deletePledgeToUser = (req, res) => {
+exports.deletePledgeToUser = (req, res, next) => {
   const { userId, pledgeId } = req.params
 
   Promise.all([deletePledgeToUser(userId, pledgeId), updateUserPledgeEnroll(pledgeId)])
@@ -10,5 +10,5 @@ exports.deletePledgeToUser = (req, res) => {
         success: true,
       })
     })
-    .catch(() => res.status(500).json({ err: ' Error' }))
+    .catch(error => next(error))
 }
