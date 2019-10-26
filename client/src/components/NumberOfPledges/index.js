@@ -10,27 +10,53 @@ class NumberOfPledges extends Component {
     serverError: ""
   }
   componentDidMount = () => {
+
+
+    const categoryInfo = Promise.all([this.getNumberOfUserPledges(), this.getNumberOfAllPledges()])
+    categoryInfo.then((res) => {
+      // this.setState({ loading: false })
+      console.log('promis success')
+    })
+
+
+  }
+  getNumberOfUserPledges() {
+
     const userId = 1
-    axios.get(`/api/dashboard_number_of_pledges/${userId}`).then(({ data }) => {
+    return axios.get(`/api/dashboard_number_of_pledges/${userId}`).then(({ data }) => {
+      // console.log(' NUM OF USER PLEDGES: ', data.data)
+
       this.setState(
-        { details: data })
+        { details: data.data })
     })
       .catch(error => {
+        // console.log('ERROR 111', error)
         this.setState({ serverError: error.response.data.message })
       })
-    axios.get('/api/dashboard_number_of_all_pledges').then(({ data }) => {
+
+  }
+
+  getNumberOfAllPledges() {
+
+    return axios.get('/api/dashboard_number_of_all_pledges').then(({ data }) => {
+      console.log('NUM OF ALL PLEDGES: ', data.allPledges)
+
       this.setState(
-        { allPledges: data })
+        { allPledges: data.allPledges })
     })
       .catch(error => {
+        // console.log('ERROR 222', error)
+
         this.setState({ serverError: error.response.data.message })
       })
   }
 
   render() {
-    const { data } = this.state.details
-    const { allPledges } = this.state.allPledges
+    const data = this.state.details
+    const allPledges = this.state.allPledges
     const { serverError } = this.state
+    console.log('data', data, 'all', allPledges, 'err', serverError)
+
     return (
       <div className="container-div">
         <div className="container-div__dashboard" >
