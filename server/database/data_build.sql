@@ -158,15 +158,15 @@ Chocolate & coffee that are un-sustainably produced have a significant impact on
  Insert into pledge_pros_cons
     (pledge_id,statement,color)
   values
-    (1, 'Significant, measureable emissions reduction', 'Green'),
-    (1, 'Significant cost saving when not flying', 'Green'),
-    (1, ' Low cost of offset (c.5% of flight cost)', 'Amber' ),
+    (1, 'Significant, measureable emissions reduction', 'green'),
+    (1, 'Significant cost saving when not flying', 'green'),
+    (1, 'Low cost of offset (c.5% of flight cost)', 'amber' ),
     (1, 'Reduced flexibility when not flying', 'red'),
 
     (2, 'Significantly reduced carbon footprint', 'cyan'),
     (2, 'More time to read or work during your journey', 'cyan'),
     (2, 'Reduced contribution to localised pollution', 'cyan'),
-    (2, 'Often cheaper than driving', 'yallow' ),
+    (2, 'Often cheaper than driving', 'yellow' ),
     (2, 'Less flexibility when travelling', 'red'),
     
     (3, 'Improved health and fitness', 'cyan'),
@@ -182,7 +182,7 @@ Chocolate & coffee that are un-sustainably produced have a significant impact on
     (5, 'Reduced cost of energy provision', 'cyan'),
     (5, 'Reduced carbon emissions', 'cyan'),
     (5, 'Spend less time with technology', 'cyan'),
-    (5, 'Cost of buying energy efficient replacements (typically recouped in short space of time)', 'yallow'),
+    (5, 'Cost of buying energy efficient replacements (typically recouped in short space of time)', 'yellow'),
 
     (6, 'It''s cheaper', 'cyan'),
     (6, 'You support charity shops', 'cyan'),

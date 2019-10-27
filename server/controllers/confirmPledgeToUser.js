@@ -4,7 +4,7 @@ const {
   CheckIfUserConfirm,
 } = require('../database/queries/confirmUserPledge')
 
-exports.confirmPledgeToUser = (request, response) => {
+exports.confirmPledgeToUser = (request, response, next) => {
   const { userId, pledgeId } = request.params
   const congratulationPageUrl = '/congratulations'
   const confirmationPageUrl = `/${userId}/${pledgeId}/addPledge`
@@ -26,8 +26,8 @@ exports.confirmPledgeToUser = (request, response) => {
             redirectUrl: congratulationPageUrl,
           })
         })
-        .catch(() => res.status(500).json({ err: ' Error' }))
+        .catch(error => next(error))
     }
   })
-    .catch(() => response.status(500).json({ err: ' Error' }))
+    .catch(error => next(error))
 }

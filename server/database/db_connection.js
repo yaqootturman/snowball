@@ -2,7 +2,7 @@ const { Pool } = require('pg')
 
 require('env2')('./config.env')
 
-const connectionString = process.env.DATABASE_URL
+const connectionString = process.env.HEROKU_POSTGRESQL_MAUVE_URL
 
 if (!connectionString) {
   throw new Error('set a DATABASE_URL env variable')

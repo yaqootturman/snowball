@@ -3,6 +3,7 @@
   position: absolute;
   top: 0px;
   bottom: 87px;
+  z-index:1;
 }
 .category-container{
  position: relative;
