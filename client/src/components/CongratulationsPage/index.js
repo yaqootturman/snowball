@@ -47,7 +47,7 @@ export class Congratulations extends Component {
       
       <div className="congratulations__page" >
         <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
-       <Confetti responsive='true'
+       <Confetti 
         width={this.state.width}
         height={this.state.height}
       />
