@@ -28,13 +28,10 @@ class NumberOfPledges extends Component {
       .catch(error => {
         this.setState({ serverError: error.response.data.message })
       })
-
   }
 
   getNumberOfAllPledges() {
-
     return axios.get('/api/dashboard_number_of_all_pledges').then(({ data }) => {
-
       this.setState(
         { allPledges: data.allPledges })
     })
@@ -44,9 +41,7 @@ class NumberOfPledges extends Component {
   }
 
   render() {
-    const data = this.state.details
-    const allPledges = this.state.allPledges
-    const { serverError } = this.state
+    const { details, allPledges, serverError } = this.state
 
     return (
       <div className="container-div">
@@ -55,7 +50,7 @@ class NumberOfPledges extends Component {
         {
           serverError !== "" ? <h1>{serverError}</h1> :
             (<>
-              {!data ? (
+              {!details ? (
                 <div >
                   <ClipLoader
                     sizeUnit={"px"}
@@ -63,7 +58,7 @@ class NumberOfPledges extends Component {
                     color={'#FFF'}
                   />
                 </div>)
-                : (<div >{data.length}/{allPledges.length}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
+                : (<div >{details.length}/{allPledges.length}<p className="container-div__number-of-Pledges-pledges">PLEDGES</p></div>)}
             </>
             )
         }
