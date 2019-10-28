@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import './style.css'
-import { Switch } from "react-router-dom";
-import ClipLoader from 'react-spinners/ClipLoader'
+
 
 
 class Category extends Component {
