@@ -6,6 +6,7 @@ import axios from 'axios'
 import './style.css'
 import ClipLoader from 'react-spinners/ClipLoader'
 
+
 class HomePage extends Component {
   state = {
     userPledges: [],
@@ -63,3 +64,5 @@ class HomePage extends Component {
   }
 }
 export default HomePage
+
+

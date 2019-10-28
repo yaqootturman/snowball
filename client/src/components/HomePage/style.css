@@ -8,13 +8,11 @@
 	margin-left: 40%;
 	font-weight: bold;
 	font-size: 100%;
-	position: absolute;
 }
 .home{
   position: absolute;
   top: 0px;
-  bottom: 100px;
-  overflow-y: scroll;
+  height: 80vh;
 }
 .home__title{
   margin-left:18px;
