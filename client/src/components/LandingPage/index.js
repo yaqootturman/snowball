@@ -48,7 +48,7 @@ const LandingPage = props => {
         </div>
 
         <div className='vertical__contents'>
-          <h3>The Vision</h3>
+          <h3 className="vertical__contents-subtitle">The Vision</h3>
           <p className="vertical__contents__description2">
             A global network of people, fighting climate change together,
             through our everyday actions.

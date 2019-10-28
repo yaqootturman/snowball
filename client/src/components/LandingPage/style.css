@@ -48,6 +48,14 @@
   font-size: 17px;
   line-height: 28px;
 }
+.vertical__contents-subtitle{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 3%;
+}
 .start {
   width: 100vw;
   text-align: center;
