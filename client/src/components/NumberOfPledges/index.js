@@ -2,7 +2,7 @@ import React from "react"
 import './style.css'
 
 const NumberOfPledges = props => {
-  const { details, allPledges, serverError } = props
+  const { details, allPledges } = props
 
   return (
     <div className="container-div">

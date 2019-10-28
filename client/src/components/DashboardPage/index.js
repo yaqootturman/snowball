@@ -96,24 +96,27 @@ class DashboardPage extends React.Component {
   }
 
   render() {
-    const { details, allPledges, loading1, loading2, userPledges, allCategories, categories } = this.state
+    const { details, allPledges, loading1, loading2, userPledges, allCategories, categories, serverError } = this.state
     return (
       <>
         {
-          loading1 || loading2 ? (
-            <div >
-              <ClipLoader
-                sizeUnit={"px"}
-                size={15}
-                color={'#FFF'}
-              />
-            </div>)
-            :
-            (<div className="dashboard-page">
-              <NumberOfPledges {...this.props} details={details} allPledges={allPledges} />
-              <Category {...this.props} allCategories={allCategories.data} userPledges={userPledges.userPledges} categories={categories} />
-              <Footer  {...this.props} />
-            </div>)
+          serverError != "" ? <h1>{serverError}</h1> :
+            (
+              loading1 || loading2 ? (
+                <div >
+                  <ClipLoader
+                    sizeUnit={"px"}
+                    size={15}
+                    color={'#FFF'}
+                  />
+                </div>)
+                :
+                (<div className="dashboard-page">
+                  <NumberOfPledges {...this.props} details={details} allPledges={allPledges} />
+                  <Category {...this.props} allCategories={allCategories.data} userPledges={userPledges.userPledges} categories={categories} />
+                  <Footer  {...this.props} />
+                </div>)
+            )
         }
 
       </>
