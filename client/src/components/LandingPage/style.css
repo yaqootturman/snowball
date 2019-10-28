@@ -34,7 +34,7 @@
 } 
 .main-description-div__description {
   font-weight: normal;
-  font-size: 33px;
+  font-size: 32px;
   line-height: 39px;
   display: initial;
   letter-spacing: 0.1em;
@@ -43,6 +43,7 @@
   margin-bottom: 24%;
   margin-left: -10%;
   padding: 5%;
+  padding-bottom: 14%;
   background-color: white;
   font-family: Raleway;
   font-size: 17px;
@@ -74,10 +75,16 @@
   font-size: 20px;
   padding: 2%;
   width: 100%;
-  padding-top: 5%;
+  padding-top: 8%;
   padding-left: 0%;
 }
-
+.vertical__contents__description{
+  font-size: 94%;
+  margin-bottom: 5%;
+}
+.vertical__contents__description2{
+  font-size: 94%;
+}
 .vertical__contents__circles__circle {
     width: 39px;
     height: 39px;
