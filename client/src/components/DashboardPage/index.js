@@ -104,9 +104,10 @@ class DashboardPage extends React.Component {
               loading1 || loading2 ? (
                 <div >
                   <ClipLoader
-                    sizeUnit={"px"}
-                    size={15}
-                    color={'#FFF'}
+                    className="loading-spinner__home"
+                    sizeUnit={'px'}
+                    size={80}
+                    color={'#123abc'}
                   />
                 </div>)
                 :
