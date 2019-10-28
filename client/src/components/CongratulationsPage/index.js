@@ -58,7 +58,7 @@ export class Congratulations extends Component {
           handleHeight
           onResize={this.onResize}
         />
-        {this.state.HideComponent == false ? (
+        {this.state.HideComponent === false ? (
           <Confetti width={this.state.width} height={this.state.height} />
         ) : (
           <></>
