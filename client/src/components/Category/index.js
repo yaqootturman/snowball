@@ -11,11 +11,11 @@ class Category extends Component {
 
   // function to push the data to category page
   moveToCategorActionPage = (id) => {
-    const { history } = this.props
-    sessionStorage.setItem('results', JSON.stringify(this.state.details.data[id - 1]))
+    const { history, allCategories } = this.props
+    sessionStorage.setItem('results', JSON.stringify(allCategories[id - 1]))
     history.push({
       pathname: `action-category/${id}`,
-      data: this.state.details.data[id - 1] // to take id from database
+      data: allCategories[id - 1] // to take id from database
     })
   }
 
