@@ -59,7 +59,6 @@ class DashboardPage extends React.Component {
   }
   getAllCategories() {
     // request to get all categories
-    const userId = 1
     return axios.get(`/api/dashboard`).then(({ data }) => {
       this.setState({
         allCategories: data
@@ -100,7 +99,7 @@ class DashboardPage extends React.Component {
     return (
       <>
         {
-          serverError != "" ? <h1>{serverError}</h1> :
+          serverError !== "" ? <h1>{serverError}</h1> :
             (
               loading1 || loading2 ? (
                 <div >
