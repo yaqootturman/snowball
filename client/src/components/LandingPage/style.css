@@ -4,12 +4,12 @@
 .vertical {
   margin: 8%;
   border-left: 3px solid #3fcfad;
-  display: inline-block;
 }
 .title-div{
   margin-top: 12vh;
   width: 100%;
   text-align: center;
+  margin-bottom: -2%;
 }
 
 .title-div__top-title{
@@ -41,9 +41,8 @@
 }
 .vertical__contents {
   margin-bottom: 24%;
-  margin-left: -10%;
-  padding: 5%;
-  padding-bottom: 14%;
+  margin-left: -13%;
+  padding: 7%;
   background-color: white;
   font-family: Raleway;
   font-size: 17px;
@@ -72,7 +71,7 @@
   font-family: Raleway;
   line-height: 30px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 19px;
   padding: 2%;
   width: 100%;
   padding-top: 8%;
