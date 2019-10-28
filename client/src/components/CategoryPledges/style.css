@@ -1,6 +1,5 @@
 .category-pledges-page{
   overflow-y: scroll;
-  position: absolute;
   top: 0px;
   bottom: 87px;
   z-index:1;

@@ -33,38 +33,44 @@ class CategoryPledges extends React.Component {
 
     return (
       <>
-        {serverError !== "" ? <h1>{serverError}</h1> :
-          (
-            <>
-              <div className="category-pledges-page">
-                < BackButton {...this.props} />
-                {!details ?
-                  <div className="loading-spinner">
-                    <ClipLoader
-                      className="loading-spinner__home"
-                      sizeUnit={'px'}
-                      size={80}
-                      color={'#123abc'}
-                    />
-                  </div>
-                  : <span><div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
-                    <h1 className="category-container__category-title">{details.name}</h1>
-                    <p className="category-container__category-description">{details.description}</p>
-                  </div> <p className="category-container__pledges">{details.name} PLEDGES</p></span>}
-                {
-                  !pledge_info.length ? <h2>Loading...</h2> : pledge_info.map((element, index) => {
+        {serverError !== "" ? <h1>{serverError}</h1> : (
+          <>
+            <div className="category-pledges-page">
+              {!details || !pledge_info.length ?
+                <div className="loading-spinner">
+                  <ClipLoader
+                    className="loading-spinner__home"
+                    sizeUnit={'px'}
+                    size={80}
+                    color={'#123abc'}
+                  />
+                </div> :
+                (<>
+                  < BackButton {...this.props} />
+                  <span>
+                    <div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
+                      <h1 className="category-container__category-title">{details.name}</h1>
+                      <p className="category-container__category-description">{details.description}</p>
+                    </div><p className="category-container__pledges">{details.name} PLEDGES</p></span>
+                  {pledge_info.map((element, index) => {
                     return (<PledgeItem {...this.props} element={element} key={index} />)
-                  })
-                }
-              </div>
+                  }
 
-            </>
-          )
-        }
+                  )}
+                  <Footer  {...this.props} />
 
-        <Footer  {...this.props} />
+                </>)
+              }
+            </div>
+          </>
 
-      </>)
+        )}
+
+      </>
+
+    )
   }
 }
+
 export default CategoryPledges
+
