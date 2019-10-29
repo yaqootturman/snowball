@@ -3,7 +3,7 @@
 }
 .user-pledge{
   width:100%;
-  height: 23%;
+  height: 153px;
   font-style: Raleway;
   position: relative;
   margin-top:18px;  
@@ -20,7 +20,7 @@
 
 .user-pledge__pledge-title{
   position: absolute;
-  bottom: 40%;
+  bottom: 43%;
   left: 7%;
   font-weight: bold;
   font-size: 21px;
