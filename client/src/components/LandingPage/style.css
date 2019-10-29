@@ -27,7 +27,7 @@
   width: 30%;
 }
 .main-description-div{
-  margin-top: 9vh;
+  margin-top: 7vh;
   padding:5vw;
   width: 90%;
   text-align: center;
@@ -69,7 +69,7 @@
 .start {
   width: 100vw;
   text-align: center;
-  margin-top: 10%;
+  margin-top: -40%;
   margin-bottom:10%;
 }
 .start__letsgo {
