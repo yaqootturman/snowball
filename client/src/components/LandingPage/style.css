@@ -40,6 +40,16 @@
   letter-spacing: 0.1em;
 }
 .vertical__contents {
+  margin-bottom: 52%;
+  margin-left: -13%;
+  padding: 7%;
+  padding-bottom: 60px;
+  background-color: white;
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 28px;
+}
+.vertical__contents2 {
   margin-bottom: 24%;
   margin-left: -13%;
   padding: 7%;
@@ -68,9 +78,9 @@
   border-radius: 5px;
   width: 134px;
   height: 43px;
-  line-height: 30px;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .vertical__contents__circles {
@@ -118,6 +128,7 @@
 .vertical__contents__circles__span {
   font-weight: normal;
   margin-left: 5%;
+  letter-spacing: 0.05em;
 }
 @media (max-width: 360px) {
   .vertical__contents__circles {

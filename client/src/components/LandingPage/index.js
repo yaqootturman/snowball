@@ -47,7 +47,7 @@ const LandingPage = props => {
           </div>
         </div>
 
-        <div className='vertical__contents'>
+        <div className='vertical__contents2'>
           <h3 className="vertical__contents-subtitle">The Vision</h3>
           <p className="vertical__contents__description2">
             A global network of people, fighting climate change together,
@@ -55,7 +55,7 @@ const LandingPage = props => {
           </p>
         </div>
 
-        <div className='vertical__contents'>
+        <div className='vertical__contents2'>
           <h3 className="vertical__contents-subtitle">How do we get there?</h3>
           <p className="vertical__contents__description">
             By showing people what they can do, giving them the tools to do it
