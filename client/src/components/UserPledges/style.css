@@ -14,7 +14,8 @@
   width: 90%;
   display: block;
   height: 100%;
-  border-radius: 6px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .user-pledge__pledge-title{
@@ -31,10 +32,10 @@
 .user-pledge__pledge-description{
   width: 72%;
   position: absolute;
-  bottom: 7%;
+  bottom: 9%;
+  top:59%;
   left: 7%;
-  font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 15px;
   color: white;
   word-wrap: break-word;
