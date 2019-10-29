@@ -6,6 +6,7 @@ import axios from 'axios'
 import './style.css'
 import ClipLoader from 'react-spinners/ClipLoader'
 
+
 class HomePage extends Component {
   state = {
     userPledges: [],
@@ -30,25 +31,38 @@ class HomePage extends Component {
 
     return (
       <div className="home">
-        <h1 className="home__title">My Pledges</h1>
-        <h5 className="home__subtitle">TOTAL PLEDGES: {userPledges.length}</h5>
+
         {serverError !== "" ? <h1>{serverError}</h1> : (
           <>
-            {loading ? <div className="loading-spinner">
-              <ClipLoader
-                className="loading-spinner__home"
-                sizeUnit={'px'}
-                size={80}
-                color={'#123abc'}
-              />
-            </div> : (!userPledges.length) ?
+            {loading ? (
+              <>
+                <div className="loading-spinner">
+                  <ClipLoader
+                    className="loading-spinner__home"
+                    sizeUnit={'px'}
+                    size={80}
+                    color={'#123abc'}
+                  />
+                </div>
+              </>
+            )
+
+
+              : (!userPledges.length) ?
                 (<>
                   <p className="home__user-message">{nl2br(userMessage)}</p>
                   <button className="home__redirect-to-dashboard" onClick={() => history.push('/dashboard')}><img className="home__dashboard-icon" alt="dashboard icon" src="https://imgur.com/cWgJL1U.png" /><span className="home__dashboard-button">Action Dashboard</span></button>
                 </>) :
-                userPledges.map(onePledge => {
-                  return <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
-                })
+                (<>
+                  < h1 className="home__title" > My Pledges</h1 >
+                  <h5 className="home__subtitle">TOTAL PLEDGES: {userPledges.length}</h5>
+                  {userPledges.map(onePledge => {
+                    return (
+                      <UserPledges {...this.props} userPledge={onePledge} key={onePledge.pledge_id} />
+                    )
+                  })}
+
+                </>)
             }
             <Footer {...this.props} />
           </>
@@ -61,3 +75,5 @@ class HomePage extends Component {
   }
 }
 export default HomePage
+
+

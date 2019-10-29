@@ -89,7 +89,6 @@ class PledgePage extends React.Component {
       <div className="container">
         {serverError !== "" ? <h1>{serverError}</h1> : (
           <>
-            <BackButton {...this.props} />
             {
               loading ? (<div className="loading-spinner">
                 <ClipLoader
@@ -100,6 +99,8 @@ class PledgePage extends React.Component {
                 />
               </div>) : (
                   <>
+                    <BackButton {...this.props} />
+
                     <div className="top-info">
                       <img className="top-info__img" alt="pledge information" src={pledgeInfo[0].img} />
 

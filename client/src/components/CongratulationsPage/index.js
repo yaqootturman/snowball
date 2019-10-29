@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import "./style.css";
 import Footer from "../Footer";
+import Confetti from "react-confetti";
+import ReactResizeDetector from "react-resize-detector";
 export class Congratulations extends Component {
   state = {
-    NumberOfEnrolledPeople: ""
+    NumberOfEnrolledPeople: "",
+    width: window.screen.width,
+    height: window.screen.height,
+    HideComponent: false
   };
 
   componentDidMount() {
@@ -13,12 +18,22 @@ export class Congratulations extends Component {
       });
     } else if (this.props.location.NumberOfEnrolledPeople) {
       const { NumberOfEnrolledPeople } = this.props.location;
-     
+
       window.localStorage.setItem("EnrolledPeople", NumberOfEnrolledPeople);
       this.setState({
         NumberOfEnrolledPeople: window.localStorage.getItem("EnrolledPeople")
       });
     }
+    this.hideCelebrate();
+  }
+
+  hideCelebrate() {
+    setTimeout(() => {
+      this.hidePlayerControls();
+    }, 6000);
+  }
+  hidePlayerControls() {
+    this.setState({ HideComponent: true });
   }
 
   redirectInformation = () => {
@@ -31,9 +46,23 @@ export class Congratulations extends Component {
     window.localStorage.clear();
     history.push("/dashboard");
   };
+  onResize = () => {
+    this.setState({ width: window.screen.width, height: window.screen.height });
+  };
+
   render() {
     return (
       <div className="congratulations__page">
+        <ReactResizeDetector
+          handleWidth
+          handleHeight
+          onResize={this.onResize}
+        />
+        {this.state.HideComponent === false ? (
+          <Confetti width={this.state.width} height={this.state.height} />
+        ) : (
+          <></>
+        )}
         <p className="congratulations__page-congratulations">
           CONGRATULATIONS!
         </p>
@@ -41,7 +70,7 @@ export class Congratulations extends Component {
           You are doing something amazing!
         </p>
         <p className="congratulations__page-motivation">
-          You're now one of<span> {this.state.NumberOfEnrolledPeople} </span>{" "}
+          You're now one of<span> {this.state.NumberOfEnrolledPeople} </span>
           people committed to this pledge and turning the tide on climate
           change.
         </p>

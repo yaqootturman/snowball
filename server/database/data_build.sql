@@ -10,24 +10,24 @@ Insert into category (name,img,description ,number_of_pledges) values
 ('Transport',
 'https://i.imgur.com/VpuEoWi.png',
 'Transport accounts for about a third of the UKs carbon dioxide emissions and is the largest contributing sector in the country. Plus emissions from transport across the EU are getting bigger. See what you can do below.',
- 1329
+3
 ),
 (
 'Household',
 'https://i.imgur.com/PjXoyF2.png',
 'In the UK, around 30% of our personal emissions come from energy used in the home. But reducing your home energy use can be surprisingly cheap and easy.',
-2000
+2
 ),
 (
 'Shopping',
 'https://i.imgur.com/jC8Lx9b.png.png',
 'It’s estimated that the things we buy, from food to trainers, account for 60% of global emissions. As consumers, we can lower emissions and change the way companies operate, with our everyday buying decisions.',
-1477
+2
 ),
 ('Food',
 'https://i.imgur.com/scVf8SP.png',
 'The food and drink we consume typically accounts for 20%-25% of our individual greenhouse gas emissions (approx 2.2tns of CO2). We look at how small dietary changes can have a big impact on the planet.',
-1500
+3
 )
 
 ;
@@ -35,7 +35,7 @@ Insert into category (name,img,description ,number_of_pledges) values
  Insert into pledge
     (category_id,order_id,pledge_short_description,title,description,number_of_enrollement, img ,banner_img, importance ,further_info)
   values
- (1,5,'Fly less','Flying','I will take no more than one return flight each year. When I do fly, I will offset my emissions.',4545,'https://i.imgur.com/dd6lk8b.jpg','https://i.imgur.com/dd6lk8b.jpg','Flying is very carbon intensive. Large planes burn over a gallon of fuel every second..
+ (1,5,'Fly less','Flying','I will take no more than one return flight each year. When I do fly, I will offset my emissions.',0,'https://i.imgur.com/dd6lk8b.jpg','https://i.imgur.com/dd6lk8b.jpg','Flying is very carbon intensive. Large planes burn over a gallon of fuel every second..
 
 A return flight from London to New York generates 1 tonne of Co2 per passenger - around 10% of the average British person''s annual carbon footprint.. 
 
@@ -52,7 +52,7 @@ And as other sectors of the economy become greener - with more wind turbines, fo
 
 By carbon offsetting you are reducing the emissions of greenhouse gasses elsewhere in the world, to compensate for the emissions of your flight. There is a regulated offset market and most vendors give you the option to choose how you would like to offset your emissions..
 '),
-(1,8,'Use Public transport','Public transport','I will take public transport instead of driving whenever I''m able to',7536,'https://i.imgur.com/G2nwFZT.jpg','https://i.imgur.com/G2nwFZT.jpg','Transport accounts for about a third of the UK''s carbon dioxide emissions and is the largest contributing sector in the country. Passenger cars and vans alone contribute around 17% of our emissions.. 
+(1,8,'Use Public transport','Public transport','I will take public transport instead of driving whenever I''m able to',0,'https://i.imgur.com/G2nwFZT.jpg','https://i.imgur.com/G2nwFZT.jpg','Transport accounts for about a third of the UK''s carbon dioxide emissions and is the largest contributing sector in the country. Passenger cars and vans alone contribute around 17% of our emissions.. 
 
 The emissions from driving on your own are typically over 4 times higher than catching the train..
 
@@ -63,7 +63,7 @@ It''s often not possible to leave the car at home. This pledge is asks you to ch
 
 Driving a car on your own can have larger emissions than flying the same distance, so fitting as many people in the car as possible has a big impact. Driving with 4 people in the car creates similar emissions to catching the train..
 '),
-(1,10,'Cycle or walk more','Walking & Cycling','I will walk or cycle more often and will try to incorporate it more into my commute or journey to and from school',4568,'https://i.imgur.com/1SNejKn.jpg','https://i.imgur.com/iizQeXI.jpg','Whether you take public transport or drive a car, your travel has a carbon footprint. Cycling and walking are completely carbon neutral.. 
+(1,10,'Cycle or walk more','Walking & Cycling','I will walk or cycle more often and will try to incorporate it more into my commute or journey to and from school',0,'https://i.imgur.com/1SNejKn.jpg','https://i.imgur.com/iizQeXI.jpg','Whether you take public transport or drive a car, your travel has a carbon footprint. Cycling and walking are completely carbon neutral.. 
 
 With transport making up around 30% of our individual emissions, choosing to walk or cycle instead of drive is a simple, impactful way to take action.. 
 
@@ -73,7 +73,7 @@ Whilst it''s not always practical to cycle or walk, swapping just 2 miles of you
 Making short journeys by car is particularly polluting as the catalytic converters that reduce these pollutants don''t work effectively on trips under 5 miles..
 
 See the 9 reasons why bike commuting is better than driving [Link - https://www.bikeradar.com/features/9-reasons-why-bike-commuting-is-better-than-driving/] for more information..')
-,(2,1,'Switch to green energy','Green energy','I will switch my electricity and gas supply to a green energy tariff',4253,'https://i.imgur.com/8xyEj34.jpg','https://i.imgur.com/Kggda0Q.jpg','The energy used to heat our homes, cook our food and power our appliances accounts for approximately 30% of the average person''s carbon footprint. A green tariff means that the electricity you buy is ''matched'' by purchases of renewable energy that your energy supplier makes on your behalf, significantly reducing the emissions you create..
+,(2,1,'Switch to green energy','Green energy','I will switch my electricity and gas supply to a green energy tariff',0,'https://i.imgur.com/8xyEj34.jpg','https://i.imgur.com/Kggda0Q.jpg','The energy used to heat our homes, cook our food and power our appliances accounts for approximately 30% of the average person''s carbon footprint. A green tariff means that the electricity you buy is ''matched'' by purchases of renewable energy that your energy supplier makes on your behalf, significantly reducing the emissions you create..
 
 For households that rely on gas for heating and cooking, many clean energy providers offset the carbon emissions associated with any continued gas provision..
 ','In the UK, our electricity comes from a range of sources see the breakdown of the last 24 hours [link: https://windeurope.org/about-wind/daily-wind/electricity-mix?utf8=%E2%9C%93&areas=GB&commit=Apply+filters]).. 
@@ -81,7 +81,7 @@ For households that rely on gas for heating and cooking, many clean energy provi
 In 2018 one third (33%) of the UK’s electricity came from renewable sources, up from 29.7% in 2017. Only around 3% of our electricity comes from coal today – compared to around 30% ten years ago. Despite these significant improvements, around 80% of the world''s energy is still generated from burning fossil fuels..
 
 When you switch to a green energy provider, it does not mean that all your electricity then comes from renewable sources. There is no unused capacity in renewable energy facilities in the UK, so the energy you consume may still be generated by burning fossil fuels. However, good green energy providers ensure that for every unit of energy you use, a unit is produced and put on the grid by a renewable source. This helps compensate your emissions and drives the industry towards renewable energy.. 
-') ,(2,9,'Reduce home energy use','Reduce energy use','I will reduce my home energy use',5961,'https://i.imgur.com/7J0ZMp5.jpg','https://i.imgur.com/Ngsupoc.jpg','With household energy accounting for 30% of individual emissions, reducing your consumption is a simple way to reduce emissions and save you money..
+') ,(2,9,'Reduce home energy use','Reduce energy use','I will reduce my home energy use',0,'https://i.imgur.com/7J0ZMp5.jpg','https://i.imgur.com/Ngsupoc.jpg','With household energy accounting for 30% of individual emissions, reducing your consumption is a simple way to reduce emissions and save you money..
 
 Household energy consumption in the UK is one of the highest in the world. On average we use over 3 times as much electricity as Chinese households and over 5 times as much as Indian households..
 
@@ -95,7 +95,7 @@ Washing a load of clothes at 40 degrees and then tumble drying it uses 4 times a
 Turning your thermostat down by one degree can prevent 320kg of CO2 emissions and save you £80, each year..
 
 Installing a smart meter gives you all the information you need to reduce your home energy use and they are free to have installed. Contact your energy supplier to request one..'),
-(3,3,'Reject fast fashion','Fast Fashion','I will reject fast fashion - buying less, higher quality or second-hand clothes',9654,'https://i.imgur.com/c768SrT.jpg','https://i.imgur.com/STflxKT.jpg','The fashion industry contributes around 10% of global greenhouse gas emissions - consuming more energy than the aviation and shipping industries combined.. 
+(3,3,'Reject fast fashion','Fast Fashion','I will reject fast fashion - buying less, higher quality or second-hand clothes',0,'https://i.imgur.com/c768SrT.jpg','https://i.imgur.com/STflxKT.jpg','The fashion industry contributes around 10% of global greenhouse gas emissions - consuming more energy than the aviation and shipping industries combined.. 
 
 If it continues on its current path, the fashion industry could use more than 26% of the global carbon budget by 2050..
 
@@ -107,7 +107,7 @@ Switching from conventional to organic cotton can cut emissions by 46%, as nitro
 
 The production of textiles also uses a huge amount of water. It takes about 8,000 litres of water to make one pair of jeans and 2,700 litres to make a single T-shirt..
 '),
-(3,7,'Avoid a single-use','Single use','I will try to avoid single-use products and overly packaged products',1556,'https://i.imgur.com/xPl7vIa.jpg','https://i.imgur.com/Rlk5r7Q.jpg','Single use products have an extremely high carbon footprint compared to the utility they provide. The way in which we have come to use single-use products, even when they are recycled, is unsustainable and will change in the future..
+(3,7,'Avoid a single-use','Single use','I will try to avoid single-use products and overly packaged products',0,'https://i.imgur.com/xPl7vIa.jpg','https://i.imgur.com/Rlk5r7Q.jpg','Single use products have an extremely high carbon footprint compared to the utility they provide. The way in which we have come to use single-use products, even when they are recycled, is unsustainable and will change in the future..
 
 The extraction of raw materials, refining, manufacturing, transporting, packaging and disposing of these goods, all have an impact on our planet. The future will be built around consumer habits that do not include the intensive use of single use products - how quickly we get there could play a defining role in the battle on climate change..','Plastics perfectly represent our single use culture. They are made out of fossil fuels, have a carbon intensive life cycle and degrade extremely slowly. They have a significant impact on our climate and on the natural environment more broadly.. 
 
@@ -116,7 +116,7 @@ Whilst plastic is the symbol of our single use society, cardboard, aluminium can
 These changes may seem small, but the way we consume these items at the moment is not sustainable and will change in the future. The speed at which we, as consumers, reject these products for re-usable, sustainable alternatives can have a big impact on the future of our planet..'),
 
 (4,2,'Eat less meat','Meat eating','I will have more meat free days than meat eating days each week and will eat red meat no more than once a week
-',5674,'https://i.imgur.com/w5is92j.jpg','https://i.imgur.com/yOkUldo.jpg','Livestock accounts for around 15% of all man made emissions..
+',0,'https://i.imgur.com/w5is92j.jpg','https://i.imgur.com/yOkUldo.jpg','Livestock accounts for around 15% of all man made emissions..
 
 Approximately 70 billion farm animals are reared each year for food. They produce vast amounts of harmful greenhouse gasses like methane (around 30x more potent than CO2) and need a lot of space and food. Around a sixth of the habitable land on earth is used for livestock feed production and a further sixth to graze and rear the animals.. 
 
@@ -134,7 +134,7 @@ Farmed shellfish often have a higher carbon footprint than lamb..
 
 Emissions from beef farmed in South America are typically 3 times higher than emission from European beef..
 '),
-(4,4,'Eat local and seasonal','Local, seasonal food','I will eat locally produced, seasonal food wherever I can',4562,'https://i.imgur.com/vGUvrQX.jpg','https://i.imgur.com/U9jjmaZ.jpg','Only 23% of fruit and vegetables eaten in Britain are grown in the UK.. 
+(4,4,'Eat local and seasonal','Local, seasonal food','I will eat locally produced, seasonal food wherever I can',0,'https://i.imgur.com/vGUvrQX.jpg','https://i.imgur.com/U9jjmaZ.jpg','Only 23% of fruit and vegetables eaten in Britain are grown in the UK.. 
 
 The transportation of food accounts for around 11% of its total footprint, and the energy required to grow it out of season in hothouses or keep it cool for long periods can be far higher.. 
 
@@ -143,7 +143,7 @@ By eating local, seasonal food, you can reduce the carbon footprint of each meal
 An important distinction should also be drawn between food that''s shipped and food that''s flown. Air freight emissions per mile can be hundreds of times higher than sea freight. For example, apples, oranges and bananas almost always travel on boats, whereas imported asparagus, avocados, tomatoes and strawberries are often flown..
 
 It''s therefore important to consider the seasonality of the food you buy as well as place it was grown, before being able to decide what you should be buying. But as people reject packaging and goods that have been transported overseas (Link: https://www.telegraph.co.uk/news/2018/11/30/greengrocers-claim-millennial-backlash-against-plastic-has-sparked/), we can support local industries and eat better food, all whilst significantly reducing carbon emissions..'),
-(4,6,'Eat and drink sustainably','Sustainable food & drink','I will make an effort to buy sustainably sourced food and drink',7226,'https://i.imgur.com/U8HDadB.jpg','https://i.imgur.com/ei5KO77.jpg','Food that''s irresponsibly produced drives deforestation, soil degradation, emissions from harmful pesticides, desertification, overfishing and species loss.. 
+(4,6,'Eat and drink sustainably','Sustainable food & drink','I will make an effort to buy sustainably sourced food and drink',0,'https://i.imgur.com/U8HDadB.jpg','https://i.imgur.com/ei5KO77.jpg','Food that''s irresponsibly produced drives deforestation, soil degradation, emissions from harmful pesticides, desertification, overfishing and species loss.. 
 
 Most of our food is intensively farmed, a practice that comes with a big carbon footprint and lacks resilience to changing temperatures..
 
