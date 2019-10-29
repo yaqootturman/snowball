@@ -56,7 +56,7 @@ const LandingPage = props => {
         </div>
 
         <div className='vertical__contents'>
-          <h3>How do we get there?</h3>
+          <h3 className="vertical__contents-subtitle">How do we get there?</h3>
           <p className="vertical__contents__description">
             By showing people what they can do, giving them the tools to do it
             and allowing them to commit to a better future.
@@ -67,7 +67,7 @@ const LandingPage = props => {
         </div>
 
         <div className='vertical__contents'>
-          <h3>What’s the goal?</h3>
+          <h3 className="vertical__contents-subtitle">What’s the goal?</h3>
           <p className="vertical__contents__description">
             If we bring people together, the power lies with the people in the
             fight against climate change.
