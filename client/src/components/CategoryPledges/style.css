@@ -1,8 +1,7 @@
 .category-pledges-page{
-  overflow-y: scroll;
-  top: 0px;
-  bottom: 87px;
-  z-index:1;
+  
+  margin-bottom: 100px;
+
 }
 .category-container{
  position: relative;
