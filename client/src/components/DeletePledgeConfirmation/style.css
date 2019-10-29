@@ -70,3 +70,12 @@
     font-weight: bold;
 }
 
+@media (min-width: 768px) {
+  
+.delete-confirmation-dialog__delete-message {
+    font-size: 5vw;
+   
+    margin-top:30%;
+    margin-bottom: 10%;
+}
+}
