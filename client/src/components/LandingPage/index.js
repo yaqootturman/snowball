@@ -47,29 +47,34 @@ const LandingPage = props => {
           </div>
         </div>
 
-        <div className='vertical__contents'>
-          <h3>The Vision</h3>
-          <p>
+        <div className='vertical__contents2'>
+          <h3 className="vertical__contents-subtitle">The Vision</h3>
+          <p className="vertical__contents__description2">
             A global network of people, fighting climate change together,
             through our everyday actions.
           </p>
         </div>
 
-        <div className='vertical__contents'>
-          <h3>How do we get there?</h3>
-          <p>
+        <div className='vertical__contents2'>
+          <h3 className="vertical__contents-subtitle">How do we get there?</h3>
+          <p className="vertical__contents__description">
             By showing people what they can do, giving them the tools to do it
-            and allowing them to commit to a better future. When we act
+            and allowing them to commit to a better future.
+            </p>
+          <p className="vertical__contents__description2">When we act
             together, small changes have a big impact.
           </p>
         </div>
 
         <div className='vertical__contents'>
-          <h3>What’s the goal?</h3>
-          <p>
+          <h3 className="vertical__contents-subtitle">What’s the goal?</h3>
+          <p className="vertical__contents__description">
             If we bring people together, the power lies with the people in the
-            fight against climate change. We want to create a movement to
-            release that inner power!
+            fight against climate change.
+            </p>
+          <p className="vertical__contents__description2">
+            We want to create a movement to
+           release that inner power!
           </p>
         </div>
       </div>
