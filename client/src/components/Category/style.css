@@ -55,4 +55,40 @@ img{
   padding-top: 3px;
 }
 
+
+@media (max-width: 320px) {
+ *{
+    padding:0;
+    margin:0
+  }
+  
+  .category-div{
+    display:flex;
+    justify-content: space-evenly;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+.category-div__dashboard-action{ 
+    display: flex;
+    width: 141px;
+    height: 141px;
+    font-style: Raleway;
+    position: relative;
+    margin-top:11px;   
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.category-div__dashboard-action-image{ 
+    margin: auto;
+    width: 141px;
+    display: block;
+    height: 141px;
+}
+.category-div__dashboard-action-title{
+  position: absolute;
+  top:59px;
+}
+
+}
     
