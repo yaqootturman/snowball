@@ -20,7 +20,7 @@
 
 .user-pledge__pledge-title{
   position: absolute;
-  bottom: 45%;
+  bottom: 46%;
   left: 7%;
   font-weight: bold;
   font-size: 21px;
@@ -44,10 +44,10 @@
 .user-pledge__pledge-enrollements-badge{
   position: absolute;
   right: 3%;
-  top: 63%;
+  top: 52%;
   background: #F9BE02;
-  width:55px;
-  height: 41.38%;
+  width:70px;
+  height:70px ;
   color: #fff;
   text-align: center;
   border-radius: 50%;
@@ -55,7 +55,7 @@
 }
 
 .user-pledge__pledge-enrollements-icon{
-  width: 20px;
+  width: 22px;
   display: block;
   margin: 10% auto 3px auto;
   filter:none;
@@ -66,7 +66,7 @@
   color: black;
   font-style: normal;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 20px;
   display: block;
   margin: auto;
