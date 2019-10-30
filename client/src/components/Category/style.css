@@ -12,6 +12,7 @@ img{
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-top:53px;
+  margin-bottom: 27%;
 }
 
 .category-div__dashboard-action{ 
@@ -67,7 +68,7 @@ img{
     justify-content: space-evenly;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-
+    margin-bottom: 27%;
 }
 .category-div__dashboard-action{ 
     display: flex;
