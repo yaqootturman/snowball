@@ -5,6 +5,7 @@
 }
 .top-info__img {
   width: 100vw;
+  object-fit: cover;
   height: 506px;
 }
 .top-info__make-cancel {
