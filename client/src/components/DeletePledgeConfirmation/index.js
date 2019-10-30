@@ -30,7 +30,7 @@ const DeletePledgeConfirmation = (props) => {
     <>
       <div className="delete-confirmation-dialog">
         <div className="delete-confirmation-dialog__back-button"><BackButton {...props} /></div>
-        <p className="delete-confirmation-dialog__delete-message">Are you Sure You Want To Delete This Pledge ?</p>
+        <p className="delete-confirmation-dialog__delete-message">Are you sure you want to delete this pledge ?</p>
         <button className="delete-confirmation-dialog__confirm-button button-aligner" onClick={() => deleteUserPledge()} disabled={buttonStatus}>Yes, please remove the pledge</button>
       </div>
       <Footer {...props} />
