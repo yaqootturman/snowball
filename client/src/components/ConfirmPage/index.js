@@ -11,6 +11,7 @@ export class ConfirmPage extends Component {
     serverError: ""
   };
   componentDidMount() {
+    window.scrollTo(0, 0)
     if (this.props.location.data) {
       const {
         description,

@@ -12,6 +12,7 @@ export class Congratulations extends Component {
   };
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     if (window.localStorage.length > 0) {
       this.setState({
         NumberOfEnrolledPeople: window.localStorage.getItem("EnrolledPeople")
