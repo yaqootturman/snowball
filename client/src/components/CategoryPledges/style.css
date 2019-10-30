@@ -13,7 +13,7 @@
   position: absolute;
   top: 45%;
   left: 50%;
-  font-size: 3.1em;
+  font-size: 2.5em;
   transform: translate(-50%, -50%);
   color: #FFFFFF;
 }
@@ -21,11 +21,10 @@
   position: absolute;
   width: 90%;
   font-size: 16px;
-  font-family: Comfortaa;
   top: 81%;
   font-style: normal;
   left: 52%;
-  line-height: 18px;
+  line-height: 22px;
   font-weight: bold;
   transform: translate(-50%, -50%);
   color: #FFFFFF;
@@ -44,10 +43,10 @@
   height: 505px;
 }
 .category-container__category-title{
-  font-size:118px;
+  font-size:2.5em;
 }
 .category-container__category-description{
-  font-size:25px;
+  font-size:14px;
 }
 .category-container__pledges{
    text-transform: uppercase;
