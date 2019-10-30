@@ -47,11 +47,13 @@ class CategoryPledges extends React.Component {
                 </div> :
                 (<>
                   < BackButton {...this.props} />
-                  <span>
-                    <div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
-                      <h1 className="category-container__category-title">{details.name}</h1>
-                      <p className="category-container__category-description">{details.description}</p>
-                    </div><p className="category-container__pledges">{details.name} PLEDGES</p></span>
+                  <div className="category-container">
+                    <img src={details.img} className="category-container__category-img" alt={details.name} />
+                    <h1 className="category-container__category-title">{details.name}</h1>
+                    <p className="category-container__category-description">{details.description}</p>
+                  </div>
+
+                  <p className="category-container__pledges">{details.name} PLEDGES</p>
                   {pledge_info.map((element, index) => {
                     return (<PledgeItem {...this.props} element={element} key={index} />)
                   }
