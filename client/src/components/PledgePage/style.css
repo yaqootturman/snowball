@@ -107,6 +107,7 @@
 }
 .pros-cons-div__element p {
   margin-left: 2%;
+  width: 95%;
 }
 .resources-div {
   width: 80%;
@@ -197,50 +198,50 @@ display: block;
 
 .blue {
   background-color: #7cdbd5;
-  height: 22px;
-  width: 8px;
+  height: 23.37px;
+  width: 9.06px;
   display: inline-block;
-  border-radius: 33%;
+  border-radius: 20px;
   margin-right: 5px;
 }
 .amber {
   background-color: #ffbf00;
-  height: 22px;
-  width: 8px;
+  height: 23.37px;
+  width: 9.06px;
   display: inline-block;
-  border-radius: 33%;
+  border-radius: 20px;
   margin-right: 5px;
 }
 .red {
   background-color: #ff4062;
-  height: 22px;
-  width: 8px;
+  height: 23.37px;
+  width: 9.06px;
   display: inline-block;
-  border-radius: 33%;
+  border-radius: 20px;
   margin-right: 5px;
 }
 .yellow {
   background-color: yellow;
-  height: 22px;
-  width: 8px;
+  height: 23.37px;
+  width: 9.06px;
   display: inline-block;
-  border-radius: 33%;
+  border-radius: 20px;
   margin-right: 5px;
 }
 .green {
   background-color: green;
-  height: 22px;
-  width: 8px;
+  height: 23.37px;
+  width: 9.06px;
   display: inline-block;
-  border-radius: 33%;
+  border-radius: 20px;
   margin-right: 5px;
 }
 .cyan {
   background-color: #1dbfd1;
-  height: 22px;
-  width: 8px;
+  height: 23.37px;
+  width: 9.06px;
   display: inline-block;
-  border-radius: 33%;
+  border-radius: 20px;
   margin-right: 5px;
 }
 
@@ -267,3 +268,9 @@ ul.resources-div__unorderedList {
   display:flex;
   flex-direction: row;
 }
+.resources-div__linkDiv p{
+
+ margin-left: 4px;
+}
+
+
