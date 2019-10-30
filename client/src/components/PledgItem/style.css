@@ -33,6 +33,7 @@
 .pledge-div__number{
   color:#1dbfd1;
   font-weight: bold;
+  margin-left:1%;
 }
 @media (min-width: 446px) {
   .pledge-div{
