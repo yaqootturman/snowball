@@ -4,8 +4,11 @@ const PledgeItem = props => {
   const { element, history } = props
   return (
     <div className="pledge-div">
-      <img onClick={() => { history.push(`/action-category/pledge/${element.title}`, { pledge_id: element.pledge_id }) }} alt={element.title} className="pledge-div__img" src={element.banner_img} />
-      <p className="pledge-div__title">{element.title}</p>
+      <div className="pledge-div__content">
+        <img onClick={() => { history.push(`/action-category/pledge/${element.title}`, { pledge_id: element.pledge_id }) }} alt={element.title} className="pledge-div__content__img" src={element.banner_img} />
+        <p className="pledge-div__content__title">{element.title}</p>
+      </div>
+
       <p className="pledge-div__description">{element.description}</p>
       <span className="pledge-div__already">PLEDGES ALREADY </span>
       <span className="pledge-div__number">{element.number_of_enrollement}</span>

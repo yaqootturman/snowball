@@ -21,7 +21,7 @@
   position: absolute;
   width: 90%;
   font-size: 16px;
-  top: 81%;
+  top: 304px;
   font-style: normal;
   left: 52%;
   line-height: 22px;
@@ -35,6 +35,7 @@
    margin-top:6%;
    margin-left: 7%;
    font-weight: bold;
+   margin-bottom:10%;
 }
 
 @media (min-width: 768px) {
@@ -55,4 +56,15 @@
    font-size: 37px;
    font-weight: bold;
 }
+}
+@media (max-width: 360px){
+.category-container__category-title{
+  top:140px;
+  font-size:20px;
+}
+.category-container__category-description{
+  font-size:10px;
+  top:253px;
+}
+
 }
