@@ -20,7 +20,7 @@
 
 .user-pledge__pledge-title{
   position: absolute;
-  bottom: 46%;
+  bottom: 49%;
   left: 7%;
   font-weight: bold;
   font-size: 21px;
@@ -30,10 +30,10 @@
 }
 
 .user-pledge__pledge-description{
-  width: 71%;
+  width: 70%;
   position: absolute;
   bottom: 9%;
-  top:55%;
+  top:52%;
   left: 7%;
   font-size: 16px;
   line-height: 15px;
