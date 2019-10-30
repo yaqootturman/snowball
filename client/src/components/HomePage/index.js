@@ -32,11 +32,7 @@ class HomePage extends Component {
     return (
       <>
         <div className="home">
-          {/* <h1 className="home__title">My Pledges</h1> */}
-          {/* <h5 className="home__subtitle">TOTAL PLEDGES: {userPledges.length}</h5> */}
-
           {serverError !== "" ? <h1>{serverError}</h1> : (
-
             loading ?
               (<div className="loading-spinner">
                 <ClipLoader
@@ -60,8 +56,6 @@ class HomePage extends Component {
                     })}
               </>
           )}
-
-
         </div >
         <Footer {...this.props} />
       </>
