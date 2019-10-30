@@ -78,7 +78,7 @@ export class ConfirmPage extends Component {
               <p className="confirm__Page-letsConfirm">LET' S CONFIRM YOUR PLEDGE</p>
               <p className="confirm__Page-confirmPledge">
                 I commit to
-          {this.state.pledgeDescription}.
+          {pledgeDescription}.
               </p>
               <button
                 className="confirm__Page-confirmButton"
