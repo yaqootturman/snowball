@@ -129,6 +129,9 @@
 }
 .resources-div__link li{
   height: 10px;
+  word-wrap:break-word;
+
+
 }
 
 .resources-div__link a {
@@ -150,7 +153,6 @@
 }
 
 .references {
-  width: 90%;
   padding-left: 6vw;
   padding-bottom: 25px;
   margin-bottom: 21vw;
@@ -176,6 +178,8 @@ display: block;
   font-size: 1.2em;
   padding-left: 1%;
   display: list-item;
+  word-wrap:break-word;
+  width: 120%;
 
 }
 .references__element p {
