@@ -4,53 +4,71 @@
 .vertical {
   margin: 8%;
   border-left: 3px solid #3fcfad;
-  display: inline-block;
 }
 .title-div{
   margin-top: 12vh;
   width: 100%;
   text-align: center;
+  margin-bottom: -2%;
 }
 
 .title-div__top-title{
   font-weight: bold;
   font-size: 33px;
-  font-family:Comfortaa;
   line-height: 39px;
   display: initial;
   padding-bottom: 8px;
 }
 .title-div__horizantal-line{
-  border-top: 8px solid #FF4062;
-  margin-left: 37%;
-  width: 25%;
+  border-top: 9px solid #ff4062;
+  margin-left: 35%;
+  margin-top: 2%;
+  width: 30%;
 }
 .main-description-div{
-  margin-top: 12vh;
+  margin-top: 7vh;
   padding:5vw;
   width: 90%;
   text-align: center;
 } 
 .main-description-div__description {
   font-weight: normal;
-  font-size: 33px;
+  font-size: 32px;
   line-height: 39px;
   display: initial;
   letter-spacing: 0.1em;
 }
 .vertical__contents {
-  margin-bottom: 24%;
-  margin-left: -10%;
-  padding: 5%;
+  margin-bottom: 52%;
+  margin-left: -13%;
+  padding: 7%;
+  padding-bottom: 60px;
   background-color: white;
   font-family: Raleway;
   font-size: 17px;
   line-height: 28px;
 }
+.vertical__contents2 {
+  margin-bottom: 24%;
+  margin-left: -13%;
+  padding: 7%;
+  background-color: white;
+  font-family: Raleway;
+  font-size: 17px;
+  line-height: 28px;
+}
+.vertical__contents-subtitle{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  padding-bottom: 4%;
+}
 .start {
   width: 100vw;
   text-align: center;
-  margin-top: 10%;
+  margin-top: -40%;
   margin-bottom:10%;
 }
 .start__letsgo {
@@ -59,9 +77,9 @@
   border-radius: 5px;
   width: 134px;
   height: 43px;
-  line-height: 30px;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .vertical__contents__circles {
@@ -70,25 +88,31 @@
   font-family: Raleway;
   line-height: 30px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 19px;
   padding: 2%;
   width: 100%;
-  padding-top: 5%;
+  padding-top: 8%;
   padding-left: 0%;
 }
-
+.vertical__contents__description{
+  font-size: 94%;
+  margin-bottom: 5%;
+}
+.vertical__contents__description2{
+  font-size: 94%;
+}
 .vertical__contents__circles__circle {
-  width: 39px;
-  height: 39px;
-  text-align: center;
-  font-family: Raleway;
-  font-size: 25px;
-  line-height: 29px;
-  font-weight: bold;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  display: inline-block;
-  color: white;
+    width: 39px;
+    height: 39px;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 700;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    display: inline-block;
+    color: #fff;
 }
 .vertical__contents__circles__numberCircle1 {
   background: #3fcfad;
@@ -101,11 +125,14 @@
   background: #FF4062;
 }
 .vertical__contents__circles__span {
+  font-weight: normal;
   margin-left: 5%;
+  letter-spacing: 0.05em;
 }
 @media (max-width: 360px) {
   .vertical__contents__circles {
     font-weight: 400;
+    display: flex;
     font-size: 16px;
   }
 }
