@@ -119,7 +119,6 @@ class PledgePage extends React.Component {
     const { pledge_id } = this.props.location.state;
     const style = this.state.HideInstructionsDiv ? { display: "none" } : {};
     const counter = this.state.counter;
-    let words = [];
 
     return (
       <div className="container">
