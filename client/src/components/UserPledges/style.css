@@ -51,7 +51,7 @@
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid white;
 }
 
 .user-pledge__pledge-enrollements-icon{
@@ -86,46 +86,41 @@
   width: 90%;
   display: block;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .user-pledge__pledge-title{
   position: absolute;
-  bottom: 45%;
+  bottom: 50%;
   left: 7%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
   color: #FFFFFF;
   margin-block-start: 0;
-  margin-block-end: 0; 
+  margin-block-end: 0;
 }
 
 .user-pledge__pledge-description{
-  width: 72%;
+  width: 70%;
   position: absolute;
-  bottom: 7%;
+  bottom: 9%;
+  top: 50%;
   left: 7%;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 10px;
+  font-size: 13px;
+  line-height: 12px;
   color: white;
   word-wrap: break-word;
 }
 
 .user-pledge__pledge-enrollements-badge{
-  position: absolute;
+  position: absolute; 
   right: 3%;
-  top: 64%;
-  background: #F9BE02;
-  width:45px;
-  height: 45px;
-  color: #fff;
-  text-align: center;
-  border-radius: 50%;
-  border: 2px solid white;
+  top: 47%;
+  width: 55px;
+  height: 55px;
 }
 
 .user-pledge__pledge-enrollements-icon{
-  width: 15px;
+  width: 17px;
   display: block;
   margin: 10% auto 1px auto;
 
@@ -136,8 +131,8 @@
   color: black;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 19px;
   display: block;
   margin: auto;
 
@@ -151,7 +146,7 @@
   height: 30%; 
 }
 .user-pledge__pledge-enrollements-badge{
-  top: 57%;
+  top: 61%;
   right: 2.5%;
   width: 120px;
   height: 120px;
