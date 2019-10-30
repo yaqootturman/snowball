@@ -1,7 +1,8 @@
 .congratulations__page {
  display: grid;
  background: #f9be02 ;
- height: -webkit-fill-available;
+ height: 85%;
+ margin-bottom: 10%;
 }
 .congratulations__page-congratulations {
  margin: 3% auto 0% 10%;
@@ -64,7 +65,7 @@
  font-weight: 600;
 }
 
-@media screen and (max-width:1330px){
+@media screen and (min-width:720px){
    .congratulations__page {
      display: grid;
      background: #f9be02 ;
@@ -136,7 +137,8 @@
  .congratulations__page {
    display: grid;
    background: #f9be02 ;
-   height: -webkit-fill-available;
+   height: 96%;
+   overflow:scroll;
    margin-bottom: 15%;
  }
  .congratulations__page-congratulations {
@@ -174,7 +176,7 @@
  .congratulations__page-buttons {
    display: flex;
    flex-direction: column;
-   margin: 10% auto auto auto;
+   margin: 10% auto 13% auto;
    font-size: 12px;
  }
  .congratulations__page-buttons-choices {
