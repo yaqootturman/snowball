@@ -1,6 +1,7 @@
 .information__page {
   display: grid;
   height: -webkit-fill-available;
+  margin-bottom: 100px;
 }
 .information__page-title {
   font-size: 30px;
