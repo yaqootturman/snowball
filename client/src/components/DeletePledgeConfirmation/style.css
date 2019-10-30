@@ -5,27 +5,16 @@
 .delete-confirmation-dialog{
   width: 99%;
   height: 100%;
-  border:2px solid white;
-  border-radius: 10px;
-  background: white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: flex-start; 
-  align-items: baseline; 
+  align-content: flex-start;
+
 }
 
 .delete-confirmation-dialog__back-button{
   width:100%;
   margin-bottom:50px;
-}
-
-.delete-confirmation-dialog__dialog-title {
-    width: 99%;
-    padding: 5%;
-    padding-bottom:2.5%;
-    font-size: 8vw;
-    color: red;
 }
 
 .delete-confirmation-dialog__delete-message {
@@ -36,29 +25,14 @@
     font-weight: normal;
     vertical-align: bottom;
     color: black;
-    margin-top:45%;
+    margin-top:40%;
     margin-bottom: 20%;
-}
-
-.delete-confirmation-dialog__pledge-image{
-  display:block;
-  margin:auto;
-  width:90%;
-  height:auto;
-  max-height: 30%;
-  padding: 3% 15% 3% 15%;
 }
 
 .delete-confirmation-dialog__confirm-button{
   color:black;
   background: white;
   border:3px solid #7cdbd5;
-}
-
-.delete-confirmation-dialog__cancel-button {
-    background: white;
-    color: black;
-    border: 2px solid gray;
 }
 
 .button-aligner {
