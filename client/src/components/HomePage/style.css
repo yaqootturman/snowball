@@ -1,9 +1,11 @@
 .home{
-  height:90%;
-  overflow-y: scroll;
+  overflow: scroll;
+  position: absolute;
   top: 0px;
-  margin-bottom: 27%;
-  padding-bottom: 12px;
+  bottom: 73px;
+  height: 93%;
+  width: 100%;
+  margin-bottom: 66px;
 }
 .loading-spinner__home{
 	margin: 30%;
@@ -57,12 +59,18 @@
 }
 
 @media (min-width: 768px) {
+
+
+
   .home__title{
     margin-left:40px;
+    font-size:3em;
 }
 
   .home__subtitle{
     margin-left:40px;
+    font-size:1em;
+
   }
 .home__user-message{
     margin:60px 40px 80px 40px;

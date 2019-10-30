@@ -4,7 +4,7 @@
   font-family: Raleway;
 }
 img{
-  filter:brightness(1)
+  filter:brightness(0.7)
 }
 .category-div{
   display:flex;
@@ -33,6 +33,7 @@ img{
   display: block;
   height: 165px;
   border-radius: 4px;
+  filter:none;
 }
 
 .category-div__dashboard-action-title{
