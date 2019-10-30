@@ -1,52 +1,79 @@
 
 .pledge-div{
   position: relative;
-  margin:19px;
+  margin-bottom: 3%;
 }
-.pledge-div__img{
+.pledge-div__content{
   position: relative;
-  width:99%;
-  height: 178px;
-  top:0;
-  left:0;
-  line-height: 39px;
-  border-radius: 15px;
+  width:100vw;
+  height: 180px;
 }
-.pledge-div__title{
+.pledge-div__content__img{
   position: absolute;
-  top: 47%; 
-  left: 3%;
-  font-weight: 900;
+  width: 90%;
+  height: 178px;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.pledge-div__content__title{
+  position: absolute;
+  bottom: 11px;
+  left: 27px;
+  font-weight: 600;
   color:white;
-  font-size:20px;
+  font-size:21px; 
+
 }
 .pledge-div__description{
   font-size: 15px;
-  font-weight: medium;
+  margin-top: 1%;
+  margin-left: 6%;
+  margin-right: 18px;
 }
 .pledge-div__already{
   font-weight: bold;
-
+  margin-top: 3%;
+  display: inline-block;
+  margin-left: 6%;
+  margin-right: 1%;
 }
 .pledge-div__number{
   color:#1dbfd1;
   font-weight: bold;
+  margin-left: 6%;
+  margin-left: 2%;
 }
-@media (min-width: 768px) {
+@media (min-width: 446px) {
+  .pledge-div{
+    width:88vw;
+  }
   .pledge-div__img{
   height: 380px;
+  width:75vw;
+  margin-left:10%;
+  margin-right:10%;
+
 }
 .pledge-div__title{
-  font-size:63px;
-}
+  font-size: 50px;
+  margin-left: 10%;
+  top:40%;
+  padding-top: 5%;
+  }
 .pledge-div__description{
-  font-size: 32px;
+  font-size: 25px;
+  margin-left: 10%;
+  padding-top: 5%;
 }
 .pledge-div__already{
   font-weight: bold;
   font-size: 32px;
+  margin-left: 10%;
+  padding-top: 5%;
 }
 .pledge-div__number{
-  font-size:32px;
+  font-size:38px;
 }
 }
