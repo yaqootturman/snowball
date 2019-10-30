@@ -102,7 +102,7 @@ class DashboardPage extends React.Component {
           serverError !== "" ? <h1>{serverError}</h1> :
             (
               loading1 || loading2 ? (
-                <div >
+                <div className="loading-spinner">
                   <ClipLoader
                     className="loading-spinner__home"
                     sizeUnit={'px'}
