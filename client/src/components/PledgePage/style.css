@@ -138,7 +138,16 @@ a{
   margin-right:5px;
   
 }
-.amber{
+.amber {
+  background-color: #ffbf00;
+  height: 22px;
+  width: 8px;
+  display: inline-block;
+  border-radius: 33%;
+  margin-right:5px;
+
+}
+.yellow {
   background-color: #ffbf00;
   height: 22px;
   width: 8px;
@@ -164,7 +173,7 @@ a{
   border-radius: 33%;
   margin-right:5px;
 }
-.cryan{
+.cyan{
   background-color:#1dbfd1;
   height: 22px;
   width: 8px;
