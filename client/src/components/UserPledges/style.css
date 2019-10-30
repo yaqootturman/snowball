@@ -151,23 +151,21 @@
   height: 30%; 
 }
 .user-pledge__pledge-enrollements-badge{
-  top: 68%;
+  top: 57%;
   right: 2.5%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 .user-pledge__pledge-title{
-  bottom: 45%;
-  font-size: 7vw;
+  bottom: 46%;
+  font-size: 5vw;
 }
 .user-pledge__pledge-description{
-    width: 78%;
+    width: 72%;
     bottom: 10%;
-    font-size: 4vw;
-    line-height: 90%;
+    font-size: 3vw;
+    line-height: 100%;
 }
-
-
 
 .user-pledge__pledge-enrollements-number{
 line-height: 25px;
