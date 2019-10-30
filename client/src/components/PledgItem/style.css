@@ -17,17 +17,18 @@
   position: absolute;
   top: 61%; 
   left: 3%;
-  font-weight: 900;
+  font-weight: 600;
   color:white;
-  font-size:20px;
+  font-size:21px;
 }
 .pledge-div__description{
   font-size: 15px;
-  font-weight: medium;
+  margin-top: 1%;
 }
 .pledge-div__already{
   font-weight: bold;
-
+  margin-top: 3%;
+  display: inline-block;
 }
 .pledge-div__number{
   color:#1dbfd1;
