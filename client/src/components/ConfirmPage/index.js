@@ -16,22 +16,28 @@ export class ConfirmPage extends Component {
         description,
         number_of_enrollement
       } = this.props.location.data[0];
+
       const separator = "$";
       const confirmDescription = description.replace("I will", "");
-      window.localStorage.setItem("storedData", [
-        confirmDescription,
-        separator,
-        number_of_enrollement + 1
-      ]);
+
+      sessionStorage.setItem('storedData', JSON.stringify(
+        [confirmDescription,
+          separator,
+          number_of_enrollement + 1]
+      ))
+
       this.setState({
         pledgeDescription: confirmDescription,
         NumberOfEnrolledPeople: number_of_enrollement + 1
       });
-    } else if (window.localStorage.length > 0) {
-      const infoPledge = window.localStorage.getItem("storedData").split(",$,");
+    } else {
+
+      const infoPledge = sessionStorage.getItem("storedData")
+      const pledgeDescription = JSON.parse(infoPledge)
+
       this.setState({
-        pledgeDescription: infoPledge[0],
-        NumberOfEnrolledPeople: infoPledge[1]
+        pledgeDescription: pledgeDescription[0],
+        NumberOfEnrolledPeople: infoPledge[2]
       });
     }
   }
@@ -61,7 +67,7 @@ export class ConfirmPage extends Component {
       })
   };
   render() {
-    const { serverError } = this.state
+    const { serverError, pledgeDescription } = this.state
     return (
       <div className="confirm__Page">
         {serverError !== "" ? <h1>{serverError}</h1> :
@@ -71,9 +77,8 @@ export class ConfirmPage extends Component {
 
               <p className="confirm__Page-letsConfirm">LET' S CONFIRM YOUR PLEDGE</p>
               <p className="confirm__Page-confirmPledge">
-                {" "}
                 I commit to
-          {this.state.pledgeDescription}
+          {this.state.pledgeDescription}.
               </p>
               <button
                 className="confirm__Page-confirmButton"
