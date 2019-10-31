@@ -49,7 +49,7 @@ class PledgePage extends React.Component {
         });
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message });
+        this.setState({ serverError: "error.response.data.message" });
       });
   }
   getUserPledges() {
@@ -60,7 +60,7 @@ class PledgePage extends React.Component {
         this.setState({ userPledges: data });
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message });
+        this.setState({ serverError: "error.response.data.message" });
       });
   }
   checkPledgeButton() {
@@ -126,165 +126,165 @@ class PledgePage extends React.Component {
         {serverError !== "" ? (
           <h1>{serverError}</h1>
         ) : (
-          <>
-            <BackButton {...this.props} />
-            {loading ? (
-              <div className="loading-spinner">
-                <ClipLoader
-                  className="loading-spinner__home"
-                  sizeUnit={"px"}
-                  size={80}
-                  color={"#123abc"}
-                />
-              </div>
-            ) : (
-              <>
-                <div className="top-info">
-                  <img
-                    className="top-info__img"
-                    alt="pledge information"
-                    src={pledgeInfo[0].img}
+            <>
+              {loading ? (
+                <div className="loading-spinner">
+                  <ClipLoader
+                    className="loading-spinner__home"
+                    sizeUnit={"px"}
+                    size={80}
+                    color={"#123abc"}
                   />
-
-                  {/* condition to change make/cancel the pledge button */}
-                  {this.checkPledgeButton() ? (
-                    <button
-                      className="top-info__make-cancel"
-                      value={pledge_id}
-                      onClick={() =>
-                        this.cancelPledgeButton(pledge_id, pledgeInfo)
-                      }
-                    >
-                      Cancel the pledge
-                    </button>
-                  ) : (
-                    <button
-                      className="top-info__make-cancel"
-                      value={pledge_id}
-                      onClick={() => this.addUserPledge()}
-                    >
-                      Make the pledge
-                    </button>
-                  )}
-
-                  <h2 className="top-info__title">{pledgeInfo[0].title}</h2>
-                  <p className="top-info__the-pledge-word">THE PLEDGE</p>
-                  <p className="top-info__description">
-                    {pledgeInfo[0].description}
-                  </p>
-                  <p className="top-info__pledgeS-already-word">
-                    PLEDGES ALREADY
-                  </p>
-                  <p className="top-info__number">
-                    {pledgeInfo[0].number_of_enrollement
-                      .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
-                  </p>
                 </div>
+              ) : (
+                  <>
+                    <BackButton {...this.props} />
+                    <div className="top-info">
+                      <img
+                        className="top-info__img"
+                        alt="pledge information"
+                        src={pledgeInfo[0].img}
+                      />
 
-                <div className="importance-div">
-                  <h3>Why it`s important?</h3>
-                  {pledgeInfo[0].importance
-                    .split("..")
-                    .map((element, index) => {
-                      return (
-                        <>
-                          <br />
-                          <p key={index}>{element}</p>
-                        </>
-                      );
-                    })}
-                </div>
+                      {/* condition to change make/cancel the pledge button */}
+                      {this.checkPledgeButton() ? (
+                        <button
+                          className="top-info__make-cancel"
+                          value={pledge_id}
+                          onClick={() =>
+                            this.cancelPledgeButton(pledge_id, pledgeInfo)
+                          }
+                        >
+                          Cancel the pledge
+                    </button>
+                      ) : (
+                          <button
+                            className="top-info__make-cancel"
+                            value={pledge_id}
+                            onClick={() => this.addUserPledge()}
+                          >
+                            Make the pledge
+                    </button>
+                        )}
 
-                <div className="how-do-div" style={style}>
-                  <h3>How to do it</h3>
+                      <h2 className="top-info__title">{pledgeInfo[0].title}</h2>
+                      <p className="top-info__the-pledge-word">THE PLEDGE</p>
+                      <p className="top-info__description">
+                        {pledgeInfo[0].description}
+                      </p>
+                      <p className="top-info__pledgeS-already-word">
+                        PLEDGES ALREADY
+                  </p>
+                      <p className="top-info__number">
+                        {pledgeInfo[0].number_of_enrollement
+                          .toString()
+                          .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                      </p>
+                    </div>
 
-                  {pledgeInstructions.length > 0 ? (
-                    <ol>
-                      {pledgeInstructions.map((element, index) => {
-                        return <li key={index}>{element.description}</li>;
+                    <div className="importance-div">
+                      <h3>Why it`s important?</h3>
+                      {pledgeInfo[0].importance
+                        .split("..")
+                        .map((element, index) => {
+                          return (
+                            <>
+                              <br />
+                              <p key={index}>{element}</p>
+                            </>
+                          );
+                        })}
+                    </div>
+
+                    <div className="how-do-div" style={style}>
+                      <h3>How to do it</h3>
+
+                      {pledgeInstructions.length > 0 ? (
+                        <ol>
+                          {pledgeInstructions.map((element, index) => {
+                            return <li key={index}>{element.description}</li>;
+                          })}
+                        </ol>
+                      ) : counter > 0 ? (
+                        this.HideInstructions()
+                      ) : (
+                            <></>
+                          )}
+                    </div>
+                    <div className="pros-cons-div">
+                      <h3>Pros & cons of pledge</h3>
+                      {pledgeProsCons.map((element, index) => {
+                        return (
+                          <div className="pros-cons-div__element" key={index}>
+                            <div className={element.color}></div>
+                            <p>{element.statement}</p>
+                          </div>
+                        );
                       })}
-                    </ol>
-                  ) : counter > 0 ? (
-                    this.HideInstructions()
-                  ) : (
-                    <></>
-                  )}
-                </div>
-                <div className="pros-cons-div">
-                  <h3>Pros & cons of pledge</h3>
-                  {pledgeProsCons.map((element, index) => {
-                    return (
-                      <div className="pros-cons-div__element" key={index}>
-                        <div className={element.color}></div>
-                        <p>{element.statement}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="resources-div">
-                  <h3>Resources to help</h3>
-                  <ul className="resources-div__unorderedList">
-                  {
-                    pledgeResources.map((element, index) => {
-                    return (
-                        <div className="resources-div__link" key={index}>
-                          <a
-                            href={element.link}
-                            className="resources-div__linkDiv"
-                          >{<div className="resources-div__linkDiv">
-                            {
-                              <span className="resources-div__linkDiv-White-Circle">
-                                -
+                    </div>
+                    <div className="resources-div">
+                      <h3>Resources to help</h3>
+                      <ul className="resources-div__unorderedList">
+                        {
+                          pledgeResources.map((element, index) => {
+                            return (
+                              <div className="resources-div__link" key={index}>
+                                <a
+                                  href={element.link}
+                                  className="resources-div__linkDiv"
+                                >{<div className="resources-div__linkDiv">
+                                  {
+                                    <span className="resources-div__linkDiv-White-Circle">
+                                      -
                               </span>
-                            }
-                            {
-                              <p >
-                              <span className="resources-div__firstWord" >
-                              {element.description.split("-")[0]}</span>{"-"}
-                            {<span>{element.description.split("-")[1]}</span>}
+                                  }
+                                  {
+                                    <p >
+                                      <span className="resources-div__firstWord" >
+                                        {element.description.split("-")[0]}</span>{"-"}
+                                      {<span>{element.description.split("-")[1]}</span>}
 
-                              
-                              </p>
-                            }</div>}{<div>
-                            </div>}
-                             </a>
-                        </div>
-                            
-                    );
-                    
-                  }) }</ul>
-                </div>
-                <div className="further-information">
-                  <h3>Further information</h3>
-                  {pledgeInfo[0].further_info
-                    .split("..")
-                    .map((element, index) => {
-                      return (
-                        <>
-                          <br />
-                          <p key={index}>{element}</p>
-                        </>
-                      );
-                    })}
-                </div>
 
-                
-                <hr className="hr-element"></hr>
+                                    </p>
+                                  }</div>}{<div>
+                                  </div>}
+                                </a>
+                              </div>
 
-                <div className="references">
-                  <h3>References</h3>
-                  <ol className="references__element">
-                      {pledgeReferences.map((element, index) => {
-                        return <li  key={index}><a href={element.description}><span>{element.description}</span></a></li>;
-                      })}
-                    </ol>
-                </div>
-                <Footer {...this.props} />
-              </>
-            )}
-          </>
-        )}
+                            );
+
+                          })}</ul>
+                    </div>
+                    <div className="further-information">
+                      <h3>Further information</h3>
+                      {pledgeInfo[0].further_info
+                        .split("..")
+                        .map((element, index) => {
+                          return (
+                            <>
+                              <br />
+                              <p key={index}>{element}</p>
+                            </>
+                          );
+                        })}
+                    </div>
+
+
+                    <hr className="hr-element"></hr>
+
+                    <div className="references">
+                      <h3>References</h3>
+                      <ol className="references__element">
+                        {pledgeReferences.map((element, index) => {
+                          return <li key={index}><a href={element.description}><span>{element.description}</span></a></li>;
+                        })}
+                      </ol>
+                    </div>
+                    <Footer {...this.props} />
+                  </>
+                )}
+            </>
+          )}
       </div>
     );
   }
