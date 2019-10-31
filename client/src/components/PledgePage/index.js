@@ -276,7 +276,7 @@ class PledgePage extends React.Component {
                   <h3>References</h3>
                   <ol className="references__element">
                       {pledgeReferences.map((element, index) => {
-                        return <li  key={index}><a href={element.description}><span>{element.description.split('//')[1].split('/')[0].substr(0, 35)}</span></a></li>;
+                        return <li  key={index}><a href={element.description}><span>{element.description.split('//')[1].split('/')[0]}</span></a></li>;
                       })}
                     </ol>
                 </div>
