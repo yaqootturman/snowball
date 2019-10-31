@@ -64,7 +64,7 @@ export class ConfirmPage extends Component {
         });
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message })
+        this.setState({ serverError: "server error" })
       })
   };
   render() {
