@@ -12,6 +12,7 @@ export class ConfirmPage extends Component {
     pledgeName:'',
   };
   componentDidMount() {
+    window.scrollTo(0, 0)
     if (this.props.location.data) {
       const {
         description,

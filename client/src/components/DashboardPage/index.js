@@ -17,7 +17,7 @@ class DashboardPage extends React.Component {
     categories: []
   }
   componentDidMount = () => {
-
+    window.scrollTo(0, 0)
     let categoryInfo = Promise.all([this.getNumberOfUserPledges(), this.getNumberOfAllPledges()])
     categoryInfo.then((res) => {
       this.setState({ loading1: false })
