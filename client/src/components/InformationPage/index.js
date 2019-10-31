@@ -3,6 +3,10 @@ import "./style.css";
 import BackButton from "../BackButton";
 import Footer from "../Footer";
 export class InformationPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+
+  }
   render() {
     return (
       <>

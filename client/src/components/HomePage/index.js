@@ -15,12 +15,13 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     const userId = 1;
     axios.get(`/api/home/${userId}`).then(({ data }) => {
       this.setState({ userPledges: data, loading: false })
     })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message })
+        this.setState({ serverError: "server error" })
       })
   }
 

@@ -20,7 +20,7 @@
 
 .user-pledge__pledge-title{
   position: absolute;
-  bottom: 45%;
+  bottom: 49%;
   left: 7%;
   font-weight: bold;
   font-size: 21px;
@@ -30,10 +30,10 @@
 }
 
 .user-pledge__pledge-description{
-  width: 71%;
+  width: 70%;
   position: absolute;
   bottom: 9%;
-  top:55%;
+  top:52%;
   left: 7%;
   font-size: 16px;
   line-height: 15px;
@@ -44,18 +44,18 @@
 .user-pledge__pledge-enrollements-badge{
   position: absolute;
   right: 3%;
-  top: 63%;
+  top: 52%;
   background: #F9BE02;
-  width:55px;
-  height: 41.38%;
+  width:70px;
+  height:70px ;
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 3px solid white;
 }
 
 .user-pledge__pledge-enrollements-icon{
-  width: 20px;
+  width: 22px;
   display: block;
   margin: 10% auto 3px auto;
   filter:none;
@@ -66,7 +66,7 @@
   color: black;
   font-style: normal;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 20px;
   display: block;
   margin: auto;
@@ -86,46 +86,41 @@
   width: 90%;
   display: block;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .user-pledge__pledge-title{
   position: absolute;
-  bottom: 45%;
+  bottom: 50%;
   left: 7%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 17px;
   color: #FFFFFF;
   margin-block-start: 0;
-  margin-block-end: 0; 
+  margin-block-end: 0;
 }
 
 .user-pledge__pledge-description{
-  width: 72%;
+  width: 70%;
   position: absolute;
-  bottom: 7%;
+  bottom: 9%;
+  top: 50%;
   left: 7%;
-  font-weight: bold;
-  font-size: 11px;
-  line-height: 10px;
+  font-size: 13px;
+  line-height: 12px;
   color: white;
   word-wrap: break-word;
 }
 
 .user-pledge__pledge-enrollements-badge{
-  position: absolute;
+  position: absolute; 
   right: 3%;
-  top: 64%;
-  background: #F9BE02;
-  width:45px;
-  height: 45px;
-  color: #fff;
-  text-align: center;
-  border-radius: 50%;
-  border: 2px solid white;
+  top: 47%;
+  width: 55px;
+  height: 55px;
 }
 
 .user-pledge__pledge-enrollements-icon{
-  width: 15px;
+  width: 17px;
   display: block;
   margin: 10% auto 1px auto;
 
@@ -136,8 +131,8 @@
   color: black;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 19px;
   display: block;
   margin: auto;
 
@@ -151,23 +146,21 @@
   height: 30%; 
 }
 .user-pledge__pledge-enrollements-badge{
-  top: 68%;
+  top: 61%;
   right: 2.5%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 .user-pledge__pledge-title{
-  bottom: 45%;
-  font-size: 7vw;
+  bottom: 46%;
+  font-size: 5vw;
 }
 .user-pledge__pledge-description{
-    width: 78%;
+    width: 72%;
     bottom: 10%;
-    font-size: 4vw;
-    line-height: 90%;
+    font-size: 3vw;
+    line-height: 100%;
 }
-
-
 
 .user-pledge__pledge-enrollements-number{
 line-height: 25px;

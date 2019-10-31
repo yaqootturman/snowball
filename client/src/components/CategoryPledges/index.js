@@ -16,6 +16,7 @@ class CategoryPledges extends React.Component {
   };
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     const data = sessionStorage.getItem('results')
     const info = JSON.parse(data)
     this.setState({ details: info })
@@ -23,7 +24,7 @@ class CategoryPledges extends React.Component {
       const pledge_info = Response.data
       this.setState({ loading: false, pledge_info })
     }).catch(error => {
-      this.setState({ serverError: error.response.data.message })
+      this.setState({ serverError: "server error" })
     })
   }
 

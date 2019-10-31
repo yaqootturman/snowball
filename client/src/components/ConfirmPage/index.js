@@ -8,39 +8,50 @@ export class ConfirmPage extends Component {
   state = {
     pledgeDescription: '',
     NumberOfEnrolledPeople: '',
-    serverError: ""
+    serverError: "",
+    pledgeName:'',
   };
   componentDidMount() {
+    window.scrollTo(0, 0)
     if (this.props.location.data) {
       const {
         description,
         number_of_enrollement
       } = this.props.location.data[0];
+      const {pledgeName}=this.props.location
+
       const separator = "$";
       const confirmDescription = description.replace("I will", "");
-      window.localStorage.setItem("storedData", [
-        confirmDescription,
-        separator,
-        number_of_enrollement + 1
-      ]);
+
+      sessionStorage.setItem('storedData', JSON.stringify(
+        [confirmDescription,
+          separator,
+          number_of_enrollement + 1,separator,pledgeName,separator]
+      ))
+
       this.setState({
         pledgeDescription: confirmDescription,
-        NumberOfEnrolledPeople: number_of_enrollement + 1
+        NumberOfEnrolledPeople: number_of_enrollement + 1,
+        pledgeName:pledgeName,
       });
-    } else if (window.localStorage.length > 0) {
-      const infoPledge = window.localStorage.getItem("storedData").split(",$,");
+    } else {
+
+      const infoPledge = sessionStorage.getItem("storedData")
+      const pledgeDescription = JSON.parse(infoPledge)
+
       this.setState({
-        pledgeDescription: infoPledge[0],
-        NumberOfEnrolledPeople: infoPledge[1]
+        pledgeDescription: pledgeDescription[0],
+        NumberOfEnrolledPeople: infoPledge[2],
+        pledgeName:infoPledge[3],
       });
     }
   }
   confirmUserPledge = () => {
     const { pathname } = this.props.location;
-    localStorage.clear();
     let Ids = pathname.split("/");
     const userId = Ids[1],
       pledgeId = Ids[2];
+      sessionStorage.clear()
     axios
       .post(`/api/${userId}/${pledgeId}/addPledge`)
       .then(response => {
@@ -53,15 +64,18 @@ export class ConfirmPage extends Component {
         const url = response.data.redirectUrl;
         history.push({
           pathname: url,
-          NumberOfEnrolledPeople: this.state.NumberOfEnrolledPeople
+          NumberOfEnrolledPeople: this.state.NumberOfEnrolledPeople,
+          pledgeName:this.state.pledgeName,
+          pledgeId:pledgeId
+          
         });
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message })
+        this.setState({ serverError: "server error" })
       })
   };
   render() {
-    const { serverError } = this.state
+    const { serverError, pledgeDescription } = this.state
     return (
       <div className="confirm__Page">
         {serverError !== "" ? <h1>{serverError}</h1> :
@@ -71,9 +85,8 @@ export class ConfirmPage extends Component {
 
               <p className="confirm__Page-letsConfirm">LET' S CONFIRM YOUR PLEDGE</p>
               <p className="confirm__Page-confirmPledge">
-                {" "}
                 I commit to
-          {this.state.pledgeDescription}
+          {pledgeDescription}.
               </p>
               <button
                 className="confirm__Page-confirmButton"

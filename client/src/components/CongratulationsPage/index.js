@@ -8,20 +8,31 @@ export class Congratulations extends Component {
     NumberOfEnrolledPeople: "",
     width: window.screen.width,
     height: window.screen.height,
-    HideComponent: false
+    HideComponent: false,
+    pledgeName:'',
+    pledgeId:0
+
   };
 
   componentDidMount() {
-    if (window.localStorage.length > 0) {
+  
+    if (sessionStorage.length>0) {
+
       this.setState({
-        NumberOfEnrolledPeople: window.localStorage.getItem("EnrolledPeople")
+        NumberOfEnrolledPeople:sessionStorage.getItem("EnrolledPeople").split(',$,')[0],
+        pledgeName:sessionStorage.getItem("EnrolledPeople").split(',$,')[1],
+        pledgeId:JSON.parse(sessionStorage.getItem("EnrolledPeople").split(',$,')[2]),
       });
     } else if (this.props.location.NumberOfEnrolledPeople) {
-      const { NumberOfEnrolledPeople } = this.props.location;
-
-      window.localStorage.setItem("EnrolledPeople", NumberOfEnrolledPeople);
+      const { NumberOfEnrolledPeople,pledgeName,pledgeId} = this.props.location;
+      const separator = '$'
+      sessionStorage.setItem("EnrolledPeople", [NumberOfEnrolledPeople,separator,pledgeName,separator,pledgeId]);
       this.setState({
-        NumberOfEnrolledPeople: window.localStorage.getItem("EnrolledPeople")
+        NumberOfEnrolledPeople: sessionStorage.getItem("EnrolledPeople").split(',$,')[0],
+        pledgeName:sessionStorage.getItem("EnrolledPeople").split(',$,')[1],
+        pledgeId:JSON.parse(sessionStorage.getItem("EnrolledPeople").split(',$,')[2]) 
+       
+
       });
     }
     this.hideCelebrate();
@@ -36,14 +47,12 @@ export class Congratulations extends Component {
     this.setState({ HideComponent: true });
   }
 
-  redirectInformation = () => {
+  redirectPledgeInformation = () => {
     const { history } = this.props;
-    window.localStorage.clear();
-    history.push("/information");
+    history.push({pathname:`/action-category/pledge/${this.state.pledgeName}`},{ pledge_id:this.state.pledgeId});
   };
   redirectDashboard = () => {
     const { history } = this.props;
-    window.localStorage.clear();
     history.push("/dashboard");
   };
   onResize = () => {
@@ -87,7 +96,7 @@ export class Congratulations extends Component {
           <div className="congratulations__page-buttons-choices">
             <button
               onClick={() => {
-                this.redirectInformation();
+                this.redirectPledgeInformation();
               }}
             >
               Revisit pledge info

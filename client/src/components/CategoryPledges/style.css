@@ -1,7 +1,5 @@
 .category-pledges-page{
-  
   margin-bottom: 100px;
-
 }
 .category-container{
  position: relative;
@@ -60,10 +58,9 @@
 @media (max-width: 360px){
 .category-container__category-title{
   top:140px;
-  font-size:20px;
 }
 .category-container__category-description{
-  font-size:10px;
+  font-size:0.9em;
   top:253px;
 }
 

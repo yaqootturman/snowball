@@ -17,7 +17,7 @@ class DashboardPage extends React.Component {
     categories: []
   }
   componentDidMount = () => {
-
+    window.scrollTo(0, 0)
     let categoryInfo = Promise.all([this.getNumberOfUserPledges(), this.getNumberOfAllPledges()])
     categoryInfo.then((res) => {
       this.setState({ loading1: false })
@@ -65,7 +65,7 @@ class DashboardPage extends React.Component {
       })
       return data
     }).catch(error =>
-      this.setState({ serverError: error.response.data.message })
+      this.setState({ serverError: "server error" })
     )
   }
 
@@ -80,7 +80,7 @@ class DashboardPage extends React.Component {
       return data
     })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message })
+        this.setState({ serverError: "server error" })
       })
   }
   getAllPledgesOfCategory() {
@@ -90,7 +90,7 @@ class DashboardPage extends React.Component {
         this.setState({ categories: data.pledgesCategory })
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message })
+        this.setState({ serverError: "server error" })
       })
   }
 
