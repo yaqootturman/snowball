@@ -23,6 +23,7 @@ class PledgePage extends React.Component {
   componentDidMount() {
     //set state pledge id coming from pressed pledge
     this.setState({ pledge_id: this.props.location.state });
+    
     //make sure that user pledges and pledge info are brought successfully to change the loading flag to false to start rendering the page
     const pledgePageInfo = Promise.all([
       this.getPledgeInfo(),
@@ -30,6 +31,7 @@ class PledgePage extends React.Component {
     ]);
     pledgePageInfo.then(res => {
       this.setState({ loading: false });
+      
     });
   }
 
@@ -73,12 +75,16 @@ class PledgePage extends React.Component {
   }
 
   addUserPledge() {
-    const { pledge_id } = this.props.location.state;
+    console.log(this.props.location);
+    
+    const { pledge_id } = this.props.location.state ;
     const { history } = this.props;
     const userId = 1; //this should change to take id from props
     history.push({
       pathname: `/${userId}/${pledge_id}/addPledge`,
-      data: this.state.pledgeInfo
+      data: this.state.pledgeInfo,
+      pledgeName:this.props.location.pathname.split('/')[3],
+     
     });
     // i should recieve confirm from confirm page to setState pledgeExist
   }
