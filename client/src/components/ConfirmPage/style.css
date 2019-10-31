@@ -1,7 +1,7 @@
 .confirm__Page {
   display: grid;
   background: #7cdbd5;
-  margin-bottom: 60px;
+  margin-bottom:15%;
 }
 
 .confirm__Page-letsConfirm {
@@ -81,7 +81,6 @@
     display: grid;
     background: #7cdbd5;
     height:93%;
-    margin-bottom: 100px;
     overflow: scroll;
   }
 

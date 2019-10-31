@@ -16,6 +16,7 @@ class CategoryPledges extends React.Component {
   };
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     const data = sessionStorage.getItem('results')
     const info = JSON.parse(data)
     this.setState({ details: info })
