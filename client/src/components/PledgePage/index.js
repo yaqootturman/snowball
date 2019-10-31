@@ -24,6 +24,7 @@ class PledgePage extends React.Component {
     window.scrollTo(0, 0)
     //set state pledge id coming from pressed pledge
     this.setState({ pledge_id: this.props.location.state });
+
     //make sure that user pledges and pledge info are brought successfully to change the loading flag to false to start rendering the page
     const pledgePageInfo = Promise.all([
       this.getPledgeInfo(),
@@ -31,6 +32,7 @@ class PledgePage extends React.Component {
     ]);
     pledgePageInfo.then(res => {
       this.setState({ loading: false });
+
     });
   }
 
@@ -49,7 +51,7 @@ class PledgePage extends React.Component {
         });
       })
       .catch(error => {
-        this.setState({ serverError: "error.response.data.message" });
+        this.setState({ serverError: "server error" });
       });
   }
   getUserPledges() {
@@ -60,7 +62,7 @@ class PledgePage extends React.Component {
         this.setState({ userPledges: data });
       })
       .catch(error => {
-        this.setState({ serverError: "error.response.data.message" });
+        this.setState({ serverError: "server error" });
       });
   }
   checkPledgeButton() {
@@ -74,12 +76,15 @@ class PledgePage extends React.Component {
   }
 
   addUserPledge() {
+
     const { pledge_id } = this.props.location.state;
     const { history } = this.props;
     const userId = 1; //this should change to take id from props
     history.push({
       pathname: `/${userId}/${pledge_id}/addPledge`,
-      data: this.state.pledgeInfo
+      data: this.state.pledgeInfo,
+      pledgeName: this.props.location.pathname.split('/')[3],
+
     });
     // i should recieve confirm from confirm page to setState pledgeExist
   }
@@ -276,7 +281,7 @@ class PledgePage extends React.Component {
                       <h3>References</h3>
                       <ol className="references__element">
                         {pledgeReferences.map((element, index) => {
-                          return <li key={index}><a href={element.description}><span>{element.description}</span></a></li>;
+                          return <li key={index}><a href={element.description}><span>{element.description.split('//')[1].split('/')[0]}</span></a></li>;
                         })}
                       </ol>
                     </div>
