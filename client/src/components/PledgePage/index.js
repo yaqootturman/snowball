@@ -76,7 +76,6 @@ class PledgePage extends React.Component {
   }
 
   addUserPledge() {
-    console.log(this.props.location);
     
     const { pledge_id } = this.props.location.state ;
     const { history } = this.props;

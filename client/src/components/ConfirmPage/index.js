@@ -36,7 +36,7 @@ export class ConfirmPage extends Component {
       });
     } else {
 
-      const infoPledge = sessionStorage.getItem("storedData").split(',$,')
+      const infoPledge = sessionStorage.getItem("storedData")
       const pledgeDescription = JSON.parse(infoPledge)
 
       this.setState({
