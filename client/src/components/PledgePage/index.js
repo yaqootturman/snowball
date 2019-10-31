@@ -51,7 +51,7 @@ class PledgePage extends React.Component {
         });
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message });
+        this.setState({ serverError: "server error" });
       });
   }
   getUserPledges() {
@@ -62,7 +62,7 @@ class PledgePage extends React.Component {
         this.setState({ userPledges: data });
       })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message });
+        this.setState({ serverError: "server error" });
       });
   }
   checkPledgeButton() {
