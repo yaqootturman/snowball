@@ -8,7 +8,8 @@ export class ConfirmPage extends Component {
   state = {
     pledgeDescription: '',
     NumberOfEnrolledPeople: '',
-    serverError: ""
+    serverError: "",
+    pledgeName:'',
   };
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -17,6 +18,7 @@ export class ConfirmPage extends Component {
         description,
         number_of_enrollement
       } = this.props.location.data[0];
+      const {pledgeName}=this.props.location
 
       const separator = "$";
       const confirmDescription = description.replace("I will", "");
@@ -24,12 +26,13 @@ export class ConfirmPage extends Component {
       sessionStorage.setItem('storedData', JSON.stringify(
         [confirmDescription,
           separator,
-          number_of_enrollement + 1]
+          number_of_enrollement + 1,separator,pledgeName,separator]
       ))
 
       this.setState({
         pledgeDescription: confirmDescription,
-        NumberOfEnrolledPeople: number_of_enrollement + 1
+        NumberOfEnrolledPeople: number_of_enrollement + 1,
+        pledgeName:pledgeName,
       });
     } else {
 
@@ -38,16 +41,17 @@ export class ConfirmPage extends Component {
 
       this.setState({
         pledgeDescription: pledgeDescription[0],
-        NumberOfEnrolledPeople: infoPledge[2]
+        NumberOfEnrolledPeople: infoPledge[2],
+        pledgeName:infoPledge[3],
       });
     }
   }
   confirmUserPledge = () => {
     const { pathname } = this.props.location;
-    localStorage.clear();
     let Ids = pathname.split("/");
     const userId = Ids[1],
       pledgeId = Ids[2];
+      sessionStorage.clear()
     axios
       .post(`/api/${userId}/${pledgeId}/addPledge`)
       .then(response => {
@@ -60,7 +64,10 @@ export class ConfirmPage extends Component {
         const url = response.data.redirectUrl;
         history.push({
           pathname: url,
-          NumberOfEnrolledPeople: this.state.NumberOfEnrolledPeople
+          NumberOfEnrolledPeople: this.state.NumberOfEnrolledPeople,
+          pledgeName:this.state.pledgeName,
+          pledgeId:pledgeId
+          
         });
       })
       .catch(error => {
