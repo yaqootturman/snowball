@@ -21,7 +21,7 @@ class HomePage extends Component {
       this.setState({ userPledges: data, loading: false })
     })
       .catch(error => {
-        this.setState({ serverError: error.response.data.message })
+        this.setState({ serverError: "server error" })
       })
   }
 

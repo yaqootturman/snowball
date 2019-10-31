@@ -67,11 +67,8 @@
 }
 .importance-div {
   width: 80%;
-  padding-left: 25px;
+  padding-left: 6%;
   margin-top: 10vw;
-}
-.importance-div h3 {
-  margin-left: 1%;
 }
 .how-do-div h3 {
   margin-bottom: 3%;
@@ -91,7 +88,7 @@
 .how-do-div li {
   text-decoration: none;
   list-style-position: outside;
-  margin-left: 5%;
+  margin-left: 13px;
 }
 .pros-cons-div {
   width: 80%;
@@ -150,6 +147,9 @@
   padding-bottom: 25px;
   margin-top: 10vw;
 }
+.further-information p{
+  overflow-wrap: break-word;
+}
 
 .references {
   padding-left: 6vw;
@@ -182,6 +182,8 @@
 }
 .references__element p {
   margin-right: 2%;
+  overflow-wrap: break-word;
+ 
 }
 
 .hr-element {
