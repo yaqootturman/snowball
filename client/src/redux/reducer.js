@@ -18,6 +18,12 @@ const reducer = (state = initialState, action) => {
         ...state,
         userPledges: action.userPledges
       }
+    case 'GET_CATEGORY_PLEDGES':
+      return {
+        ...state,
+        pledge_info: action.pledge_info,
+        loading: false,
+      }
     case 'GET_PLEDGE_INFO':
 
       return {

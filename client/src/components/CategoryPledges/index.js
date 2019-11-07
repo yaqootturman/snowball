@@ -4,40 +4,36 @@ import PledgeItem from './../PledgItem'
 import BackButton from '../BackButton';
 import Footer from '../Footer'
 import './style.css'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import ClipLoader from 'react-spinners/ClipLoader'
+import { getCategoryPledges } from '../../redux/actions'
 
 
 class CategoryPledges extends React.Component {
   state = {
-    pledge_info: [], // i used an array to store values of object cause its more difficult if i use each name or an object inside state object
-    loading: true,
     details: {},
     serverError: ""
   };
 
   componentDidMount() {
-    window.scrollTo(0, 0)
     const data = sessionStorage.getItem('results')
     const info = JSON.parse(data)
     this.setState({ details: info })
-    axios.get(`/api/action-category/${info.category_id}`).then(Response => {
-      const pledge_info = Response.data
-      this.setState({ loading: false, pledge_info })
-    }).catch(error => {
-      this.setState({ serverError: "server error" })
-    })
+    this.props.getCategoryPledges(info.category_id)
   }
 
   render() {
-    const { pledge_info, serverError } = this.state
+    const { serverError } = this.state
     const { details } = this.state
+    const { pledge_info } = this.props
 
     return (
       <>
         {serverError !== "" ? <h1>{serverError}</h1> : (
           <>
             <div className="category-pledges-page">
-              {!details || !pledge_info.length ?
+              {this.props.loading ?
                 <div className="loading-spinner">
                   <ClipLoader
                     className="loading-spinner__home"
@@ -46,15 +42,14 @@ class CategoryPledges extends React.Component {
                     color={'#123abc'}
                   />
                 </div> :
+
                 (<>
                   < BackButton {...this.props} />
-                  <div className="category-container">
-                    <img src={details.img} className="category-container__category-img" alt={details.name} />
-                    <h1 className="category-container__category-title">{details.name}</h1>
-                    <p className="category-container__category-description">{details.description}</p>
-                  </div>
-
-                  <p className="category-container__pledges">{details.name} PLEDGES</p>
+                  <span>
+                    <div className="category-container"><img src={details.img} className="category-container__category-img" alt={details.name} />
+                      <h1 className="category-container__category-title">{details.name}</h1>
+                      <p className="category-container__category-description">{details.description}</p>
+                    </div><p className="category-container__pledges">{details.name} PLEDGES</p></span>
                   {pledge_info.map((element, index) => {
                     return (<PledgeItem {...this.props} element={element} key={index} />)
                   }
@@ -75,5 +70,20 @@ class CategoryPledges extends React.Component {
   }
 }
 
-export default CategoryPledges
+//used for selecting the part of the data from the store that the connected component needs.
+const mapStateToProps = (state) => {
+  return {
+    pledge_info: state.pledge_info,
+    loading: state.loading,
+  }
+}
+
+
+// allows you to specify which actions your component might need to dispatch.It lets you provide action dispatching functions as props. 
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    getCategoryPledges
+  }, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryPledges)
 
